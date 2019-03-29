@@ -1,0 +1,584 @@
+fileFormatVersion: 2
+guid: 45625d74f329f574095542ffa3472f3b
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Antenna
+    100002: Bayrak
+    100004: DECORATION
+    100006: doner
+    100008: Lamps
+    100010: Lamps1
+    100012: Look_at_the_tabela
+    100014: pCube10
+    100016: pCube12
+    100018: pCube14
+    100020: pCube15
+    100022: pCube16
+    100024: pCube17
+    100026: pCube18
+    100028: pCube2
+    100030: pCube5
+    100032: pCube6
+    100034: pCube7
+    100036: pCube8
+    100038: pCube9
+    100040: pCylinder10
+    100042: pCylinder11
+    100044: pCylinder12
+    100046: pCylinder13
+    100048: pCylinder14
+    100050: pCylinder15
+    100052: pCylinder16
+    100054: pCylinder17
+    100056: pCylinder18
+    100058: pCylinder2
+    100060: pCylinder3
+    100062: pCylinder4
+    100064: pCylinder5
+    100066: pCylinder7
+    100068: pCylinder7 1
+    100070: pCylinder9
+    100072: pPlane16
+    100074: pPlane17
+    100076: pPlane18
+    100078: pPlane19
+    100080: pPlane20
+    100082: pPlane21
+    100084: pPlane22
+    100086: pTorus10
+    100088: pTorus10 1
+    100090: pTorus11
+    100092: pTorus11 1
+    100094: pTorus12
+    100096: pTorus12 1
+    100098: pTorus13
+    100100: pTorus13 1
+    100102: pTorus14
+    100104: pTorus14 1
+    100106: pTorus15
+    100108: pTorus15 1
+    100110: pTorus16
+    100112: pTorus16 1
+    100114: pTorus17
+    100116: pTorus17 1
+    100118: pTorus18
+    100120: pTorus18 1
+    100122: pTorus19
+    100124: pTorus19 1
+    100126: pTorus2
+    100128: pTorus2 1
+    100130: pTorus20
+    100132: pTorus20 1
+    100134: pTorus21
+    100136: pTorus21 1
+    100138: pTorus3
+    100140: pTorus3 1
+    100142: pTorus4
+    100144: pTorus4 1
+    100146: pTorus5
+    100148: pTorus5 1
+    100150: pTorus6
+    100152: pTorus6 1
+    100154: pTorus7
+    100156: pTorus7 1
+    100158: pTorus8
+    100160: pTorus8 1
+    100162: pTorus9
+    100164: pTorus9 1
+    100166: //RootNode
+    100168: raf
+    100170: SALE
+    100172: Steer
+    100174: Thruster_1
+    100176: Thruster_2
+    100178: typeMesh1
+    100180: typeMesh2
+    100182: w
+    100184: w 1
+    100186: w1
+    100188: w1 1
+    100190: w2
+    100192: w2 1
+    100194: w3
+    100196: w4
+    100198: w4 1
+    100200: w5
+    100202: w5 1
+    100204: w6
+    100206: w6 1
+    400000: Antenna
+    400002: Bayrak
+    400004: DECORATION
+    400006: doner
+    400008: Lamps
+    400010: Lamps1
+    400012: Look_at_the_tabela
+    400014: pCube10
+    400016: pCube12
+    400018: pCube14
+    400020: pCube15
+    400022: pCube16
+    400024: pCube17
+    400026: pCube18
+    400028: pCube2
+    400030: pCube5
+    400032: pCube6
+    400034: pCube7
+    400036: pCube8
+    400038: pCube9
+    400040: pCylinder10
+    400042: pCylinder11
+    400044: pCylinder12
+    400046: pCylinder13
+    400048: pCylinder14
+    400050: pCylinder15
+    400052: pCylinder16
+    400054: pCylinder17
+    400056: pCylinder18
+    400058: pCylinder2
+    400060: pCylinder3
+    400062: pCylinder4
+    400064: pCylinder5
+    400066: pCylinder7
+    400068: pCylinder7 1
+    400070: pCylinder9
+    400072: pPlane16
+    400074: pPlane17
+    400076: pPlane18
+    400078: pPlane19
+    400080: pPlane20
+    400082: pPlane21
+    400084: pPlane22
+    400086: pTorus10
+    400088: pTorus10 1
+    400090: pTorus11
+    400092: pTorus11 1
+    400094: pTorus12
+    400096: pTorus12 1
+    400098: pTorus13
+    400100: pTorus13 1
+    400102: pTorus14
+    400104: pTorus14 1
+    400106: pTorus15
+    400108: pTorus15 1
+    400110: pTorus16
+    400112: pTorus16 1
+    400114: pTorus17
+    400116: pTorus17 1
+    400118: pTorus18
+    400120: pTorus18 1
+    400122: pTorus19
+    400124: pTorus19 1
+    400126: pTorus2
+    400128: pTorus2 1
+    400130: pTorus20
+    400132: pTorus20 1
+    400134: pTorus21
+    400136: pTorus21 1
+    400138: pTorus3
+    400140: pTorus3 1
+    400142: pTorus4
+    400144: pTorus4 1
+    400146: pTorus5
+    400148: pTorus5 1
+    400150: pTorus6
+    400152: pTorus6 1
+    400154: pTorus7
+    400156: pTorus7 1
+    400158: pTorus8
+    400160: pTorus8 1
+    400162: pTorus9
+    400164: pTorus9 1
+    400166: //RootNode
+    400168: raf
+    400170: SALE
+    400172: Steer
+    400174: Thruster_1
+    400176: Thruster_2
+    400178: typeMesh1
+    400180: typeMesh2
+    400182: w
+    400184: w 1
+    400186: w1
+    400188: w1 1
+    400190: w2
+    400192: w2 1
+    400194: w3
+    400196: w4
+    400198: w4 1
+    400200: w5
+    400202: w5 1
+    400204: w6
+    400206: w6 1
+    2100000: lambert4
+    2100002: lambert1
+    2100004: lambert3
+    2100006: lambert2
+    2100008: lambert5
+    2100010: lambert10
+    2100012: lambert9
+    2100014: lambert7
+    2100016: lambert8
+    2100018: lambert11
+    2300000: Antenna
+    2300002: Look_at_the_tabela
+    2300004: pCube10
+    2300006: pCube12
+    2300008: pCube14
+    2300010: pCube15
+    2300012: pCube16
+    2300014: pCube17
+    2300016: pCube18
+    2300018: pCube2
+    2300020: pCube5
+    2300022: pCube6
+    2300024: pCube7
+    2300026: pCube8
+    2300028: pCube9
+    2300030: pCylinder10
+    2300032: pCylinder11
+    2300034: pCylinder12
+    2300036: pCylinder13
+    2300038: pCylinder14
+    2300040: pCylinder15
+    2300042: pCylinder16
+    2300044: pCylinder17
+    2300046: pCylinder18
+    2300048: pCylinder2
+    2300050: pCylinder3
+    2300052: pCylinder4
+    2300054: pCylinder5
+    2300056: pCylinder7
+    2300058: pCylinder7 1
+    2300060: pCylinder9
+    2300062: pPlane16
+    2300064: pPlane17
+    2300066: pPlane18
+    2300068: pPlane19
+    2300070: pPlane20
+    2300072: pPlane21
+    2300074: pPlane22
+    2300076: pTorus10
+    2300078: pTorus10 1
+    2300080: pTorus11
+    2300082: pTorus11 1
+    2300084: pTorus12
+    2300086: pTorus12 1
+    2300088: pTorus13
+    2300090: pTorus13 1
+    2300092: pTorus14
+    2300094: pTorus14 1
+    2300096: pTorus15
+    2300098: pTorus15 1
+    2300100: pTorus16
+    2300102: pTorus16 1
+    2300104: pTorus17
+    2300106: pTorus17 1
+    2300108: pTorus18
+    2300110: pTorus18 1
+    2300112: pTorus19
+    2300114: pTorus19 1
+    2300116: pTorus2
+    2300118: pTorus2 1
+    2300120: pTorus20
+    2300122: pTorus20 1
+    2300124: pTorus21
+    2300126: pTorus21 1
+    2300128: pTorus3
+    2300130: pTorus3 1
+    2300132: pTorus4
+    2300134: pTorus4 1
+    2300136: pTorus5
+    2300138: pTorus5 1
+    2300140: pTorus6
+    2300142: pTorus6 1
+    2300144: pTorus7
+    2300146: pTorus7 1
+    2300148: pTorus8
+    2300150: pTorus8 1
+    2300152: pTorus9
+    2300154: pTorus9 1
+    2300156: typeMesh1
+    2300158: typeMesh2
+    2300160: w1
+    2300162: w1 1
+    2300164: w2
+    2300166: w2 1
+    2300168: w3
+    2300170: w4
+    2300172: w4 1
+    2300174: w5
+    2300176: w5 1
+    2300178: w6
+    2300180: w6 1
+    3300000: Antenna
+    3300002: Look_at_the_tabela
+    3300004: pCube10
+    3300006: pCube12
+    3300008: pCube14
+    3300010: pCube15
+    3300012: pCube16
+    3300014: pCube17
+    3300016: pCube18
+    3300018: pCube2
+    3300020: pCube5
+    3300022: pCube6
+    3300024: pCube7
+    3300026: pCube8
+    3300028: pCube9
+    3300030: pCylinder10
+    3300032: pCylinder11
+    3300034: pCylinder12
+    3300036: pCylinder13
+    3300038: pCylinder14
+    3300040: pCylinder15
+    3300042: pCylinder16
+    3300044: pCylinder17
+    3300046: pCylinder18
+    3300048: pCylinder2
+    3300050: pCylinder3
+    3300052: pCylinder4
+    3300054: pCylinder5
+    3300056: pCylinder7
+    3300058: pCylinder7 1
+    3300060: pCylinder9
+    3300062: pPlane16
+    3300064: pPlane17
+    3300066: pPlane18
+    3300068: pPlane19
+    3300070: pPlane20
+    3300072: pPlane21
+    3300074: pPlane22
+    3300076: pTorus10
+    3300078: pTorus10 1
+    3300080: pTorus11
+    3300082: pTorus11 1
+    3300084: pTorus12
+    3300086: pTorus12 1
+    3300088: pTorus13
+    3300090: pTorus13 1
+    3300092: pTorus14
+    3300094: pTorus14 1
+    3300096: pTorus15
+    3300098: pTorus15 1
+    3300100: pTorus16
+    3300102: pTorus16 1
+    3300104: pTorus17
+    3300106: pTorus17 1
+    3300108: pTorus18
+    3300110: pTorus18 1
+    3300112: pTorus19
+    3300114: pTorus19 1
+    3300116: pTorus2
+    3300118: pTorus2 1
+    3300120: pTorus20
+    3300122: pTorus20 1
+    3300124: pTorus21
+    3300126: pTorus21 1
+    3300128: pTorus3
+    3300130: pTorus3 1
+    3300132: pTorus4
+    3300134: pTorus4 1
+    3300136: pTorus5
+    3300138: pTorus5 1
+    3300140: pTorus6
+    3300142: pTorus6 1
+    3300144: pTorus7
+    3300146: pTorus7 1
+    3300148: pTorus8
+    3300150: pTorus8 1
+    3300152: pTorus9
+    3300154: pTorus9 1
+    3300156: typeMesh1
+    3300158: typeMesh2
+    3300160: w1
+    3300162: w1 1
+    3300164: w2
+    3300166: w2 1
+    3300168: w3
+    3300170: w4
+    3300172: w4 1
+    3300174: w5
+    3300176: w5 1
+    3300178: w6
+    3300180: w6 1
+    4300000: pCube12
+    4300002: pCube5
+    4300004: pCube6
+    4300006: pCube7
+    4300008: pCube8
+    4300010: pCube9
+    4300012: pCube10
+    4300014: pCube2
+    4300016: pCylinder2
+    4300018: pCylinder3
+    4300020: pCube14
+    4300022: pCube15
+    4300024: pCube16
+    4300026: pCylinder4
+    4300028: Antenna
+    4300030: pCylinder9
+    4300032: pCylinder10
+    4300034: pCylinder12
+    4300036: pCylinder11
+    4300038: pCylinder13
+    4300040: Look_at_the_tabela
+    4300042: pTorus3
+    4300044: pTorus4
+    4300046: pTorus5
+    4300048: pTorus6
+    4300050: pTorus7
+    4300052: pTorus8
+    4300054: pTorus9
+    4300056: pTorus10
+    4300058: pTorus11
+    4300060: pTorus12
+    4300062: pTorus13
+    4300064: pTorus14
+    4300066: pTorus15
+    4300068: pTorus16
+    4300070: pTorus17
+    4300072: pTorus18
+    4300074: pTorus19
+    4300076: pTorus20
+    4300078: pTorus21
+    4300080: pTorus2
+    4300082: pTorus3
+    4300084: pTorus4
+    4300086: pTorus5
+    4300088: pTorus6
+    4300090: pTorus7
+    4300092: pTorus8
+    4300094: pTorus9
+    4300096: pTorus10
+    4300098: pTorus11
+    4300100: pTorus12
+    4300102: pTorus13
+    4300104: pTorus14
+    4300106: pTorus15
+    4300108: pTorus16
+    4300110: pTorus17
+    4300112: pTorus18
+    4300114: pTorus19
+    4300116: pTorus20
+    4300118: pTorus21
+    4300120: pTorus2
+    4300122: typeMesh1
+    4300124: typeMesh2
+    4300126: w6
+    4300128: w5
+    4300130: w4
+    4300132: w3
+    4300134: w2
+    4300136: w1
+    4300138: pCylinder7
+    4300140: w6
+    4300142: w5
+    4300144: w4
+    4300146: w2
+    4300148: w1
+    4300150: pCylinder7
+    4300152: pCylinder5
+    4300154: pCube17
+    4300156: pCube18
+    4300158: pCylinder14
+    4300160: pCylinder15
+    4300162: pCylinder16
+    4300164: pPlane16
+    4300166: pPlane17
+    4300168: pPlane18
+    4300170: pPlane19
+    4300172: pPlane20
+    4300174: pPlane21
+    4300176: pPlane22
+    4300178: pCylinder17
+    4300180: pCylinder18
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
