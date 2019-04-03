@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 361406596}
   - component: {fileID: 361406595}
   - component: {fileID: 361406594}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Doner
   m_TagString: DonerPiece
   m_Icon: {fileID: 0}

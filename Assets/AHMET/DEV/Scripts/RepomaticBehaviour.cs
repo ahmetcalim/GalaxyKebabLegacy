@@ -14,6 +14,7 @@ public class RepomaticBehaviour : MonoBehaviour
     {
         if (other.tag == "Lavas")
         {
+            canThrow = false;
             canStart = true;
             durumInstance = Instantiate(durumPrefab, transform.position, Quaternion.identity);
         }

@@ -12,7 +12,6 @@ public class DonerBehaviour : MonoBehaviour
     {
         if (DonerKnifeBehaviour.velocity <= amountMax)
         {
-
             endPoint.localPosition = new Vector3(endPoint.localPosition.x, endPoint.localPosition.y, DonerKnifeBehaviour.velocity);
             transform.localScale = new Vector3(transform.localScale.x, (maxScaleX - DonerKnifeBehaviour.distanceFromDoner) * 2f, transform.localScale.z);
         }

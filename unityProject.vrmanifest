@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.galaxykebablegacy.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\User\\Documents\\GitHub\\galaxy-kebab-legacy\\Galaxy-Kebab-Legacy\\actions.json",
+      "action_manifest_path": "C:\\Users\\User\\Documents\\GitHub\\GalaxyKebabLegacy\\actions.json",
       "strings": {
         "en_us": {
           "name": "Galaxy-Kebab-Legacy [Testing]"

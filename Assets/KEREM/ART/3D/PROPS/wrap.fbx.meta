@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: b3ee9ce47bbf0524985d2358b6299f0c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bant_LP
+    100002: Boru_LP
+    100004: Bulb_Emission_LP
+    100006: Bulb_holder_LP
+    100008: Bulb_Metal_LP
+    100010: Glass_LP
+    100012: Kadran_LP
+    100014: Kol_LP
+    100016: Kontur_LP
+    100018: vida_LP
+    100020: //RootNode
+    100022: Wrapomatic_LP
+    400000: Bant_LP
+    400002: Boru_LP
+    400004: Bulb_Emission_LP
+    400006: Bulb_holder_LP
+    400008: Bulb_Metal_LP
+    400010: Glass_LP
+    400012: Kadran_LP
+    400014: Kol_LP
+    400016: Kontur_LP
+    400018: vida_LP
+    400020: //RootNode
+    400022: Wrapomatic_LP
+    2100000: M_Wrap_Things
+    2100002: M_Wrap_Kontur
+    2100004: M_Wrap_Pallet
+    2100006: M_Wrap_Main
+    2100008: M_Wrap_Glass
+    2100010: M_Wrap_emission_no
+    2100012: M_Wrap_Bulb_Metal_no
+    2100014: M_Wrap_Bulb_bronze_no
+    2300000: Bant_LP
+    2300002: Boru_LP
+    2300004: Bulb_Emission_LP
+    2300006: Bulb_holder_LP
+    2300008: Bulb_Metal_LP
+    2300010: Glass_LP
+    2300012: Kadran_LP
+    2300014: Kol_LP
+    2300016: Kontur_LP
+    2300018: vida_LP
+    2300020: Wrapomatic_LP
+    3300000: Bant_LP
+    3300002: Boru_LP
+    3300004: Bulb_Emission_LP
+    3300006: Bulb_holder_LP
+    3300008: Bulb_Metal_LP
+    3300010: Glass_LP
+    3300012: Kadran_LP
+    3300014: Kol_LP
+    3300016: Kontur_LP
+    3300018: vida_LP
+    3300020: Wrapomatic_LP
+    4300000: Kol_LP
+    4300002: Kontur_LP
+    4300004: vida_LP
+    4300006: Kadran_LP
+    4300008: Bant_LP
+    4300010: Boru_LP
+    4300012: Wrapomatic_LP
+    4300014: Bulb_holder_LP
+    4300016: Glass_LP
+    4300018: Bulb_Emission_LP
+    4300020: Bulb_Metal_LP
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

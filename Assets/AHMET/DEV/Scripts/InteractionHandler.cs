@@ -16,13 +16,16 @@ public class InteractionHandler : MonoBehaviour
     public Hand hand;
     private void OnEnable()
     {
-        controllerPose.onTransformChanged.AddListener(OnControllerTransformChanged);
     }
-    private void OnControllerTransformChanged(SteamVR_Behaviour_Pose fromPose, SteamVR_Input_Sources fromSource)
+    private void Update()
     {
+        if (grabAction.GetStateDown(handType))
+        {
+            CheckDonerPieceGrabbed();
+        }
         if (controllerPose.GetVelocity().magnitude > power)
         {
-            
+
             if (!IsShaking)
             {
                 IsShaking = true;
@@ -34,13 +37,34 @@ public class InteractionHandler : MonoBehaviour
             IsShaking = false;
         }
     }
+    void CheckDonerPieceGrabbed()
+    {
+        if (hand.currentAttachedObject != null)
+        {
+            if (hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>() != null)
+            {
+            }
+            if (hand.currentAttachedObject.GetComponent<DonerBehaviour>() != null)
+            {
+                if (hand.currentAttachedObject.GetComponent<HingeJoint>() != null)
+                {
+
+                    Destroy(hand.currentAttachedObject.GetComponent<HingeJoint>());
+                    Debug.Log("Tuttum");
+                }
+            }
+
+            hand.hapticAction.Execute(3f, 3f, 300f, 1f, handType);
+        }
+    }
     private void Shake()
     {
         if (hand.currentAttachedObject != null)
         {
             if (hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>() != null)
             {
-                hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>().Add();
+                hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>().canAdd = true;
+                hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>().Particle();
             }
         
             hand.hapticAction.Execute(3f, 3f, 300f, 1f, handType);

@@ -46,8 +46,12 @@ public class DonerKnifeBehaviour : MonoBehaviour
         {
             spawned = false;
                isHit = false;
-            currentDoner.AddComponent<Rigidbody>();
-            currentDoner.AddComponent<MeshCollider>();
+            if (currentDoner.GetComponent<Rigidbody>() == null || currentDoner.GetComponent<MeshCollider>() == null)
+            {
+                currentDoner.AddComponent<Rigidbody>();
+                currentDoner.AddComponent<MeshCollider>();
+            }
+           
             timeSinceTriggered = 0f;
         }
 

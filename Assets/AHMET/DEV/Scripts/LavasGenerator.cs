@@ -13,6 +13,7 @@ public class LavasGenerator : MonoBehaviour
     private bool canMove = false;
     public static bool lavasCanMove = true;
     public CircularDrive circularDrive;
+    public HoverButton hoverButton;
     public void GenerateLavas()
     {
         
@@ -39,6 +40,10 @@ public class LavasGenerator : MonoBehaviour
             if (currentLavas.transform.position != arrivePoint.position)
             {
                 StartCoroutine(Move());
+            }
+            else
+            {
+                hoverButton.enabled = true;
             }
         }
      

@@ -14,11 +14,21 @@ public class OrderControl : MonoBehaviour
         this.customerName.text = customer.customerName;
         for (int i = 0; i < tastes.Count; i++)
         {
-            if (tastes[i].isLike)
-                tasteItems[i].ingredient.color = Color.green;
-            else
-                tasteItems[i].ingredient.color = Color.red;
 
+            switch (tastes[i].preference)
+            {
+                case Taste.Preference.irrelevant:
+                    tasteItems[i].ingredient.color = Color.black;
+                    break;
+                case Taste.Preference.like:
+                    tasteItems[i].ingredient.color = Color.green;
+                    break;
+                case Taste.Preference.dislike:
+                    tasteItems[i].ingredient.color = Color.red;
+                    break;
+                default:
+                    break;
+            }
 
            tasteItems[i].ingredient.text =tastes[i].taste.ToString();
            tasteItems[i].value.text = tastes[i].tasteRating.ToString();

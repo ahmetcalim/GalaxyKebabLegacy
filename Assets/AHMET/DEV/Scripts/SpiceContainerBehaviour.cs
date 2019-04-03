@@ -10,6 +10,7 @@ public class SpiceContainerBehaviour : MonoBehaviour
     public ParticleSystem particleSystem;
     public SkinnedMeshRenderer skinnedMesh;
     public bool isFluid;
+    public bool canAdd;
     public void UseIngredient(float amount)
     {
 
@@ -24,31 +25,44 @@ public class SpiceContainerBehaviour : MonoBehaviour
         }
       
     }
-    public void Add()
+    private void FixedUpdate()
     {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit))
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit))
+        {
+            if (hit.transform != null)
             {
-                if (hit.transform != null)
+               
+                if (hit.transform.tag == "LavasIngredient" && canAdd)
                 {
-                    if (hit.transform.tag == "Lavas")
-                    {
-                        GetComponent<IngredientItem>().Action();
-                        Debug.Log("Dökülüyor");
-                    }
-                    StartCoroutine(ActivateParticleForSeconds(1f));
+                    GetComponent<IngredientItem>().Action();
+                    Debug.Log("Dökülüyor");
+                    canAdd = false;
+                    
                 }
                 else
                 {
-                    Debug.Log("Dökülemiyor.");
+                    
                 }
+                }
+               
             }
-        
+            else
+            {
+                Debug.Log("Dökülemiyor.");
+            }
+        }
+    public void Particle()
+    {
+        StartCoroutine(ActivateParticle());
     }
-    IEnumerator ActivateParticleForSeconds(float sec)
+    public IEnumerator ActivateParticle()
     {
         particleSystem.Play();
-        yield return new WaitForSeconds(sec);
-        particleSystem.Stop();
+        yield return new WaitForSeconds(1f);
+        if (particleSystem.isPlaying)
+        {
+            particleSystem.Stop();
+        }
     }
-}
+    }

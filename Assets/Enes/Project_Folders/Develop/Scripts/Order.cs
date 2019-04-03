@@ -35,6 +35,8 @@ public class Order : MonoBehaviour
 
         Taste.Tastes sortByMaxMinValueTaste = GetFavoriteTaste();
 
+        Debug.Log(sortByMaxMinValueTaste);
+
         ListIngredientsForFavoriteTaste(sortByMaxMinValueTaste);
 
         CalculateTotalInputForEachIngredient();
@@ -53,7 +55,8 @@ public class Order : MonoBehaviour
 
     Taste.Tastes GetFavoriteTaste()
     {
-        return customer.Tastes.OrderByDescending(t => t.x_max - t.x_zero).ToList().First().taste;
+        List<Taste> tastes= customer.Tastes.Where(t => t.preference==Taste.Preference.like).ToList();
+        return tastes.OrderByDescending(t =>t.x_max - t.x_zero).ToList().First().taste;
     }
 
     void ListIngredientsForFavoriteTaste(Taste.Tastes _query)
