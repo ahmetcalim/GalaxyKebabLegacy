@@ -35,8 +35,6 @@ public class Order : MonoBehaviour
 
         Taste.Tastes sortByMaxMinValueTaste = GetFavoriteTaste();
 
-        Debug.Log(sortByMaxMinValueTaste);
-
         ListIngredientsForFavoriteTaste(sortByMaxMinValueTaste);
 
         CalculateTotalInputForEachIngredient();

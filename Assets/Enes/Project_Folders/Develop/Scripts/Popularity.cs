@@ -8,8 +8,12 @@ public class Popularity
 {
     public int userID=1;
     public double averageDailyPopularity;
+    public double totalDailyPopularity;
     public double globalPopularity;
-    public int totalDay;
+    public int activeDay; // actively played
+    public int passiveDay; //have not played
+    public float popularityDecayRate=1; //Pdec
+    public float otherDecayRate = 1;  //c
 
     public void Activate()
     {
@@ -18,9 +22,12 @@ public class Popularity
             Popularity p = ReadFromJSON(GetJsonPopularity());
             userID = p.userID;
             averageDailyPopularity = p.averageDailyPopularity;
+            totalDailyPopularity = p.totalDailyPopularity;
             globalPopularity = p.globalPopularity;
-            totalDay = p.totalDay;
-        }    
+            popularityDecayRate = p.popularityDecayRate;
+            activeDay = p.activeDay;
+            passiveDay = p.passiveDay;
+        }
     }
 
     public Popularity ReadFromJSON(string jsonString)
@@ -34,22 +41,24 @@ public class Popularity
         DailyPopularity.dailyPopularity += value;
     }
 
+    public double CalculateGlobalPopularity()
+    {
+       return globalPopularity = totalDailyPopularity - (Mathf.Pow(passiveDay,2)/(passiveDay+Mathf.Pow(activeDay,2)))*popularityDecayRate*otherDecayRate;
+    }
+
     public void SetGlobalPopularity()
     {
-        totalDay += 1;
-        if (!File.Exists(DailyPopularity.path))
-        {
+        activeDay += 1;
+        totalDailyPopularity += DailyPopularity.dailyPopularity/DailyPopularity.index;
+        averageDailyPopularity = totalDailyPopularity / activeDay;
+        globalPopularity = CalculateGlobalPopularity();
+
+        if (!File.Exists(DailyPopularity.path))    
             using (StreamWriter sw = File.CreateText(DailyPopularity.path))
-            {
-                globalPopularity =DailyPopularity.dailyPopularity / DailyPopularity.index;
                 sw.WriteLine(JsonUtility.ToJson(this));
-            }
-        }
         else
-        {
-            globalPopularity =globalPopularity + DailyPopularity.dailyPopularity / DailyPopularity.index;
             File.WriteAllText(DailyPopularity.path,JsonUtility.ToJson(this));
-        }
+
         DailyPopularity.dailyPopularity = 0;
         DailyPopularity.index = 0;
     }

@@ -8,7 +8,9 @@ public class Taste
     public Tastes taste;
     public double x_zero;
     public double x_max;
+    [System.NonSerialized]
     public double tasteRating;
+    [System.NonSerialized]
     public double totalInputCount;
     public Preference preference;
     public enum Preference

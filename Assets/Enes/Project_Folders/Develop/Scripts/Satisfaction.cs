@@ -32,8 +32,44 @@ public static class Satisfaction
 
     public static double CalculateIrrelevantSatisfaction(double tasteInput)
     {
-        Debug.Log(tasteInput);
-        return -Math.Pow(tasteInput/141,2);
+        return -Math.Pow(tasteInput/182.5f,2);
+    }
+
+    /// <param name="orderTime">orderTime is the time since order is given</param>
+    /// /// <param name="tBase">random base time</param>
+    /// /// <param name="averageDailyPopularity">average daily popularity</param>
+    /// /// <param name="pr">pr is the price of the unit sold</param>
+    /// /// /// <param name="cogs">cogs is the cost of the unit sold</param>
+
+    public static double CalculateImpactFactor(int orderTime,int tBase,double averageDailyPopularity,float pr,float cogs)
+    {
+        if (averageDailyPopularity != 0)
+        {
+           double value= CalculateWaitingTime(orderTime, tBase, averageDailyPopularity) * CalculatePriceJudgement(averageDailyPopularity, pr, cogs);
+            if (value<0.87f)
+            {
+                return 0.87f;
+            }
+            else if (value>1.13f)
+            {
+                return 1.13f;
+            }
+            else
+            {
+                return value;
+            }
+        }           
+        else
+            return 1;
+    }
+
+    static double CalculateWaitingTime(int orderTime,int tBase,double averageDailyPopularity)
+    {
+        return (orderTime - ((tBase/2) - 3 * averageDailyPopularity))*(-(0.26f/6*averageDailyPopularity))+1.13f;
+    }
+    static double CalculatePriceJudgement(double averageDailyPopularity,float pr,float cogs)
+    {
+        return cogs * ((1.20f + (averageDailyPopularity / 100))/pr);
     }
 
 
