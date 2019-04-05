@@ -19,9 +19,36 @@ public class InteractionHandler : MonoBehaviour
     }
     private void Update()
     {
+       
         if (grabAction.GetStateDown(handType))
         {
-            CheckDonerPieceGrabbed();
+            if (hand.currentAttachedObject != null)
+            {
+                if (hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>() != null)
+                {
+                   
+                            if (transform.eulerAngles.z > 90f && transform.eulerAngles.z < 270f)
+                            {
+                                hand.currentAttachedObject.transform.localScale = new Vector3(hand.currentAttachedObject.transform.localScale.x, hand.currentAttachedObject.transform.localScale.y *-1f, hand.currentAttachedObject.transform.localScale.z);
+                            }
+                            else
+                            {
+                            if (hand.currentAttachedObject.transform.localScale.y <0)
+                            {
+                                hand.currentAttachedObject.transform.localScale = new Vector3(hand.currentAttachedObject.transform.localScale.x, hand.currentAttachedObject.transform.localScale.y * -1f, hand.currentAttachedObject.transform.localScale.z);
+
+                            }
+                            else
+                            {
+                                hand.currentAttachedObject.transform.localScale = new Vector3(hand.currentAttachedObject.transform.localScale.x, hand.currentAttachedObject.transform.localScale.y * 1f, hand.currentAttachedObject.transform.localScale.z);
+                            }
+
+                    }
+
+
+                }
+                CheckDonerPieceGrabbed();
+            }
         }
         if (controllerPose.GetVelocity().magnitude > power)
         {
@@ -43,6 +70,7 @@ public class InteractionHandler : MonoBehaviour
         {
             if (hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>() != null)
             {
+               // Debug.Log(transform.eulerAngles.z);
             }
             if (hand.currentAttachedObject.GetComponent<DonerBehaviour>() != null)
             {

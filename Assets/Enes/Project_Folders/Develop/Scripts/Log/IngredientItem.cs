@@ -10,7 +10,7 @@ public class IngredientItem : MonoBehaviour
 
     private void OnEnable()
     {
-        this.GetComponent<Button>().onClick.AddListener(() => Action());
+     //   this.GetComponent<Button>().onClick.AddListener(() => Action());
     }
 
     public void Action()

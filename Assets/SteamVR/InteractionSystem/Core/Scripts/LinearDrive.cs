@@ -6,29 +6,30 @@
 
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 namespace Valve.VR.InteractionSystem
 {
 	//-------------------------------------------------------------------------
 	[RequireComponent( typeof( Interactable ) )]
 	public class LinearDrive : MonoBehaviour
-	{
-		public Transform startPosition;
+    {
+        public UnityEvent onEndPoint;
+        public Transform startPosition;
 		public Transform endPosition;
 		public LinearMapping linearMapping;
 		public bool repositionGameObject = true;
 		public bool maintainMomemntum = true;
 		public float momemtumDampenRate = 5.0f;
-
+        public bool arrivedToEndpoint;
         protected Hand.AttachmentFlags attachmentFlags = Hand.AttachmentFlags.DetachFromOtherHand;
-
+        public static bool canUseWrapomatic;
         protected float initialMappingOffset;
         protected int numMappingChangeSamples = 5;
         protected float[] mappingChangeSamples;
         protected float prevMapping = 0.0f;
         protected float mappingChangeRate;
         protected int sampleCount = 0;
-
         protected Interactable interactable;
 
 
@@ -40,6 +41,7 @@ namespace Valve.VR.InteractionSystem
 
         protected virtual void Start()
 		{
+            canUseWrapomatic = true;
 			if ( linearMapping == null )
 			{
 				linearMapping = GetComponent<LinearMapping>();
@@ -128,8 +130,28 @@ namespace Valve.VR.InteractionSystem
 			return Vector3.Dot( displacement, direction ) / length;
 		}
 
-        
-		protected virtual void Update()
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.tag == "EndPoint" && !arrivedToEndpoint)
+            {
+                if (canUseWrapomatic)
+                {
+                    onEndPoint.Invoke();
+                }
+                canUseWrapomatic = false;
+                arrivedToEndpoint = true;
+               
+               
+                Debug.Log("Teslim et > Lavaş oluştur.");
+            }
+            if (other.tag == "StartPoint" && arrivedToEndpoint)
+            {
+                arrivedToEndpoint = false;
+                UpdateLinearMapping(transform);
+                Debug.Log("Çıktı");
+            }
+        }
+        protected virtual void Update()
         {
             if ( maintainMomemntum && mappingChangeRate != 0.0f )
 			{
@@ -141,7 +163,18 @@ namespace Valve.VR.InteractionSystem
 				{
 					transform.position = Vector3.Lerp( startPosition.position, endPosition.position, linearMapping.value );
 				}
+               
+               
 			}
-		}
-	}
+            else
+            {
+                if (arrivedToEndpoint)
+                {
+                    transform.position = Vector3.MoveTowards(transform.position, startPosition.position, 0.1f);
+                }
+            }
+          
+
+        }
+    }
 }

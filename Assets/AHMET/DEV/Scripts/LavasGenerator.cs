@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+
 public class LavasGenerator : MonoBehaviour
 {
+    public Transform kitchen;
     public GameObject lavasPrefab;
     public Transform lavasSpawnPoint;
     public static int generatedLavasCount;
@@ -14,13 +17,19 @@ public class LavasGenerator : MonoBehaviour
     public static bool lavasCanMove = true;
     public CircularDrive circularDrive;
     public HoverButton hoverButton;
+    public static UnityEvent onLavasArrived;
+    public LinearDrive linearDrive;
+    private void Awake()
+    {
+        linearDrive.onEndPoint.AddListener(SiparisTeslim);
+    }
     public void GenerateLavas()
     {
-        
         if (generatedLavasCount == 0)
         {
             generatedLavasCount++;
             currentLavas = Instantiate(lavasPrefab, lavasSpawnPoint.position, Quaternion.identity);
+            currentLavas.transform.SetParent(kitchen);
         }
     }
     public void SiparisTeslim()
@@ -36,13 +45,19 @@ public class LavasGenerator : MonoBehaviour
 
         if (currentLavas != null)
         {
-            currentLavas.transform.position = Vector3.MoveTowards(currentLavas.transform.position, arrivePoint.position, 0.01f);
+            currentLavas.transform.position = Vector3.MoveTowards(currentLavas.transform.position, arrivePoint.position, 0.03f);
             if (currentLavas.transform.position != arrivePoint.position)
             {
                 StartCoroutine(Move());
             }
             else
             {
+                if (!hoverButton.enabled)
+                {
+                    Destroy(currentLavas);
+                    generatedLavasCount = 0;
+                    GenerateLavas();
+                }
                 hoverButton.enabled = true;
             }
         }

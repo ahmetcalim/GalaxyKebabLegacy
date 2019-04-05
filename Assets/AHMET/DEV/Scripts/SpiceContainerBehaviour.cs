@@ -6,11 +6,12 @@ public class SpiceContainerBehaviour : MonoBehaviour
 {
     public enum SpiceType { salt, blackPepper, chiliPepper, mayonnaise, mustard, ketchup }
     public SpiceType spiceType;
-    public float amountPerShake;
+    public int amountPerShake;
     public ParticleSystem particleSystem;
     public SkinnedMeshRenderer skinnedMesh;
     public bool isFluid;
     public bool canAdd;
+    public GameObject ingredientObj;
     public void UseIngredient(float amount)
     {
 
@@ -27,31 +28,17 @@ public class SpiceContainerBehaviour : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit))
-        {
-            if (hit.transform != null)
-            {
-               
-                if (hit.transform.tag == "LavasIngredient" && canAdd)
-                {
-                    GetComponent<IngredientItem>().Action();
-                    Debug.Log("Dökülüyor");
-                    canAdd = false;
-                    
-                }
-                else
-                {
-                    
-                }
-                }
-               
-            }
-            else
-            {
-                Debug.Log("Dökülemiyor.");
-            }
-        }
+       if (canAdd)
+       {
+               GameObject copy = Instantiate(ingredientObj, particleSystem.transform.position, Quaternion.identity);
+               copy.GetComponent<SpiceBehaviour>().spiceContainer = GetComponent<SpiceContainerBehaviour>();
+           canAdd = false;
+       }
+    }
+    public void Add()
+    {
+        GetComponent<IngredientItem>().Action();
+    }
     public void Particle()
     {
         StartCoroutine(ActivateParticle());
