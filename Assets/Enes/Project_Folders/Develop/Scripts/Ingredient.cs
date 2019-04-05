@@ -12,7 +12,7 @@ public class Ingredient
     public double totalTasteInput;
     [System.NonSerialized]
     public double inputPercentage;
-
+    public int actionAmount;
     public double GetTotalTasteInput()
     {
         totalTasteInput = 0;
@@ -27,5 +27,5 @@ public class Ingredient
 public class IngredientTaste
 {
     public Taste.Tastes taste;
-    public double tasteInput;
+    public float tasteInput;
 }

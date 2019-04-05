@@ -16,7 +16,7 @@ public class GameLogic : MonoBehaviour
     bool isPlay;
     public int playingTime=300;
     public int interval = 20;
-    int timeCounter = 0;
+    public int timeCounter = 0;
     GameObject currentOrderPrefab;
     List<Order> orders=new List<Order>();
     Taste result;
@@ -24,6 +24,8 @@ public class GameLogic : MonoBehaviour
     Popularity popularity;
     Session session;
     double spawnRate;
+
+
 
     public void StartGame()
     {
@@ -56,11 +58,14 @@ public class GameLogic : MonoBehaviour
                 if (timeCounter==0)
                 {
                     CreateOrder(customers[Random.Range(0, customers.Count)]);
+                    Debug.Log("BAŞLANGIÇ");
                 }
                 else
                 {                
                     if (spawnRate >= 1)
                     {
+                        Debug.Log("spawn rate 1'den BÜYÜK");
+
                         for (int i = 0; i < int.Parse(spawnRate.ToString("0.##").Split(',')[0]); i++)
                             CreateOrder(customers[Random.Range(0, customers.Count)]);
 
@@ -69,6 +74,7 @@ public class GameLogic : MonoBehaviour
                     }
                     else
                     {
+                        Debug.Log("spawn rate 1'den KÜÇÜK");
                         if (Random.Range(0.00f, 1.00f) < spawnRate)
                             CreateOrder(customers[Random.Range(0, customers.Count)]);
                     }
@@ -134,7 +140,8 @@ public class GameLogic : MonoBehaviour
         }
         else
         {
-            Debug.Log("Elinde sipariş yok.");
+            CreateOrder(customers[Random.Range(0, customers.Count)]);
+            SetCustomer();
         }
     }
     string percentage;
@@ -227,6 +234,7 @@ public class GameLogic : MonoBehaviour
                         break;
                     case Taste.Preference.dislike:
                         result.totalInputCount += ingredients[ingredientID].tastes[i].tasteInput;
+                        if (result.totalInputCount<=result.x_max)
                         result.CalculateAverageTasteRating(Satisfaction.CalculateSatisfaction(result.x_max, result.x_zero, result.totalInputCount, -1));
                         break;
                     default:
