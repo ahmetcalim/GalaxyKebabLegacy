@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 85858377}
   - component: {fileID: 85858376}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: OrderView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -719,6 +719,109 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 91090322}
   m_CullTransparentMesh: 0
+--- !u!1 &121013393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 121013394}
+  - component: {fileID: 121013396}
+  - component: {fileID: 121013395}
+  - component: {fileID: 121013397}
+  m_Layer: 5
+  m_Name: SummaryView
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &121013394
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121013393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1525184810}
+  - {fileID: 560487013}
+  - {fileID: 1720081902}
+  - {fileID: 1850505135}
+  - {fileID: 1341102457}
+  - {fileID: 1601128656}
+  - {fileID: 1894355329}
+  - {fileID: 913937828}
+  - {fileID: 1357710494}
+  - {fileID: 1278312842}
+  - {fileID: 1893887547}
+  m_Father: {fileID: 1014950798}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &121013395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121013393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &121013396
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121013393}
+  m_CullTransparentMesh: 0
+--- !u!114 &121013397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121013393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6bf617356d311c4caaf881548b6131b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalOrder: {fileID: 1894355330}
+  successOrder: {fileID: 913937829}
+  dailyRating: {fileID: 1357710495}
+  globalFirst: {fileID: 1278312843}
+  globalLast: {fileID: 1893887548}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -2813,6 +2916,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558631100}
   m_CullTransparentMesh: 0
+--- !u!1 &560487012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 560487013}
+  - component: {fileID: 560487015}
+  - component: {fileID: 560487014}
+  m_Layer: 5
+  m_Name: toplamSiparis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &560487013
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560487012}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 121013394}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -112.6, y: 240.2}
+  m_SizeDelta: {x: 225.2, y: 33.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &560487014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560487012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Toplam sipari\u015F:"
+--- !u!222 &560487015
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560487012}
+  m_CullTransparentMesh: 0
 --- !u!1 &588458301
 GameObject:
   m_ObjectHideFlags: 0
@@ -4047,6 +4229,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 909309125}
   m_CullTransparentMesh: 0
+--- !u!1 &913937827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 913937828}
+  - component: {fileID: 913937830}
+  - component: {fileID: 913937829}
+  m_Layer: 5
+  m_Name: basariliValue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &913937828
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913937827}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 121013394}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 104.00008, y: 207.86002}
+  m_SizeDelta: {x: 225.2, y: 31.29}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &913937829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913937827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &913937830
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913937827}
+  m_CullTransparentMesh: 0
 --- !u!1 &914915444
 GameObject:
   m_ObjectHideFlags: 0
@@ -4107,153 +4368,426 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients:
-  - ID: 0
-    ingredientName: Sumac
+  - ingredientName: Sumac
+    ID: 0
     tastes:
-    - taste: 6
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 7
-    - taste: 0
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 5
-  - ID: 1
-    ingredientName: Coriander
+    actionAmount: 0
+  - ingredientName: Coriander
+    ID: 1
     tastes:
-    - taste: 6
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 2
-    - taste: 1
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 6
-  - ID: 2
-    ingredientName: Fermented Olives
+    actionAmount: 0
+  - ingredientName: Fermented Olives
+    ID: 2
     tastes:
-    - taste: 6
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 9
-    - taste: 3
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 4
-  - ID: 3
-    ingredientName: Onions
+    actionAmount: 0
+  - ingredientName: Onions
+    ID: 3
     tastes:
-    - taste: 6
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 3
-    - taste: 2
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 12
-  - ID: 4
-    ingredientName: Soy Sauce
+    actionAmount: 0
+  - ingredientName: Soy Sauce
+    ID: 4
     tastes:
-    - taste: 6
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 11
-    - taste: 4
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 6
-  - ID: 5
-    ingredientName: Heavy Cream
+    actionAmount: 0
+  - ingredientName: Heavy Cream
+    ID: 5
     tastes:
-    - taste: 6
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 8
-    - taste: 5
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 1
-  - ID: 6
-    ingredientName: Fermented Pear
+    actionAmount: 0
+  - ingredientName: Fermented Pear
+    ID: 6
     tastes:
-    - taste: 5
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 13
-    - taste: 0
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 4
-  - ID: 7
-    ingredientName: Chocolate
+    actionAmount: 0
+  - ingredientName: Chocolate
+    ID: 7
     tastes:
-    - taste: 5
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 15
-    - taste: 1
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 2
-  - ID: 8
-    ingredientName: Mustard
+    actionAmount: 0
+  - ingredientName: Mustard
+    ID: 8
     tastes:
-    - taste: 5
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 3
-    - taste: 2
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 6
-  - ID: 9
-    ingredientName: Tomatoes
+    actionAmount: 0
+  - ingredientName: Tomatoes
+    ID: 9
     tastes:
-    - taste: 5
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 4
-    - taste: 3
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 3
-  - ID: 10
-    ingredientName: Ketchup
+    actionAmount: 0
+  - ingredientName: Ketchup
+    ID: 10
     tastes:
-    - taste: 5
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 6
-    - taste: 4
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 7
-  - ID: 11
-    ingredientName: Salt
+    actionAmount: 0
+  - ingredientName: Salt
+    ID: 11
     tastes:
-    - taste: 4
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 17
-    - taste: 0
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 1
-  - ID: 12
-    ingredientName: PLC
+    actionAmount: 0
+  - ingredientName: PLC
+    ID: 12
     tastes:
-    - taste: 4
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 0
-    - taste: 1
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 0
-  - ID: 13
-    ingredientName: Garlic Sauce
+    actionAmount: 0
+  - ingredientName: Garlic Sauce
+    ID: 13
     tastes:
-    - taste: 4
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 7
-    - taste: 2
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 14
-  - ID: 14
-    ingredientName: Pickled Cucumber
+    actionAmount: 0
+  - ingredientName: Pickled Cucumber
+    ID: 14
     tastes:
-    - taste: 4
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 13
-    - taste: 3
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 3
-  - ID: 15
-    ingredientName: Wheat Sprouts
+    actionAmount: 0
+  - ingredientName: Wheat Sprouts
+    ID: 15
     tastes:
-    - taste: 3
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 4
-    - taste: 0
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 6
-  - ID: 16
-    ingredientName: Broccoli
+    actionAmount: 0
+  - ingredientName: Broccoli
+    ID: 16
     tastes:
-    - taste: 3
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 4
-    - taste: 1
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 13
-  - ID: 17
-    ingredientName: Jalepeno
+    actionAmount: 0
+  - ingredientName: Jalepeno
+    ID: 17
     tastes:
-    - taste: 3
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 6
-    - taste: 2
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 10
-  - ID: 18
-    ingredientName: Cumin
+    actionAmount: 0
+  - ingredientName: Cumin
+    ID: 18
     tastes:
-    - taste: 2
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 5
-    - taste: 0
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 7
-  - ID: 19
-    ingredientName: Chilli Flakes
+    actionAmount: 0
+  - ingredientName: Chilli Flakes
+    ID: 19
     tastes:
-    - taste: 2
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 20
-    - taste: 1
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 3
-  - ID: 20
-    ingredientName: Cider
+    actionAmount: 0
+  - ingredientName: Cider
+    ID: 20
     tastes:
-    - taste: 1
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 11
-    - taste: 0
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 12
+    actionAmount: 0
   gLogic: {fileID: 914915448}
   ingredientItem: {fileID: 4258734271927757586, guid: a76718198c9ad3747a232e0e6e2072b9,
     type: 3}
@@ -4278,32 +4812,46 @@ MonoBehaviour:
       orderTime: 0
     Tastes:
     - taste: 0
-      x_zero: 30
-      x_max: 65
+      x_zero: 16
+      x_max: 80
+      tasteRating: 0
+      totalInputCount: 0
       preference: 1
     - taste: 1
-      x_zero: 40
-      x_max: 70
+      x_zero: 15
+      x_max: 79
+      tasteRating: 0
+      totalInputCount: 0
       preference: 2
     - taste: 2
-      x_zero: 35
-      x_max: 60
+      x_zero: 17
+      x_max: 80
+      tasteRating: 0
+      totalInputCount: 0
       preference: 0
     - taste: 3
-      x_zero: 30
-      x_max: 50
+      x_zero: 22
+      x_max: 81
+      tasteRating: 0
+      totalInputCount: 0
       preference: 1
     - taste: 4
-      x_zero: 30
-      x_max: 50
+      x_zero: 16
+      x_max: 78
+      tasteRating: 0
+      totalInputCount: 0
       preference: 0
     - taste: 5
-      x_zero: 30
-      x_max: 50
+      x_zero: 18
+      x_max: 79
+      tasteRating: 0
+      totalInputCount: 0
       preference: 0
     - taste: 6
-      x_zero: 30
-      x_max: 50
+      x_zero: 17
+      x_max: 77
+      tasteRating: 0
+      totalInputCount: 0
       preference: 0
   - customerName: Alien 2
     averageTasteRatingnValue: 0
@@ -4312,187 +4860,572 @@ MonoBehaviour:
       orderTime: 0
     Tastes:
     - taste: 0
-      x_zero: 30
-      x_max: 65
+      x_zero: 20
+      x_max: 79
+      tasteRating: 0
+      totalInputCount: 0
       preference: 0
     - taste: 1
-      x_zero: 40
-      x_max: 70
+      x_zero: 17
+      x_max: 77
+      tasteRating: 0
+      totalInputCount: 0
       preference: 0
     - taste: 2
-      x_zero: 35
-      x_max: 60
+      x_zero: 22
+      x_max: 77
+      tasteRating: 0
+      totalInputCount: 0
       preference: 2
     - taste: 3
-      x_zero: 30
-      x_max: 50
+      x_zero: 25
+      x_max: 79
+      tasteRating: 0
+      totalInputCount: 0
       preference: 1
     - taste: 4
-      x_zero: 30
-      x_max: 50
+      x_zero: 15
+      x_max: 73
+      tasteRating: 0
+      totalInputCount: 0
       preference: 1
     - taste: 5
-      x_zero: 30
-      x_max: 50
+      x_zero: 25
+      x_max: 78
+      tasteRating: 0
+      totalInputCount: 0
       preference: 0
     - taste: 6
-      x_zero: 30
-      x_max: 50
+      x_zero: 24
+      x_max: 69
+      tasteRating: 0
+      totalInputCount: 0
       preference: 0
+  - customerName: Alien 3
+    averageTasteRatingnValue: 0
+    personality:
+      impatianceValue: 0
+      orderTime: 0
+    Tastes:
+    - taste: 0
+      x_zero: 15
+      x_max: 62
+      tasteRating: 0
+      totalInputCount: 0
+      preference: 0
+    - taste: 1
+      x_zero: 15
+      x_max: 61
+      tasteRating: 0
+      totalInputCount: 0
+      preference: 1
+    - taste: 2
+      x_zero: 18
+      x_max: 63
+      tasteRating: 0
+      totalInputCount: 0
+      preference: 1
+    - taste: 3
+      x_zero: 19
+      x_max: 64
+      tasteRating: 0
+      totalInputCount: 0
+      preference: 0
+    - taste: 4
+      x_zero: 15
+      x_max: 61
+      tasteRating: 0
+      totalInputCount: 0
+      preference: 2
+    - taste: 5
+      x_zero: 25
+      x_max: 78
+      tasteRating: 0
+      totalInputCount: 0
+      preference: 0
+    - taste: 6
+      x_zero: 23
+      x_max: 63
+      tasteRating: 0
+      totalInputCount: 0
+      preference: 0
+  - customerName: Alien 4
+    averageTasteRatingnValue: 0
+    personality:
+      impatianceValue: 0
+      orderTime: 0
+    Tastes:
+    - taste: 0
+      x_zero: 19
+      x_max: 62
+      tasteRating: 0
+      totalInputCount: 0
+      preference: 2
+    - taste: 1
+      x_zero: 23
+      x_max: 65
+      tasteRating: 0
+      totalInputCount: 0
+      preference: 1
+    - taste: 2
+      x_zero: 21
+      x_max: 63
+      tasteRating: 0
+      totalInputCount: 0
+      preference: 0
+    - taste: 3
+      x_zero: 15
+      x_max: 62
+      tasteRating: 0
+      totalInputCount: 0
+      preference: 2
+    - taste: 4
+      x_zero: 15
+      x_max: 61
+      tasteRating: 0
+      totalInputCount: 0
+      preference: 0
+    - taste: 5
+      x_zero: 16
+      x_max: 65
+      tasteRating: 0
+      totalInputCount: 0
+      preference: 1
+    - taste: 6
+      x_zero: 17
+      x_max: 69
+      tasteRating: 0
+      totalInputCount: 0
+      preference: 1
   ingredients:
-  - ID: 0
-    ingredientName: Sumac
+  - ingredientName: Sumac
+    ID: 0
     tastes:
-    - taste: 6
-      tasteInput: 7
-    - taste: 0
-      tasteInput: 5
-  - ID: 1
-    ingredientName: Coriander
+    - taste:
+        taste: 6
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 3.5
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 2.5
+    actionAmount: 2
+  - ingredientName: Coriander
+    ID: 1
     tastes:
-    - taste: 6
-      tasteInput: 2
-    - taste: 1
-      tasteInput: 6
-  - ID: 2
-    ingredientName: Fermented Olives
-    tastes:
-    - taste: 6
-      tasteInput: 9
-    - taste: 3
-      tasteInput: 4
-  - ID: 3
-    ingredientName: Onions
-    tastes:
-    - taste: 6
-      tasteInput: 3
-    - taste: 2
-      tasteInput: 12
-  - ID: 4
-    ingredientName: Soy Sauce
-    tastes:
-    - taste: 6
-      tasteInput: 11
-    - taste: 4
-      tasteInput: 6
-  - ID: 5
-    ingredientName: Heavy Cream
-    tastes:
-    - taste: 6
-      tasteInput: 8
-    - taste: 5
+    - taste:
+        taste: 6
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 1
-  - ID: 6
-    ingredientName: Fermented Pear
+    - taste:
+        taste: 1
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 3
+    actionAmount: 20
+  - ingredientName: Fermented Olives
+    ID: 2
     tastes:
-    - taste: 5
-      tasteInput: 13
-    - taste: 0
-      tasteInput: 4
-  - ID: 7
-    ingredientName: Chocolate
-    tastes:
-    - taste: 5
-      tasteInput: 15
-    - taste: 1
+    - taste:
+        taste: 6
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 4.5
+    - taste:
+        taste: 3
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 2
-  - ID: 8
-    ingredientName: Mustard
+    actionAmount: 8
+  - ingredientName: Onions
+    ID: 3
     tastes:
-    - taste: 5
-      tasteInput: 3
-    - taste: 2
+    - taste:
+        taste: 6
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 1.5
+    - taste:
+        taste: 2
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 6
-  - ID: 9
-    ingredientName: Tomatoes
+    actionAmount: 20
+  - ingredientName: Soy Sauce
+    ID: 4
     tastes:
-    - taste: 5
+    - taste:
+        taste: 6
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 5.5
+    - taste:
+        taste: 4
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 3
+    actionAmount: 10
+  - ingredientName: Heavy Cream
+    ID: 5
+    tastes:
+    - taste:
+        taste: 6
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 4
-    - taste: 3
-      tasteInput: 3
-  - ID: 10
-    ingredientName: Ketchup
+    - taste:
+        taste: 5
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 0.5
+    actionAmount: 5
+  - ingredientName: Fermented Pear
+    ID: 6
     tastes:
-    - taste: 5
-      tasteInput: 6
-    - taste: 4
-      tasteInput: 7
-  - ID: 11
-    ingredientName: Salt
+    - taste:
+        taste: 5
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 6.5
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 2
+    actionAmount: 20
+  - ingredientName: Chocolate
+    ID: 7
     tastes:
-    - taste: 4
-      tasteInput: 17
-    - taste: 0
+    - taste:
+        taste: 5
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 7.5
+    - taste:
+        taste: 1
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 1
-  - ID: 12
-    ingredientName: Fermented Seaweed
+    actionAmount: 12
+  - ingredientName: Mustard
+    ID: 8
     tastes:
-    - taste: 4
-      tasteInput: 6
-    - taste: 1
-      tasteInput: 10
-  - ID: 13
-    ingredientName: Garlic Sauce
-    tastes:
-    - taste: 4
-      tasteInput: 7
-    - taste: 2
-      tasteInput: 14
-  - ID: 14
-    ingredientName: Pickled Cucumber
-    tastes:
-    - taste: 4
-      tasteInput: 13
-    - taste: 3
+    - taste:
+        taste: 5
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 1.5
+    - taste:
+        taste: 2
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 3
-  - ID: 15
-    ingredientName: Wheat Sprouts
+    actionAmount: 5
+  - ingredientName: Tomatoes
+    ID: 9
     tastes:
-    - taste: 3
-      tasteInput: 4
-    - taste: 0
-      tasteInput: 6
-  - ID: 16
-    ingredientName: Broccoli
+    - taste:
+        taste: 5
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 2
+    - taste:
+        taste: 3
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 1.5
+    actionAmount: 20
+  - ingredientName: Ketchup
+    ID: 10
     tastes:
-    - taste: 3
-      tasteInput: 4
-    - taste: 1
-      tasteInput: 13
-  - ID: 17
-    ingredientName: Jalepeno
+    - taste:
+        taste: 5
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 3
+    - taste:
+        taste: 4
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 3.5
+    actionAmount: 8
+  - ingredientName: Salt
+    ID: 11
     tastes:
-    - taste: 3
-      tasteInput: 6
-    - taste: 2
-      tasteInput: 10
-  - ID: 18
-    ingredientName: Cumin
+    - taste:
+        taste: 4
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 2.5
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 0.5
+    actionAmount: 2
+  - ingredientName: Fermented Seaweed
+    ID: 12
     tastes:
-    - taste: 2
+    - taste:
+        taste: 4
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 3
+    - taste:
+        taste: 1
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 5
-    - taste: 0
+    actionAmount: 15
+  - ingredientName: Garlic Sauce
+    ID: 13
+    tastes:
+    - taste:
+        taste: 4
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 3.5
+    - taste:
+        taste: 2
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 7
-  - ID: 19
-    ingredientName: Chilli Flakes
+    actionAmount: 10
+  - ingredientName: Pickled Cucumber
+    ID: 14
     tastes:
-    - taste: 2
-      tasteInput: 20
-    - taste: 1
+    - taste:
+        taste: 4
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 6.5
+    - taste:
+        taste: 3
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 1.5
+    actionAmount: 20
+  - ingredientName: Wheat Sprouts
+    ID: 15
+    tastes:
+    - taste:
+        taste: 3
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 2
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
       tasteInput: 3
-  - ID: 20
-    ingredientName: Cider
+    actionAmount: 10
+  - ingredientName: Broccoli
+    ID: 16
     tastes:
-    - taste: 1
-      tasteInput: 11
-    - taste: 0
-      tasteInput: 12
+    - taste:
+        taste: 3
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 2
+    - taste:
+        taste: 1
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 6.5
+    actionAmount: 20
+  - ingredientName: Jalepeno
+    ID: 17
+    tastes:
+    - taste:
+        taste: 3
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 3
+    - taste:
+        taste: 2
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 5
+    actionAmount: 10
+  - ingredientName: Cumin
+    ID: 18
+    tastes:
+    - taste:
+        taste: 2
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 2.5
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 3.5
+    actionAmount: 2
+  - ingredientName: Chilli Flakes
+    ID: 19
+    tastes:
+    - taste:
+        taste: 2
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 10
+    - taste:
+        taste: 1
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 1.5
+    actionAmount: 2
+  - ingredientName: Cider
+    ID: 20
+    tastes:
+    - taste:
+        taste: 1
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 5.5
+    - taste:
+        taste: 0
+        x_zero: 0
+        x_max: 0
+        tasteRating: 0
+        totalInputCount: 0
+        preference: 0
+      tasteInput: 6
+    actionAmount: 5
   viewport: {fileID: 1151647648}
   oItem: {fileID: 676017147392888186, guid: 8c860c09c74d15a4b8487501eae7935c, type: 3}
   oControl: {fileID: 1310275427}
+  summaryView: {fileID: 121013397}
   star: {fileID: 7195276488973041280, guid: a8d2ae25bcdbb634fbf32e8005c06ca5, type: 3}
-  playingTime: 300
-  interval: 20
+  playingTime: 180
+  interval: 30
+  timeCounter: 0
 --- !u!1 &946660374
 GameObject:
   m_ObjectHideFlags: 0
@@ -4925,7 +5858,7 @@ RectTransform:
   m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
   m_Children:
   - {fileID: 85858375}
-  - {fileID: 1483194223}
+  - {fileID: 121013394}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5627,6 +6560,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266595043}
   m_CullTransparentMesh: 0
+--- !u!1 &1278312841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1278312842}
+  - component: {fileID: 1278312844}
+  - component: {fileID: 1278312843}
+  m_Layer: 5
+  m_Name: ilkValue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1278312842
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278312841}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 121013394}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 104.00008, y: 140.59999}
+  m_SizeDelta: {x: 225.2, y: 31.29}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1278312843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278312841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1278312844
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278312841}
+  m_CullTransparentMesh: 0
 --- !u!1 &1285452880
 GameObject:
   m_ObjectHideFlags: 0
@@ -6079,6 +7091,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336177644}
   m_CullTransparentMesh: 0
+--- !u!1 &1341102456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1341102457}
+  - component: {fileID: 1341102459}
+  - component: {fileID: 1341102458}
+  m_Layer: 5
+  m_Name: ilkGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1341102457
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341102456}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 121013394}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -112.59987, y: 140.59999}
+  m_SizeDelta: {x: 225.2, y: 31.29}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1341102458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341102456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'ilk Global Rating :'
+--- !u!222 &1341102459
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341102456}
+  m_CullTransparentMesh: 0
 --- !u!1 &1351404351
 GameObject:
   m_ObjectHideFlags: 0
@@ -6291,6 +7382,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1352199526}
+  m_CullTransparentMesh: 0
+--- !u!1 &1357710493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1357710494}
+  - component: {fileID: 1357710496}
+  - component: {fileID: 1357710495}
+  m_Layer: 5
+  m_Name: dailyRatingValue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1357710494
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357710493}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 121013394}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 104, y: 172.94006}
+  m_SizeDelta: {x: 225.2, y: 33.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1357710495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357710493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1357710496
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357710493}
   m_CullTransparentMesh: 0
 --- !u!1 &1388461046
 GameObject:
@@ -6583,81 +7753,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460526099}
   m_CullTransparentMesh: 0
---- !u!1 &1483194222
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1483194223}
-  - component: {fileID: 1483194225}
-  - component: {fileID: 1483194224}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1483194223
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483194222}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1626467395}
-  m_Father: {fileID: 1014950798}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1483194224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483194222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5176471}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &1483194225
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483194222}
-  m_CullTransparentMesh: 0
 --- !u!1 &1509567173
 GameObject:
   m_ObjectHideFlags: 0
@@ -6736,6 +7831,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509567173}
+  m_CullTransparentMesh: 0
+--- !u!1 &1525184809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1525184810}
+  - component: {fileID: 1525184812}
+  - component: {fileID: 1525184811}
+  m_Layer: 5
+  m_Name: gameOver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1525184810
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525184809}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 121013394}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.0000076293945, y: -59.8}
+  m_SizeDelta: {x: 0, y: 119.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1525184811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525184809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 50
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Oyun Bitti
+--- !u!222 &1525184812
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525184809}
   m_CullTransparentMesh: 0
 --- !u!1 &1571266020
 GameObject:
@@ -6816,7 +7990,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571266020}
   m_CullTransparentMesh: 0
---- !u!1 &1626467394
+--- !u!1 &1601128655
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6824,49 +7998,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1626467395}
-  - component: {fileID: 1626467397}
-  - component: {fileID: 1626467396}
+  - component: {fileID: 1601128656}
+  - component: {fileID: 1601128658}
+  - component: {fileID: 1601128657}
   m_Layer: 5
-  m_Name: Text
+  m_Name: sonGlobal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1626467395
+--- !u!224 &1601128656
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1626467394}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 1601128655}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Children: []
-  m_Father: {fileID: 1483194223}
-  m_RootOrder: 0
+  m_Father: {fileID: 121013394}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -112.59987, y: 107}
+  m_SizeDelta: {x: 225.2, y: 31.29}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1626467396
+--- !u!114 &1601128657
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1626467394}
+  m_GameObject: {fileID: 1601128655}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8784348, b: 0, a: 1}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -6875,25 +8049,25 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Oyun Bitti
---- !u!222 &1626467397
+  m_Text: 'son Global Rating :'
+--- !u!222 &1601128658
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1626467394}
+  m_GameObject: {fileID: 1601128655}
   m_CullTransparentMesh: 0
 --- !u!1 &1633269464
 GameObject:
@@ -7186,6 +8360,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704524015}
   m_CullTransparentMesh: 0
+--- !u!1 &1720081901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1720081902}
+  - component: {fileID: 1720081904}
+  - component: {fileID: 1720081903}
+  m_Layer: 5
+  m_Name: basariliSiparis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1720081902
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720081901}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 121013394}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -112.59987, y: 207.86}
+  m_SizeDelta: {x: 225.2, y: 31.29}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1720081903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720081901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Basarili sipari\u015F:"
+--- !u!222 &1720081904
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720081901}
+  m_CullTransparentMesh: 0
 --- !u!1 &1790300875
 GameObject:
   m_ObjectHideFlags: 0
@@ -7344,6 +8597,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802470587}
   m_CullTransparentMesh: 0
+--- !u!1 &1850505134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1850505135}
+  - component: {fileID: 1850505137}
+  - component: {fileID: 1850505136}
+  m_Layer: 5
+  m_Name: Average DailyRating
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1850505135
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850505134}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 121013394}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -112.59987, y: 172.94005}
+  m_SizeDelta: {x: 225.2, y: 33.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1850505136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850505134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Daily Rating :'
+--- !u!222 &1850505137
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850505134}
+  m_CullTransparentMesh: 0
 --- !u!1 &1854513649
 GameObject:
   m_ObjectHideFlags: 0
@@ -7496,6 +8828,164 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1893887546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1893887547}
+  - component: {fileID: 1893887549}
+  - component: {fileID: 1893887548}
+  m_Layer: 5
+  m_Name: sonValue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1893887547
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893887546}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 121013394}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 104.000305, y: 106.99989}
+  m_SizeDelta: {x: 225.2, y: 31.29}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1893887548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893887546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1893887549
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893887546}
+  m_CullTransparentMesh: 0
+--- !u!1 &1894355328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1894355329}
+  - component: {fileID: 1894355331}
+  - component: {fileID: 1894355330}
+  m_Layer: 5
+  m_Name: toplamValue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1894355329
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894355328}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 121013394}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 104.00008, y: 240.20001}
+  m_SizeDelta: {x: 225.2, y: 33.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1894355330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894355328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1894355331
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894355328}
+  m_CullTransparentMesh: 0
 --- !u!1 &1916413048
 GameObject:
   m_ObjectHideFlags: 0

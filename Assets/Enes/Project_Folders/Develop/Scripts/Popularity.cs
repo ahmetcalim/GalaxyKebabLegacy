@@ -19,6 +19,7 @@ public class Popularity
     {
         if (File.Exists(DailyPopularity.path))
         {
+            Debug.Log("popularity active");
             Popularity p = ReadFromJSON(GetJsonPopularity());
             userID = p.userID;
             averageDailyPopularity = p.averageDailyPopularity;

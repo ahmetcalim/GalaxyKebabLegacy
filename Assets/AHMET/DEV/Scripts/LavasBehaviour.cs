@@ -9,11 +9,11 @@ public class LavasBehaviour : MonoBehaviour
         if (collider.gameObject.tag == "DonerPiece")
         {
           
-            if (collider.gameObject.GetComponent<HingeJoint>() == null)
+            if (collider.gameObject.GetComponent<FixedJoint>() == null)
             {
-                collider.gameObject.AddComponent<HingeJoint>();
+                collider.gameObject.AddComponent<FixedJoint>();
             }
-            collider.gameObject.GetComponent<HingeJoint>().connectedBody = GetComponent<Rigidbody>();
+            collider.gameObject.GetComponent<FixedJoint>().connectedBody = GetComponent<Rigidbody>();
         }
     }
 }

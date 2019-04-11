@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class WrapOMatic : MonoBehaviour
 {
-    public int lavasCount;
+    public static int lavasCount = 20;
 }

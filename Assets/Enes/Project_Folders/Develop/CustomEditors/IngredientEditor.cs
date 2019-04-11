@@ -40,7 +40,7 @@ public class IngredientEditor : Editor
         if (GUILayout.Button("Clean"))
         {
             customerCreate.ingredients.Clear();
-        }
+        }       
     }
 
 }

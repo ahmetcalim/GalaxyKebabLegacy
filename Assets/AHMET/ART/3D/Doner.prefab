@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endPoint: {fileID: 1853074978576365758}
+  startPoint: {fileID: 3083441499968391529}
   amount: 0
 --- !u!137 &3408191651439517821
 SkinnedMeshRenderer:
@@ -213,8 +214,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 3083441499968391529}
   m_AABB:
-    m_Center: {x: 0, y: 0, z: 0.213813}
-    m_Extent: {x: 1, y: 0.0366867, z: 0.21459997}
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 1, y: 0.0366867, z: 0.03}
   m_DirtyAABB: 0
 --- !u!114 &361406599
 MonoBehaviour:

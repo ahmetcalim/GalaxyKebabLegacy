@@ -7,14 +7,24 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.Events;
+using System.Collections.Generic;
 
+[System.Serializable]
+public class ParameterEvent : UnityEvent<int>
+{
+
+}
 namespace Valve.VR.InteractionSystem
 {
-	//-------------------------------------------------------------------------
-	[RequireComponent( typeof( Interactable ) )]
+   
+    //-------------------------------------------------------------------------
+    [RequireComponent( typeof( Interactable ) )]
 	public class LinearDrive : MonoBehaviour
     {
+    
         public UnityEvent onEndPoint;
+        public ParameterEvent onIngredientTrayChanged;
+        public ParameterEvent onIngredientTrayChangedRight;
         public Transform startPosition;
 		public Transform endPosition;
 		public LinearMapping linearMapping;
@@ -31,8 +41,16 @@ namespace Valve.VR.InteractionSystem
         protected float mappingChangeRate;
         protected int sampleCount = 0;
         protected Interactable interactable;
+        private int currentPoint = 0;
+        public List<Transform> points;
 
-
+        public enum LinearDriveFor
+        {
+            WRAPOMATIC,
+            INGREDIENT_1,
+            INGREDIENT_2
+        }
+        public LinearDriveFor linearDriveFor;
         protected virtual void Awake()
         {
             mappingChangeSamples = new float[numMappingChangeSamples];
@@ -87,6 +105,8 @@ namespace Valve.VR.InteractionSystem
         protected virtual void OnDetachedFromHand(Hand hand)
         {
             CalculateMappingChangeRate();
+          
+            
         }
 
 
@@ -132,47 +152,141 @@ namespace Valve.VR.InteractionSystem
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.tag == "EndPoint" && !arrivedToEndpoint)
+            switch (linearDriveFor)
             {
-                if (canUseWrapomatic)
-                {
-                    onEndPoint.Invoke();
-                }
-                canUseWrapomatic = false;
-                arrivedToEndpoint = true;
-               
-               
-                Debug.Log("Teslim et > Lavaş oluştur.");
+                case LinearDriveFor.WRAPOMATIC:
+                    if (other.tag == "EndPoint" && !arrivedToEndpoint)
+                    {
+                        if (canUseWrapomatic)
+                        {
+                            onEndPoint.Invoke();
+                        }
+                        canUseWrapomatic = false;
+                        arrivedToEndpoint = true;
+
+
+                        Debug.Log("Teslim et > Lavaş oluştur.");
+                    }
+                    if (other.tag == "StartPoint" && arrivedToEndpoint)
+                    {
+                        arrivedToEndpoint = false;
+                        UpdateLinearMapping(transform);
+                        Debug.Log("Çıktı");
+                    }
+                    break;
+                case LinearDriveFor.INGREDIENT_1:
+                    Debug.Log("SOL TRİGGER ÇALIŞTI");
+                    if (other.tag == "Point_1")
+                    {
+                        currentPoint = 0;
+                        
+                        Debug.Log("Tepsi 1");
+                        //Birinci tepsi
+                    }
+                    if (other.tag == "Point_2")
+                    {
+                        currentPoint = 1;
+                        Debug.Log("Tepsi 2");
+                        //İkinci tepsi
+                    }
+                    if (other.tag == "Point_3")
+                    {
+                        currentPoint = 2;
+                        Debug.Log("Tepsi 3");
+                        //Üçüncü tepsi
+                    }
+                    if (other.tag == "Point_4")
+                    {
+                        currentPoint = 3;
+                        Debug.Log("Tepsi 4");
+                        //Dördüncü tepsi
+                    }
+                    onIngredientTrayChanged.Invoke(currentPoint);
+
+                    break;
+                case LinearDriveFor.INGREDIENT_2:
+                    Debug.Log("SAĞ TRİGGER ÇALIŞTI");
+                    if (other.tag == "Point_1R")
+                    {
+                        currentPoint = 0;
+                        Debug.Log("Tepsi 1");
+                        //Birinci tepsi
+                    }
+                    if (other.tag == "Point_2R")
+                    {
+                        currentPoint = 1;
+                        Debug.Log("Tepsi 2");
+                        //İkinci tepsi
+                    }
+                    if (other.tag == "Point_3R")
+                    {
+                        currentPoint = 2;
+                        Debug.Log("Tepsi 3");
+                        //Üçüncü tepsi
+                    }
+                    if (other.tag == "Point_4R")
+                    {
+                        currentPoint = 3;
+                        Debug.Log("Tepsi 4");
+                        //Dördüncü tepsi
+                    }
+                    onIngredientTrayChangedRight.Invoke(currentPoint);
+
+                    break;
+                default:
+                    break;
             }
-            if (other.tag == "StartPoint" && arrivedToEndpoint)
-            {
-                arrivedToEndpoint = false;
-                UpdateLinearMapping(transform);
-                Debug.Log("Çıktı");
-            }
+           
+           
         }
         protected virtual void Update()
         {
-            if ( maintainMomemntum && mappingChangeRate != 0.0f )
-			{
-				//Dampen the mapping change rate and apply it to the mapping
-				mappingChangeRate = Mathf.Lerp( mappingChangeRate, 0.0f, momemtumDampenRate * Time.deltaTime );
-				linearMapping.value = Mathf.Clamp01( linearMapping.value + ( mappingChangeRate * Time.deltaTime ) );
-
-				if ( repositionGameObject )
-				{
-					transform.position = Vector3.Lerp( startPosition.position, endPosition.position, linearMapping.value );
-				}
-               
-               
-			}
-            else
+            switch (linearDriveFor)
             {
-                if (arrivedToEndpoint)
-                {
-                    transform.position = Vector3.MoveTowards(transform.position, startPosition.position, 0.1f);
-                }
+                case LinearDriveFor.WRAPOMATIC:
+                    if (maintainMomemntum && mappingChangeRate != 0.0f)
+                    {
+                        //Dampen the mapping change rate and apply it to the mapping
+                        mappingChangeRate = Mathf.Lerp(mappingChangeRate, 0.0f, momemtumDampenRate * Time.deltaTime);
+                        linearMapping.value = Mathf.Clamp01(linearMapping.value + (mappingChangeRate * Time.deltaTime));
+
+                        if (repositionGameObject)
+                        {
+                            transform.position = Vector3.Lerp(startPosition.position, endPosition.position, linearMapping.value);
+                        }
+
+
+                    }
+                    else
+                    {
+                        if (arrivedToEndpoint)
+                        {
+                            transform.position = Vector3.MoveTowards(transform.position, startPosition.position, 0.1f);
+                        }
+                    }
+                    break;
+                case LinearDriveFor.INGREDIENT_1:
+                    if (maintainMomemntum && mappingChangeRate != 0.0f)
+                    {
+                        //Dampen the mapping change rate and apply it to the mapping
+                        mappingChangeRate = Mathf.Lerp(mappingChangeRate, 0.0f, momemtumDampenRate * Time.deltaTime);
+                        linearMapping.value = Mathf.Clamp01(linearMapping.value + (mappingChangeRate * Time.deltaTime));
+
+                        if (repositionGameObject)
+                        {
+                            transform.position = Vector3.Lerp(startPosition.position, endPosition.position, linearMapping.value);
+                        }
+                    }
+                    else
+                    {
+                        transform.position = points[currentPoint].position;
+
+                    }
+                    break;
+                default:
+                    break;
             }
+            
           
 
         }

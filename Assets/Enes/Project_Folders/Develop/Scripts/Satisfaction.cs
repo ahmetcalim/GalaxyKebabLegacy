@@ -30,16 +30,17 @@ public static class Satisfaction
         (GetTasteInputValue(tasteInput,xMax)+0.01f-xZero))))-1)*preference;
     }
 
-    public static double CalculateIrrelevantSatisfaction(double tasteInput)
+    public static double CalculateIrrelevantSatisfaction_OverTaste(double tasteInput)
     {
-        return -Math.Pow(tasteInput/182.5f,2);
+        return -Math.Pow(tasteInput/119.52f,2);
     }
-
-    /// <param name="orderTime">orderTime is the time since order is given</param>
-    /// /// <param name="tBase">random base time</param>
-    /// /// <param name="averageDailyPopularity">average daily popularity</param>
-    /// /// <param name="pr">pr is the price of the unit sold</param>
-    /// /// /// <param name="cogs">cogs is the cost of the unit sold</param>
+    public static double CalculateIrrelevantSatisfaction_SweetBump(double tasteInput)
+    {
+        if (tasteInput < 71)
+            return 0.34f - (1 + Math.Pow(tasteInput - 55, 2)) / 675;
+        else
+           return CalculateIrrelevantSatisfaction_OverTaste(tasteInput);
+    }
 
     public static double CalculateImpactFactor(int orderTime,int tBase,double averageDailyPopularity,float pr,float cogs)
     {
@@ -62,7 +63,6 @@ public static class Satisfaction
         else
             return 1;
     }
-
     static double CalculateWaitingTime(int orderTime,int tBase,double averageDailyPopularity)
     {
         return (orderTime - ((tBase/2) - 3 * averageDailyPopularity))*(-(0.26f/6*averageDailyPopularity))+1.13f;

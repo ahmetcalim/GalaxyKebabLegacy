@@ -14,6 +14,17 @@ TagManager:
   - LavasIngredient
   - EndPoint
   - StartPoint
+  - Picak
+  - AddableLavas
+  - ContactPoint
+  - Point_1
+  - Point_2
+  - Point_3
+  - Point_4
+  - Point_1R
+  - Point_2R
+  - Point_3R
+  - Point_4R
   layers:
   - Default
   - TransparentFX

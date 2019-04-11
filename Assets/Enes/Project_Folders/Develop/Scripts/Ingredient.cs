@@ -4,28 +4,18 @@ using UnityEngine;
 
 [System.Serializable]
 public class Ingredient
-{
-    public int ID;
+{  
     public string ingredientName;
+    public int ID;
     public List<IngredientTaste> tastes;
     [System.NonSerialized]
-    public double totalTasteInput;
-    [System.NonSerialized]
-    public double inputPercentage;
-
-    public double GetTotalTasteInput()
-    {
-        totalTasteInput = 0;
-        for (int i = 0; i < tastes.Count; i++)
-        {
-            totalTasteInput += tastes[i].tasteInput;
-        }
-        return totalTasteInput;
-    }
+    public float rating=1;
+    public int actionAmount;
+   
 }
 [System.Serializable]
 public class IngredientTaste
 {
-    public Taste.Tastes taste;
-    public double tasteInput;
+    public Taste taste;
+    public float tasteInput;
 }

@@ -4,15 +4,10 @@ using UnityEngine;
 [System.Serializable]
 public class Personality
 {
-    public Impatience impatianceValue;
+    public bool irrelevantFunction;
     public int orderTime;
     [System.NonSerialized]
     public bool counterActive=true;
-
-    public enum Impatience
-    {
-       low,medium,high
-    }
 
     WaitForSeconds wts = new WaitForSeconds(1);
 

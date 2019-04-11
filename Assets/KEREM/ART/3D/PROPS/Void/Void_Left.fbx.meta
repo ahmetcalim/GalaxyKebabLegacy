@@ -1,0 +1,279 @@
+fileFormatVersion: 2
+guid: d90046558936be440b68ef0ae35a3c55
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bulb_Emission_1_left
+    100002: Bulb_Emission_2_left
+    100004: Bulb_Emission_3_left
+    100006: Bulb_Emission_4_left
+    100008: Bulb_Glass_left
+    100010: Bulb_Holder_left
+    100012: Bulb_Metal_left
+    100014: Glasses_left
+    100016: Lever_left
+    100018: Tray_Holder_1_left
+    100020: Tray_Holder_2_left
+    100022: Tray_left
+    100024: //RootNode
+    100026: Void_Lid_A_1_left
+    100028: Void_Lid_A_2_left
+    100030: Void_Lid_B_1_left
+    100032: Void_Lid_B_2_left
+    100034: Void_Storage_left
+    100036: Glasses_left1
+    400000: Bulb_Emission_1_left
+    400002: Bulb_Emission_2_left
+    400004: Bulb_Emission_3_left
+    400006: Bulb_Emission_4_left
+    400008: Bulb_Glass_left
+    400010: Bulb_Holder_left
+    400012: Bulb_Metal_left
+    400014: Glasses_left
+    400016: Lever_left
+    400018: Tray_Holder_1_left
+    400020: Tray_Holder_2_left
+    400022: Tray_left
+    400024: //RootNode
+    400026: Void_Lid_A_1_left
+    400028: Void_Lid_A_2_left
+    400030: Void_Lid_B_1_left
+    400032: Void_Lid_B_2_left
+    400034: Void_Storage_left
+    400036: Glasses_left1
+    2100000: M_Void_Main
+    2100002: M_Void_Monitor
+    2100004: M_Void_Things
+    2100006: M_Void_Glass
+    2100008: M_Void_Motion
+    2100010: M_Void_bulbmetal_no
+    2100012: M_Void_emission_1_no
+    2100014: M_Void_emission_2_no
+    2100016: M_Void_emission_3_no
+    2100018: M_Void_emission_4_no
+    2100020: M_Void_Glass_Warp
+    2300000: Bulb_Emission_1_left
+    2300002: Bulb_Emission_2_left
+    2300004: Bulb_Emission_3_left
+    2300006: Bulb_Emission_4_left
+    2300008: Bulb_Glass_left
+    2300010: Bulb_Holder_left
+    2300012: Bulb_Metal_left
+    2300014: Glasses_left
+    2300016: Lever_left
+    2300018: Tray_Holder_1_left
+    2300020: Tray_Holder_2_left
+    2300022: Tray_left
+    2300024: Void_Lid_A_1_left
+    2300026: Void_Lid_A_2_left
+    2300028: Void_Lid_B_1_left
+    2300030: Void_Lid_B_2_left
+    2300032: Void_Storage_left
+    2300034: Glasses_left1
+    3300000: Bulb_Emission_1_left
+    3300002: Bulb_Emission_2_left
+    3300004: Bulb_Emission_3_left
+    3300006: Bulb_Emission_4_left
+    3300008: Bulb_Glass_left
+    3300010: Bulb_Holder_left
+    3300012: Bulb_Metal_left
+    3300014: Glasses_left
+    3300016: Lever_left
+    3300018: Tray_Holder_1_left
+    3300020: Tray_Holder_2_left
+    3300022: Tray_left
+    3300024: Void_Lid_A_1_left
+    3300026: Void_Lid_A_2_left
+    3300028: Void_Lid_B_1_left
+    3300030: Void_Lid_B_2_left
+    3300032: Void_Storage_left
+    3300034: Glasses_left1
+    4300000: Void_Storage_left
+    4300002: Lever_left
+    4300004: Glasses_left
+    4300006: Tray_left
+    4300008: Tray_Holder_1_left
+    4300010: Tray_Holder_2_left
+    4300012: Void_Lid_A_1_left
+    4300014: Void_Lid_A_2_left
+    4300016: Void_Lid_B_1_left
+    4300018: Void_Lid_B_2_left
+    4300020: Bulb_Metal_left
+    4300022: Bulb_Glass_left
+    4300024: Bulb_Holder_left
+    4300026: Bulb_Emission_1_left
+    4300028: Bulb_Emission_2_left
+    4300030: Bulb_Emission_3_left
+    4300032: Bulb_Emission_4_left
+    4300034: Glasses_left1
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Void_Glass
+    second: {fileID: 2100000, guid: 9af0551fa84638741937ef73f05a9308, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Void_Glass_Warp
+    second: {fileID: 2100000, guid: 0de862883ed63cd4f872fd3c136b717e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Void_Main
+    second: {fileID: 2100000, guid: d46fbadbfe39578488358d8c4b87959f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Void_Monitor
+    second: {fileID: 2100000, guid: a9a712c69da74df4baf428a19e45181c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Void_Motion
+    second: {fileID: 2100000, guid: 0f817b3fc2ff2a44f8f2fad3e2c8bb93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Void_Things
+    second: {fileID: 2100000, guid: fd7c989428675f248a2522d2f737d1d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Void_bulbmetal_no
+    second: {fileID: 2100000, guid: a217fd6dbc22f1b46aae3bb1b59e7c70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Void_emission_1_no
+    second: {fileID: 2100000, guid: e27643ae41e14004fa7059a3135b0d53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Void_emission_2_no
+    second: {fileID: 2100000, guid: 1f1356e837093a340849edd5ab857bda, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Void_emission_3_no
+    second: {fileID: 2100000, guid: bfa4bda4d7032834d9f43dad7d286fc8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Void_emission_4_no
+    second: {fileID: 2100000, guid: 40aacc6a202ab8942a3cbf5fc2923a7f, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

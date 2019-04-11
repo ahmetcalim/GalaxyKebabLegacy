@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 public class InteractionHandler : MonoBehaviour
@@ -14,7 +16,10 @@ public class InteractionHandler : MonoBehaviour
     public bool IsShaking { get; set; }
     public float power;
     public Hand hand;
-    private void OnEnable()
+    public List<RectTransform> kadranlar = new List<RectTransform>();
+    public List<Text> texts = new List<Text>();
+    private Vector3 kadranDefault;
+    private void Start()
     {
     }
     private void Update()
@@ -47,9 +52,10 @@ public class InteractionHandler : MonoBehaviour
 
 
                 }
-                CheckDonerPieceGrabbed();
+              
             }
         }
+        CheckDonerPieceGrabbed();
         if (controllerPose.GetVelocity().magnitude > power)
         {
 
@@ -57,6 +63,7 @@ public class InteractionHandler : MonoBehaviour
             {
                 IsShaking = true;
                 Shake();
+                
             }
         }
         else
@@ -64,25 +71,27 @@ public class InteractionHandler : MonoBehaviour
             IsShaking = false;
         }
     }
+
     void CheckDonerPieceGrabbed()
     {
         if (hand.currentAttachedObject != null)
         {
             if (hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>() != null)
             {
-               // Debug.Log(transform.eulerAngles.z);
+                hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>().UpdateBar(hand, kadranlar, texts);
+                hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>().Particle();
             }
+            
             if (hand.currentAttachedObject.GetComponent<DonerBehaviour>() != null)
             {
-                if (hand.currentAttachedObject.GetComponent<HingeJoint>() != null)
+                if (hand.currentAttachedObject.GetComponent<FixedJoint>() != null)
                 {
 
-                    Destroy(hand.currentAttachedObject.GetComponent<HingeJoint>());
+                    Destroy(hand.currentAttachedObject.GetComponent<FixedJoint>());
                     Debug.Log("Tuttum");
                 }
             }
 
-            hand.hapticAction.Execute(3f, 3f, 300f, 1f, handType);
         }
     }
     private void Shake()
@@ -91,7 +100,7 @@ public class InteractionHandler : MonoBehaviour
         {
             if (hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>() != null)
             {
-                hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>().canAdd = true;
+                hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>().InstantiateIngredient(hand, kadranlar, texts);
                 hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>().Particle();
             }
         

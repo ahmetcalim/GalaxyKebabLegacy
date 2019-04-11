@@ -16,7 +16,6 @@ public class LavasGenerator : MonoBehaviour
     private bool canMove = false;
     public static bool lavasCanMove = true;
     public CircularDrive circularDrive;
-    public HoverButton hoverButton;
     public static UnityEvent onLavasArrived;
     public LinearDrive linearDrive;
     private void Awake()
@@ -25,11 +24,16 @@ public class LavasGenerator : MonoBehaviour
     }
     public void GenerateLavas()
     {
-        if (generatedLavasCount == 0)
+        if (generatedLavasCount == 0 && WrapOMatic.lavasCount>0)
         {
-            generatedLavasCount++;
+            WrapOMatic.lavasCount--;
+               generatedLavasCount++;
             currentLavas = Instantiate(lavasPrefab, lavasSpawnPoint.position, Quaternion.identity);
             currentLavas.transform.SetParent(kitchen);
+        }
+        else
+        {
+            Debug.Log("Lavaşın bitti bebeğim lavaş koy");
         }
     }
     public void SiparisTeslim()
@@ -52,13 +56,10 @@ public class LavasGenerator : MonoBehaviour
             }
             else
             {
-                if (!hoverButton.enabled)
-                {
                     Destroy(currentLavas);
                     generatedLavasCount = 0;
                     GenerateLavas();
-                }
-                hoverButton.enabled = true;
+                
             }
         }
      

@@ -9,29 +9,34 @@ public class GameLogic : MonoBehaviour
 {
 
     public List<Customer> customers;
+    public Transform customerSpawnPoint;
     public List<Ingredient> ingredients;
     public Transform viewport;
     public OrderItem oItem;
-    public OrderControl oControl;  
-    public GameObject star;   
+    public OrderControl oControl;
+    public SummaryView summaryView;
+    public GameObject star;
     bool isPlay;
-    public int playingTime=300;
+    public int playingTime = 300;
     public int interval = 20;
-    int timeCounter = 0;
+    public int timeCounter = 0;
     GameObject currentOrderPrefab;
-    public static bool hasOrder;
-    List<Order> orders=new List<Order>();
+    List<Order> orders = new List<Order>();
     Taste result;
-    Order currentOrder;
+    public Order currentOrder;
     Popularity popularity;
     Session session;
+    public static bool hasOrder;
     double spawnRate;
-    public HoverButton hoverButton;
+
     public LavasGenerator lavasGenerator;
+
+
     public void Start()
     {
         if (!isPlay)
         {
+            SetIrrelevantFunction();
             lavasGenerator.GenerateLavas();
             isPlay = true;
             popularity = new Popularity();
@@ -39,6 +44,7 @@ public class GameLogic : MonoBehaviour
             session = new Session();
             session.Activate();
             spawnRate = 0.5f + 0.005f * popularity.globalPopularity;
+            summaryView.globalFirst.text = popularity.averageDailyPopularity.ToString();
             StartCoroutine(RecursiveCounter());
         }
     }
@@ -48,10 +54,16 @@ public class GameLogic : MonoBehaviour
     }
     public void EndGame()
     {
-        FinishOrder();
         isPlay = false;
+        FinishOrder();
+        summaryView.transform.gameObject.SetActive(true);
+        summaryView.totalOrder.text = orders.Count.ToString();
+        summaryView.dailyRating.text = (Popularity.DailyPopularity.dailyPopularity / Popularity.DailyPopularity.index).ToString();
+        summaryView.successOrder.text = successOrderCount.ToString();
         popularity.SetGlobalPopularity();
-        Debug.Log("Oyun Bitti!");       
+        summaryView.globalLast.text = popularity.averageDailyPopularity.ToString();
+        Debug.Log("Oyun Bitti!");
+        successOrderCount = 0;
     }
     IEnumerator RecursiveCounter()
     {
@@ -60,14 +72,17 @@ public class GameLogic : MonoBehaviour
         {
             if (timeCounter < playingTime)
             {
-                if (timeCounter==0)
+                if (timeCounter != 1000)
                 {
                     CreateOrder(customers[Random.Range(0, customers.Count)]);
+                    //Debug.Log("BAŞLANGIÇ");
                 }
                 else
-                {                
+                {
                     if (spawnRate >= 1)
                     {
+                        Debug.Log("spawn rate 1'den BÜYÜK");
+
                         for (int i = 0; i < int.Parse(spawnRate.ToString("0.##").Split(',')[0]); i++)
                             CreateOrder(customers[Random.Range(0, customers.Count)]);
 
@@ -76,6 +91,7 @@ public class GameLogic : MonoBehaviour
                     }
                     else
                     {
+                        Debug.Log("spawn rate 1'den KÜÇÜK");
                         if (Random.Range(0.00f, 1.00f) < spawnRate)
                             CreateOrder(customers[Random.Range(0, customers.Count)]);
                     }
@@ -88,7 +104,7 @@ public class GameLogic : MonoBehaviour
             else
                 EndGame();
             yield return new WaitForSeconds(interval);
-            StartCoroutine(RecursiveCounter());  
+            StartCoroutine(RecursiveCounter());
         }
         else
             yield break;
@@ -98,14 +114,15 @@ public class GameLogic : MonoBehaviour
         hasOrder = true;
         Customer customer = new Customer
         {
-            averageTasteRatingnValue =_customer.averageTasteRatingnValue,
+            averageTasteRatingnValue = _customer.averageTasteRatingnValue,
             customerName = _customer.customerName,
-            personality = new Personality { counterActive = _customer.personality.counterActive, impatianceValue = _customer.personality.impatianceValue, orderTime = _customer.personality.orderTime },
+            model = _customer.model,
+            personality = new Personality { counterActive = _customer.personality.counterActive, orderTime = _customer.personality.orderTime,irrelevantFunction = _customer.personality.irrelevantFunction },
             Tastes = new List<Taste>(_customer.Tastes)
 
         };
 
-        Order order = new Order(customer, ingredients,2);
+        Order order = new Order(customer, ingredients, 2);
         orders.Add(order);
         oItem.ClearTexts();
         for (int i = 0; i < order.finalIngredients.Count; i++)
@@ -121,17 +138,22 @@ public class GameLogic : MonoBehaviour
             StartCoroutine(currentOrder.customer.personality.TimeCounter(this));
             currentOrderPrefab.GetComponent<OrderItem>().SetColor(Color.yellow);
             oControl.SetValues(currentOrder.customer, currentOrder.customer.Tastes);
+            customer.model = Instantiate(customer.model, customerSpawnPoint.position, Quaternion.identity);
+            customer.model.transform.localRotation = Quaternion.Euler(customer.model.transform.localRotation.x, customer.model.transform.localRotation.y + 180f, customer.model.transform.localRotation.z);
         }
         else
         {
             orders[orders.Count - 2].nextOrder = order;
+            orders[orders.Count - 2].nextOrder.customer.model = Instantiate(orders[orders.Count - 2].nextOrder.customer.model, new Vector3(orders[orders.Count - 2].customer.model.transform.position.x, orders[orders.Count - 2].customer.model.transform.position.y, orders[orders.Count - 2].customer.model.transform.position.z + 8), Quaternion.identity);
+            orders[orders.Count - 2].nextOrder.customer.model.transform.localRotation = Quaternion.Euler(orders[orders.Count - 2].nextOrder.customer.model.transform.localRotation.x, orders[orders.Count - 2].nextOrder.customer.model.transform.localRotation.y + 180f, orders[orders.Count - 2].nextOrder.customer.model.transform.localRotation.z);
         }
     }
     int customerIndex;
     void SetCustomer()
     {
-        if (orders.Count>customerIndex+1)
+        if (orders.Count > customerIndex + 1)
         {
+            currentOrder.nextOrder.prevOrder = currentOrder;
             currentOrder = currentOrder.nextOrder;
             currentOrderPrefab = currentOrder.orderPrefab;
             currentOrder.customer.personality.SetCounter(true);
@@ -139,22 +161,31 @@ public class GameLogic : MonoBehaviour
             currentOrderPrefab.GetComponent<OrderItem>().SetColor(Color.yellow);
             oControl.SetValues(currentOrder.customer, currentOrder.customer.Tastes);
             customerIndex++;
+            SetModelPosition();
         }
         else
         {
-            hasOrder = false;
-            Debug.Log("Elinde sipariş yok.");
+            CreateOrder(customers[Random.Range(0, customers.Count)]);
+            SetCustomer();
         }
     }
+    int successOrderCount;
     string percentage;
     int kalan;
+    void SetModelPosition()
+    {
+        for (int i = 0; i < orders.Count; i++)
+        {
+            orders[i].customer.model.transform.position = new Vector3(orders[i].customer.model.transform.position.x, orders[i].customer.model.transform.position.y, orders[i].customer.model.transform.position.z - 8);
+        }
+    }
     public void FinishOrder()
     {
         if (RepomaticBehaviour.canThrow)
         {
+
             if (!currentOrder.isFinished)
             {
-                hoverButton.enabled = false;
                 foreach (Taste taste in currentOrder.customer.Tastes)
                 {
                     if (taste.totalInputCount == 0)
@@ -201,6 +232,7 @@ public class GameLogic : MonoBehaviour
                         }
                     }
                     currentOrderPrefab.GetComponent<OrderItem>().SetColor(Color.green);
+                    successOrderCount++;
                 }
                 else
                 {
@@ -214,26 +246,35 @@ public class GameLogic : MonoBehaviour
                     taste.totalInputCount = 0;
                 }
                 currentOrder.isFinished = true;
+                currentOrder.customer.model.SetActive(false);
                 currentOrder.customer.averageTasteRatingnValue = 0;
                 currentOrder.customer.personality.SetCounter(false);
             }
             SetCustomer();
         }
-          
     }
     public void AddIngredient(int ingredientID)
     {
         for (int i = 0; i < ingredients[ingredientID].tastes.Count; i++)
         {
-            result = currentOrder.customer.Tastes.Where(t => t.taste == ingredients[ingredientID].tastes[i].taste).ToList().FirstOrDefault();
-            if (result.totalInputCount<=100)
+            result = currentOrder.customer.Tastes.Where(t => t.taste == ingredients[ingredientID].tastes[i].taste.taste).ToList().FirstOrDefault();
+            if (result.totalInputCount <= 100)
             {
                 switch (result.preference)
                 {
                     case Taste.Preference.irrelevant:
                         result.totalInputCount += ingredients[ingredientID].tastes[i].tasteInput;
-                        if (result.totalInputCount > 70)
-                            result.CalculateAverageTasteRating(Satisfaction.CalculateIrrelevantSatisfaction(result.totalInputCount));
+                        if (currentOrder.customer.personality.irrelevantFunction)
+                        {
+                            if (result.totalInputCount > 45)
+                                result.CalculateAverageTasteRating(Satisfaction.CalculateIrrelevantSatisfaction_SweetBump(result.totalInputCount));
+                        }
+                        else
+                        {
+                            if (result.totalInputCount > 70)
+                                result.CalculateAverageTasteRating(Satisfaction.CalculateIrrelevantSatisfaction_OverTaste(result.totalInputCount));
+                        }
+
                         break;
                     case Taste.Preference.like:
                         result.totalInputCount += ingredients[ingredientID].tastes[i].tasteInput;
@@ -241,17 +282,27 @@ public class GameLogic : MonoBehaviour
                         break;
                     case Taste.Preference.dislike:
                         result.totalInputCount += ingredients[ingredientID].tastes[i].tasteInput;
-                        result.CalculateAverageTasteRating(Satisfaction.CalculateSatisfaction(result.x_max, result.x_zero, result.totalInputCount, -1));
+                        if (result.totalInputCount <= result.x_max)
+                            result.CalculateAverageTasteRating(Satisfaction.CalculateSatisfaction(result.x_max, result.x_zero, result.totalInputCount, -1));
                         break;
                     default:
                         break;
                 }
-            }      
+            }
         }
         currentOrder.customer.CalculateAverageSatisfactionValue();
         oControl.SetValues(currentOrder.customer, currentOrder.customer.Tastes);
     }
-
+    void SetIrrelevantFunction()
+    {
+        foreach (Customer item in customers)
+        {
+            if (Random.Range(0, 2) == 1)
+                item.personality.irrelevantFunction = true;
+            else
+                item.personality.irrelevantFunction = false;
+        }
+    }
 
 }
 

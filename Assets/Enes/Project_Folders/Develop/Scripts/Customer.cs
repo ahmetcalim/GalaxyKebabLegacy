@@ -6,6 +6,7 @@ using UnityEngine;
 public class Customer
 {
     public string customerName;
+    public GameObject model;
     public double averageTasteRatingnValue;
     public Personality personality;
     public List<Taste> Tastes;

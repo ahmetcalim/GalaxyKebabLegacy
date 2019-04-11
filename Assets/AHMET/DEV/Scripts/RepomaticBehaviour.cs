@@ -13,6 +13,8 @@ public class RepomaticBehaviour : MonoBehaviour
     public LavasGenerator lavasGenerator;
     public static bool canThrow;
     public Transform durumSpawnPoint;
+    public GameObject finishOrderButton;
+    public Transform durumparent;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Lavas")
@@ -20,7 +22,8 @@ public class RepomaticBehaviour : MonoBehaviour
             Debug.Log("Yes");
             canThrow = false;
             canStart = true;
-            durumInstance = Instantiate(durumPrefab, durumSpawnPoint.position, Quaternion.identity);
+            durumInstance = Instantiate(durumPrefab, durumSpawnPoint.position, Quaternion.identity, durumparent);
+            durumInstance.transform.localScale = durumInstance.transform.localScale / 10f;
         }
         if (other.tag == "DonerPiece")
         {
@@ -32,7 +35,14 @@ public class RepomaticBehaviour : MonoBehaviour
     {
         if (canStart)
         {
-            durumInstance.transform.position = Vector3.MoveTowards(durumInstance.transform.position, durumPoint.position, .003f);
+            durumInstance.transform.localPosition = Vector3.MoveTowards(durumInstance.transform.localPosition, durumPoint.localPosition, .001f);
+            if (durumInstance.transform.localPosition.y >= durumPoint.localPosition.y)
+            {
+                if (!finishOrderButton.activeSelf)
+                {
+                    finishOrderButton.SetActive(true);
+                }
+            }
         }
     } 
     public void ThrowDurum()
@@ -42,6 +52,7 @@ public class RepomaticBehaviour : MonoBehaviour
             Debug.Log("Throwlamam  gerek");
             if (durumInstance.transform.localPosition.y >= durumPoint.localPosition.y)
             {
+                finishOrderButton.SetActive(false);
                 canThrow = true;
                 canStart = false;
                 LinearDrive.canUseWrapomatic = true;
