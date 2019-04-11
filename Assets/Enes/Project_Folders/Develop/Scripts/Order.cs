@@ -36,7 +36,7 @@ public class Order : MonoBehaviour
         CalculateIngredientRating();
         CalculateSumRating();
         CalculateSequentialRating();
-        GetRandomVariableValue();
+        GetRandomVariableValue(ingredientCount-1);
     }
 
     void RemoveIngredientForDislikeTastes()
@@ -80,9 +80,9 @@ public class Order : MonoBehaviour
             foreach (IngredientTaste ingredientTaste in ingredient.tastes)
             {
                 if (isLikeTastes.Where(t => t.taste == ingredientTaste.taste.taste).Any())
-                    ingredient.rating *= ingredientTaste.tasteInput;
+                    ingredient.rating *= ingredientTaste.tasteInput+1;
                 else
-                    ingredient.rating *= 1;
+                    ingredient.rating *=1;
             }
         }
 
@@ -103,22 +103,25 @@ public class Order : MonoBehaviour
         for (int i = 1; i < ingredientsWithOrderByDescending.Count; i++)
             ingredientsWithOrderByDescending[i].rating += ingredientsWithOrderByDescending[i - 1].rating;          
     }
-    void GetRandomVariableValue()
+    void GetRandomVariableValue(int _ingredientCount)
+    {
+        for (int i = 0; i < _ingredientCount; i++)
+        AddIngredientToOrder();
+        for (int i = 0; i < ingredients.Count; i++)
+            ingredients[i].rating = 1;
+    }
+    void AddIngredientToOrder()
     {
         double rndValue = Random.Range(0f, 1f);
-        AddIngredientToOrder(rndValue);
-    }
-    void AddIngredientToOrder(double _rndValue)
-    {
         difference = 1;
         temporalIngredient = null;
 
         for (int i = 0; i < ingredientsWithOrderByDescending.Count; i++)
         {
-            float currentDifference = Mathf.Abs((float)_rndValue - (float)ingredientsWithOrderByDescending[i].rating);
+            float currentDifference = Mathf.Abs((float)rndValue - (float)ingredientsWithOrderByDescending[i].rating);
             if (currentDifference <= difference)
             {
-                if (_rndValue > ingredientsWithOrderByDescending[i].rating)
+                if (rndValue > ingredientsWithOrderByDescending[i].rating)
                     temporalIngredient = ingredientsWithOrderByDescending[i + 1];
                 else
                     temporalIngredient = ingredientsWithOrderByDescending[i];
@@ -127,8 +130,6 @@ public class Order : MonoBehaviour
             }
         }
         if (!finalIngredients.Contains(temporalIngredient))
-            finalIngredients.Add(temporalIngredient);
-        for (int i = 0; i < ingredients.Count; i++)
-            ingredients[i].rating = 1;
+            finalIngredients.Add(temporalIngredient);       
     }
 }

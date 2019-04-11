@@ -122,7 +122,7 @@ public class GameLogic : MonoBehaviour
 
         };
 
-        Order order = new Order(customer, ingredients, 2);
+        Order order = new Order(customer, ingredients, 3);
         orders.Add(order);
         oItem.ClearTexts();
         for (int i = 0; i < order.finalIngredients.Count; i++)
