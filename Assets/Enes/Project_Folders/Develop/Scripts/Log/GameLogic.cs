@@ -31,11 +31,12 @@ public class GameLogic : MonoBehaviour
 
     public LavasGenerator lavasGenerator;
 
-
+    public IngredientSorter ingredientSorter;
     public void Start()
     {
         if (!isPlay)
         {
+          
             SetIrrelevantFunction();
             lavasGenerator.GenerateLavas();
             isPlay = true;
@@ -46,6 +47,7 @@ public class GameLogic : MonoBehaviour
             spawnRate = 0.5f + 0.005f * popularity.globalPopularity;
             summaryView.globalFirst.text = popularity.averageDailyPopularity.ToString();
             StartCoroutine(RecursiveCounter());
+            ingredientSorter.CheckTasteLights();
         }
     }
     public void PauseGame()
@@ -147,6 +149,8 @@ public class GameLogic : MonoBehaviour
             orders[orders.Count - 2].nextOrder.customer.model = Instantiate(orders[orders.Count - 2].nextOrder.customer.model, new Vector3(orders[orders.Count - 2].customer.model.transform.position.x, orders[orders.Count - 2].customer.model.transform.position.y, orders[orders.Count - 2].customer.model.transform.position.z + 8), Quaternion.identity);
             orders[orders.Count - 2].nextOrder.customer.model.transform.localRotation = Quaternion.Euler(orders[orders.Count - 2].nextOrder.customer.model.transform.localRotation.x, orders[orders.Count - 2].nextOrder.customer.model.transform.localRotation.y + 180f, orders[orders.Count - 2].nextOrder.customer.model.transform.localRotation.z);
         }
+
+       
     }
     int customerIndex;
     void SetCustomer()
@@ -181,11 +185,13 @@ public class GameLogic : MonoBehaviour
     }
     public void FinishOrder()
     {
+       
         if (RepomaticBehaviour.canThrow)
         {
-
+            
             if (!currentOrder.isFinished)
             {
+                
                 foreach (Taste taste in currentOrder.customer.Tastes)
                 {
                     if (taste.totalInputCount == 0)
@@ -251,6 +257,7 @@ public class GameLogic : MonoBehaviour
                 currentOrder.customer.personality.SetCounter(false);
             }
             SetCustomer();
+            ingredientSorter.CheckTasteLights();
         }
     }
     public void AddIngredient(int ingredientID)

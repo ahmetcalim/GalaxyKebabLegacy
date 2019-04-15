@@ -19,19 +19,23 @@ public class InteractionHandler : MonoBehaviour
     public List<RectTransform> kadranlar = new List<RectTransform>();
     public List<Text> texts = new List<Text>();
     private Vector3 kadranDefault;
+    public Test ingredientGradientTest;
     private void Start()
     {
     }
     private void Update()
     {
-       
         if (grabAction.GetStateDown(handType))
         {
             if (hand.currentAttachedObject != null)
             {
+
                 if (hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>() != null)
                 {
-                   
+                    ObjectInHand = hand.currentAttachedObject;
+                    hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>().isInHand = true;
+                    hand.currentAttachedObject.GetComponent<Rigidbody>().useGravity = true;
+                    hand.currentAttachedObject.GetComponent<Rigidbody>().isKinematic = false;
                             if (transform.eulerAngles.z > 90f && transform.eulerAngles.z < 270f)
                             {
                                 hand.currentAttachedObject.transform.localScale = new Vector3(hand.currentAttachedObject.transform.localScale.x, hand.currentAttachedObject.transform.localScale.y *-1f, hand.currentAttachedObject.transform.localScale.z);
@@ -53,6 +57,28 @@ public class InteractionHandler : MonoBehaviour
 
                 }
               
+            }
+        }
+        if (grabAction.GetLastStateUp(handType))
+        {
+          
+            if (ObjectInHand != null)
+            {
+                ObjectInHand.GetComponent<Rigidbody>().useGravity = true;
+                ObjectInHand.GetComponent<Rigidbody>().isKinematic = false;
+                ObjectInHand.GetComponent<SpiceContainerBehaviour>().isInHand = false;
+                switch (handType)
+                {
+                    case SteamVR_Input_Sources.LeftHand:
+                        ingredientGradientTest.ResetGradients(0, false);
+                        break;
+                    case SteamVR_Input_Sources.RightHand:
+                        ingredientGradientTest.ResetGradients(1, false);
+                        break;
+                    default:
+                        break;
+                }
+
             }
         }
         CheckDonerPieceGrabbed();
@@ -78,6 +104,17 @@ public class InteractionHandler : MonoBehaviour
         {
             if (hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>() != null)
             {
+                switch (handType)
+                {
+                    case SteamVR_Input_Sources.LeftHand:
+                        ingredientGradientTest.ResetGradients(0, true);
+                        break;
+                    case SteamVR_Input_Sources.RightHand:
+                        ingredientGradientTest.ResetGradients(1, true);
+                        break;
+                    default:
+                        break;
+                }
                 hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>().UpdateBar(hand, kadranlar, texts);
                 hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>().Particle();
             }

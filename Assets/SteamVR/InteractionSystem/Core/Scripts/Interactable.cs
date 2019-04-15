@@ -312,8 +312,7 @@ namespace Valve.VR.InteractionSystem
                 if (hand.skeleton != null)
                     hand.skeleton.BlendToSkeleton(releasePoseBlendTime);
             }
-
-            attachedToHand = null;
+           attachedToHand = null;
         }
 
         protected virtual void OnDestroy()

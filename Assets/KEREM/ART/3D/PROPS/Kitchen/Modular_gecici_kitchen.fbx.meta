@@ -1,0 +1,474 @@
+fileFormatVersion: 2
+guid: 7710fdf8e65ec8545aeff8d5b960a447
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bulb_Emission_1_high
+    100002: Bulb_Emission_2_high
+    100004: Bulb_Emission_3_high
+    100006: Bulb_Emission_4_high
+    100008: Bulb_Glass_high
+    100010: Bulb_Holder_high
+    100012: Bulb_Metal_high
+    100014: Cabinet_Door_1
+    100016: Cabinet_Door_1 1
+    100018: Cabinet_Door_2
+    100020: Cabinet_Door_2 1
+    100022: Door
+    100024: Drawer_1
+    100026: Drawer_1 1
+    100028: Drawer_2
+    100030: Drawer_2 1
+    100032: Drawer_3
+    100034: Drawer_3 1
+    100036: Glasses_high
+    100038: Ground
+    100040: Handle_1
+    100042: Handle_1 1
+    100044: Handle_2
+    100046: Handle_2 1
+    100048: Lever_high
+    100050: //RootNode
+    100052: Module_Cabinet_1
+    100054: Module_Cabinet_2
+    100056: Module_Drawer_1
+    100058: Module_Drawer_2
+    100060: Module_Empt_1
+    100062: Module_Empty_2
+    100064: Module_Round_Corner
+    100066: Module_Sharp_Corner
+    100068: Module_Void_1
+    100070: Module_Void_2
+    100072: pasted__pCube52
+    100074: pasted__pCylinder40
+    100076: pasted__pCylinder41
+    100078: pasted__pCylinder42
+    100080: Roof
+    100082: Seperator_1
+    100084: Seperator_2
+    100086: Seperator_3
+    100088: Seperator_4
+    100090: Seperator_5
+    100092: Seperator_6
+    100094: Seperator_7
+    100096: Seperator_8
+    100098: Seperator_9
+    100100: Seperators
+    100102: Slurp
+    100104: Supurgelik
+    100106: Tray_high
+    100108: Tray_Holder_1_high
+    100110: Tray_Holder_2_high
+    100112: Void_high
+    100114: Void_Lid_A_1_high
+    100116: Void_Lid_A_2_high
+    100118: Void_Lid_B_1_high
+    100120: Void_Lid_B_2_high
+    100122: Void_Storage_high
+    100124: Walls
+    400000: Bulb_Emission_1_high
+    400002: Bulb_Emission_2_high
+    400004: Bulb_Emission_3_high
+    400006: Bulb_Emission_4_high
+    400008: Bulb_Glass_high
+    400010: Bulb_Holder_high
+    400012: Bulb_Metal_high
+    400014: Cabinet_Door_1
+    400016: Cabinet_Door_1 1
+    400018: Cabinet_Door_2
+    400020: Cabinet_Door_2 1
+    400022: Door
+    400024: Drawer_1
+    400026: Drawer_1 1
+    400028: Drawer_2
+    400030: Drawer_2 1
+    400032: Drawer_3
+    400034: Drawer_3 1
+    400036: Glasses_high
+    400038: Ground
+    400040: Handle_1
+    400042: Handle_1 1
+    400044: Handle_2
+    400046: Handle_2 1
+    400048: Lever_high
+    400050: //RootNode
+    400052: Module_Cabinet_1
+    400054: Module_Cabinet_2
+    400056: Module_Drawer_1
+    400058: Module_Drawer_2
+    400060: Module_Empt_1
+    400062: Module_Empty_2
+    400064: Module_Round_Corner
+    400066: Module_Sharp_Corner
+    400068: Module_Void_1
+    400070: Module_Void_2
+    400072: pasted__pCube52
+    400074: pasted__pCylinder40
+    400076: pasted__pCylinder41
+    400078: pasted__pCylinder42
+    400080: Roof
+    400082: Seperator_1
+    400084: Seperator_2
+    400086: Seperator_3
+    400088: Seperator_4
+    400090: Seperator_5
+    400092: Seperator_6
+    400094: Seperator_7
+    400096: Seperator_8
+    400098: Seperator_9
+    400100: Seperators
+    400102: Slurp
+    400104: Supurgelik
+    400106: Tray_high
+    400108: Tray_Holder_1_high
+    400110: Tray_Holder_2_high
+    400112: Void_high
+    400114: Void_Lid_A_1_high
+    400116: Void_Lid_A_2_high
+    400118: Void_Lid_B_1_high
+    400120: Void_Lid_B_2_high
+    400122: Void_Storage_high
+    400124: Walls
+    2100000: Color_Cyan
+    2100002: Color_Yellow
+    2100004: Color_Purple
+    2100006: Color_Red
+    2100008: lambert1
+    2100010: M_Void_Main
+    2100012: M_Void_Glass
+    2100014: lambert11
+    2100016: lambert10
+    2100018: lambert12
+    2100020: M_Wrap_Glass2
+    2100022: M_Door_Glass
+    2100024: lambert28
+    2300000: Bulb_Emission_1_high
+    2300002: Bulb_Emission_2_high
+    2300004: Bulb_Emission_3_high
+    2300006: Bulb_Emission_4_high
+    2300008: Bulb_Glass_high
+    2300010: Bulb_Holder_high
+    2300012: Bulb_Metal_high
+    2300014: Cabinet_Door_1
+    2300016: Cabinet_Door_1 1
+    2300018: Cabinet_Door_2
+    2300020: Cabinet_Door_2 1
+    2300022: Door
+    2300024: Drawer_1
+    2300026: Drawer_1 1
+    2300028: Drawer_2
+    2300030: Drawer_2 1
+    2300032: Drawer_3
+    2300034: Drawer_3 1
+    2300036: Glasses_high
+    2300038: Ground
+    2300040: Handle_1
+    2300042: Handle_1 1
+    2300044: Handle_2
+    2300046: Handle_2 1
+    2300048: Lever_high
+    2300050: Module_Cabinet_1
+    2300052: Module_Cabinet_2
+    2300054: Module_Drawer_1
+    2300056: Module_Drawer_2
+    2300058: Module_Empt_1
+    2300060: Module_Empty_2
+    2300062: Module_Round_Corner
+    2300064: Module_Sharp_Corner
+    2300066: Module_Void_1
+    2300068: Module_Void_2
+    2300070: pasted__pCube52
+    2300072: pasted__pCylinder40
+    2300074: pasted__pCylinder41
+    2300076: pasted__pCylinder42
+    2300078: Roof
+    2300080: Seperator_1
+    2300082: Seperator_2
+    2300084: Seperator_3
+    2300086: Seperator_4
+    2300088: Seperator_5
+    2300090: Seperator_6
+    2300092: Seperator_7
+    2300094: Seperator_8
+    2300096: Seperator_9
+    2300098: Supurgelik
+    2300100: Tray_high
+    2300102: Tray_Holder_1_high
+    2300104: Tray_Holder_2_high
+    2300106: Void_Lid_A_1_high
+    2300108: Void_Lid_A_2_high
+    2300110: Void_Lid_B_1_high
+    2300112: Void_Lid_B_2_high
+    2300114: Void_Storage_high
+    2300116: Walls
+    3300000: Bulb_Emission_1_high
+    3300002: Bulb_Emission_2_high
+    3300004: Bulb_Emission_3_high
+    3300006: Bulb_Emission_4_high
+    3300008: Bulb_Glass_high
+    3300010: Bulb_Holder_high
+    3300012: Bulb_Metal_high
+    3300014: Cabinet_Door_1
+    3300016: Cabinet_Door_1 1
+    3300018: Cabinet_Door_2
+    3300020: Cabinet_Door_2 1
+    3300022: Door
+    3300024: Drawer_1
+    3300026: Drawer_1 1
+    3300028: Drawer_2
+    3300030: Drawer_2 1
+    3300032: Drawer_3
+    3300034: Drawer_3 1
+    3300036: Glasses_high
+    3300038: Ground
+    3300040: Handle_1
+    3300042: Handle_1 1
+    3300044: Handle_2
+    3300046: Handle_2 1
+    3300048: Lever_high
+    3300050: Module_Cabinet_1
+    3300052: Module_Cabinet_2
+    3300054: Module_Drawer_1
+    3300056: Module_Drawer_2
+    3300058: Module_Empt_1
+    3300060: Module_Empty_2
+    3300062: Module_Round_Corner
+    3300064: Module_Sharp_Corner
+    3300066: Module_Void_1
+    3300068: Module_Void_2
+    3300070: pasted__pCube52
+    3300072: pasted__pCylinder40
+    3300074: pasted__pCylinder41
+    3300076: pasted__pCylinder42
+    3300078: Roof
+    3300080: Seperator_1
+    3300082: Seperator_2
+    3300084: Seperator_3
+    3300086: Seperator_4
+    3300088: Seperator_5
+    3300090: Seperator_6
+    3300092: Seperator_7
+    3300094: Seperator_8
+    3300096: Seperator_9
+    3300098: Supurgelik
+    3300100: Tray_high
+    3300102: Tray_Holder_1_high
+    3300104: Tray_Holder_2_high
+    3300106: Void_Lid_A_1_high
+    3300108: Void_Lid_A_2_high
+    3300110: Void_Lid_B_1_high
+    3300112: Void_Lid_B_2_high
+    3300114: Void_Storage_high
+    3300116: Walls
+    4300000: Module_Empt_1
+    4300002: Module_Void_1
+    4300004: Module_Drawer_1
+    4300006: Drawer_1
+    4300008: Drawer_2
+    4300010: Drawer_3
+    4300012: Module_Void_2
+    4300014: Module_Round_Corner
+    4300016: Module_Cabinet_1
+    4300018: Cabinet_Door_1
+    4300020: Handle_1
+    4300022: Cabinet_Door_2
+    4300024: Handle_2
+    4300026: Module_Sharp_Corner
+    4300028: Module_Empty_2
+    4300030: Module_Cabinet_2
+    4300032: Cabinet_Door_1
+    4300034: Handle_1
+    4300036: Cabinet_Door_2
+    4300038: Handle_2
+    4300040: Module_Drawer_2
+    4300042: Drawer_1
+    4300044: Drawer_2
+    4300046: Drawer_3
+    4300048: pasted__pCube52
+    4300050: pasted__pCylinder40
+    4300052: pasted__pCylinder41
+    4300054: pasted__pCylinder42
+    4300056: Supurgelik
+    4300058: Void_Storage_high
+    4300060: Lever_high
+    4300062: Glasses_high
+    4300064: Tray_high
+    4300066: Tray_Holder_1_high
+    4300068: Tray_Holder_2_high
+    4300070: Void_Lid_A_1_high
+    4300072: Void_Lid_A_2_high
+    4300074: Void_Lid_B_1_high
+    4300076: Void_Lid_B_2_high
+    4300078: Bulb_Metal_high
+    4300080: Bulb_Glass_high
+    4300082: Bulb_Holder_high
+    4300084: Bulb_Emission_1_high
+    4300086: Bulb_Emission_2_high
+    4300088: Bulb_Emission_3_high
+    4300090: Bulb_Emission_4_high
+    4300092: Seperator_1
+    4300094: Seperator_2
+    4300096: Seperator_3
+    4300098: Seperator_4
+    4300100: Seperator_5
+    4300102: Seperator_6
+    4300104: Seperator_7
+    4300106: Seperator_8
+    4300108: Seperator_9
+    4300110: Ground
+    4300112: Roof
+    4300114: Door
+    4300116: Walls
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_Cyan
+    second: {fileID: 2100000, guid: ece56adf0b307854d85329dc5b194794, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_Purple
+    second: {fileID: 2100000, guid: 1395001b786a38844be9db5c5e34d8c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_Red
+    second: {fileID: 2100000, guid: 11511402e4d7b4343b59d2c7700258c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_Yellow
+    second: {fileID: 2100000, guid: 0f9554641c0807641aef399f47f570fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Door_Glass
+    second: {fileID: 2100000, guid: 1a9cdc14963ca84458f51dd3f9b86da4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Void_Glass
+    second: {fileID: 2100000, guid: e543082f624ef6c4ab0fa7fd27877fda, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Void_Main
+    second: {fileID: 2100000, guid: 3cbff565dea107a478b2aa353f72c1e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Wrap_Glass2
+    second: {fileID: 2100000, guid: d158811d10d8e2c4080d8ab6c1bf1db4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 884ef76c880871445bba3f566828ca76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert10
+    second: {fileID: 2100000, guid: 77d858b15db24094c8054662bd2eacbc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert11
+    second: {fileID: 2100000, guid: 44eef77f1cdff394fa000aad4364dac0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert12
+    second: {fileID: 2100000, guid: 10c6effd4f129594293b7d652359542a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert28
+    second: {fileID: 2100000, guid: 7a2f4c603d2619448923b1d01bf31795, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

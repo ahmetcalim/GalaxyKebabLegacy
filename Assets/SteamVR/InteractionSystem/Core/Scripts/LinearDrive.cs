@@ -43,7 +43,7 @@ namespace Valve.VR.InteractionSystem
         protected Interactable interactable;
         private int currentPoint = 0;
         public List<Transform> points;
-
+        public Animator voidAnimator;
         public enum LinearDriveFor
         {
             WRAPOMATIC,
@@ -76,7 +76,22 @@ namespace Valve.VR.InteractionSystem
 			{
 				UpdateLinearMapping( transform );
 			}
-		}
+            switch (linearDriveFor)
+            {
+                case LinearDriveFor.WRAPOMATIC:
+                    break;
+                case LinearDriveFor.INGREDIENT_1:
+                    voidAnimator.SetTrigger("OpenVoid");
+                    StartCoroutine(ChangeIngredients());
+                    break;
+                case LinearDriveFor.INGREDIENT_2:
+                    voidAnimator.SetTrigger("OpenVoid");
+                    StartCoroutine(ChangeIngredients());
+                    break;
+                default:
+                    break;
+            }
+        }
 
         protected virtual void HandHoverUpdate( Hand hand )
         {
@@ -104,12 +119,42 @@ namespace Valve.VR.InteractionSystem
 
         protected virtual void OnDetachedFromHand(Hand hand)
         {
-            CalculateMappingChangeRate();
           
-            
+            CalculateMappingChangeRate();
+            switch (linearDriveFor)
+            {
+                case LinearDriveFor.WRAPOMATIC:
+                    break;
+                case LinearDriveFor.INGREDIENT_1:
+                    voidAnimator.SetTrigger("OpenVoid");
+                    StartCoroutine(ChangeIngredients());
+                    break;
+                case LinearDriveFor.INGREDIENT_2:
+                    voidAnimator.SetTrigger("OpenVoid");
+                    StartCoroutine(ChangeIngredients());
+                    break;
+                default:
+                    break;
+            }
         }
 
-
+        IEnumerator ChangeIngredients()
+        {
+            yield return new WaitForSeconds(1f);
+            switch (linearDriveFor)
+            {
+                case LinearDriveFor.WRAPOMATIC:
+                    break;
+                case LinearDriveFor.INGREDIENT_1:
+                    onIngredientTrayChanged.Invoke(currentPoint);
+                    break;
+                case LinearDriveFor.INGREDIENT_2:
+                    onIngredientTrayChangedRight.Invoke(currentPoint);
+                    break;
+                default:
+                    break;
+            }
+        }
         protected void CalculateMappingChangeRate()
 		{
 			//Compute the mapping change rate
@@ -201,8 +246,6 @@ namespace Valve.VR.InteractionSystem
                         Debug.Log("Tepsi 4");
                         //Dördüncü tepsi
                     }
-                    onIngredientTrayChanged.Invoke(currentPoint);
-
                     break;
                 case LinearDriveFor.INGREDIENT_2:
                     Debug.Log("SAĞ TRİGGER ÇALIŞTI");
@@ -230,7 +273,7 @@ namespace Valve.VR.InteractionSystem
                         Debug.Log("Tepsi 4");
                         //Dördüncü tepsi
                     }
-                    onIngredientTrayChangedRight.Invoke(currentPoint);
+                   
 
                     break;
                 default:

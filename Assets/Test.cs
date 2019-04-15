@@ -26,6 +26,30 @@ public class Test : MonoBehaviour {
     public CustomGradient tasteGradient_Irrelevant3;
     public CustomGradient tasteGradient_Irrelevant4;
 
+    public List<GameObject> leftHandGradients;
+    public List<GameObject> rightHandGradients;
+    public void ResetGradients(int index, bool state)
+    {
+        switch (index)
+        {
+            case 0:
+                foreach (var item in leftHandGradients)
+                {
+
+                    item.SetActive(state);
+                }
+                break;
+            case 1:
+                foreach (var item in rightHandGradients)
+                {
+
+                    item.SetActive(state);
+                }
+                break;
+            default:
+                break;
+        }
+    }
     public void SetGradient1(float green, int index)
     {
         switch (index)

@@ -9,6 +9,7 @@ public class SpiceContainerBehaviour : MonoBehaviour
 {
     public enum SpiceType { salt, blackPepper, chiliPepper, mayonnaise, mustard, ketchup }
     public SpiceType spiceType;
+    public bool isInHand;
     public int amountPerShake;
     public GameObject particleSystem;
     public bool isInMachine;
@@ -30,6 +31,7 @@ public class SpiceContainerBehaviour : MonoBehaviour
     
     float[] xMaxes = new float[2];
     public Test test;
+    
     public void UseIngredient(float amount)
     {
 
@@ -199,7 +201,7 @@ public class SpiceContainerBehaviour : MonoBehaviour
                 }
                 xMaxes[0] = (float)taste_1.x_max;
                         txts[0].text = taste_1.taste.ToString();
-                        if (rectTransforms[0].anchoredPosition3D.x <= 1900)
+                        if (rectTransforms[0].anchoredPosition3D.x <= 1850)
                         {
                             rectTransforms[0].anchoredPosition3D += new Vector3((gLogic.ingredients[hand.currentAttachedObject.GetComponent<IngredientItem>().ID].tastes[0].tasteInput) * 19f, 0f, 0f);
                         }
@@ -209,7 +211,7 @@ public class SpiceContainerBehaviour : MonoBehaviour
                 xMaxes[1] = (float)taste_2.x_max;
                         txts[1].text = taste_2.taste.ToString();
 
-                        if (rectTransforms[1].anchoredPosition3D.x <=1900)
+                        if (rectTransforms[1].anchoredPosition3D.x <= 1850)
                         {
                             rectTransforms[1].anchoredPosition3D += new Vector3((gLogic.ingredients[hand.currentAttachedObject.GetComponent<IngredientItem>().ID].tastes[1].tasteInput) * 19f, 0f, 0f);
                         }
