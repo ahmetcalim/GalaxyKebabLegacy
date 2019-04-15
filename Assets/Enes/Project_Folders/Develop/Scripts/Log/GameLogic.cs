@@ -149,8 +149,8 @@ public class GameLogic : MonoBehaviour
             orders[orders.Count - 2].nextOrder.customer.model = Instantiate(orders[orders.Count - 2].nextOrder.customer.model, new Vector3(orders[orders.Count - 2].customer.model.transform.position.x, orders[orders.Count - 2].customer.model.transform.position.y, orders[orders.Count - 2].customer.model.transform.position.z + 8), Quaternion.identity);
             orders[orders.Count - 2].nextOrder.customer.model.transform.localRotation = Quaternion.Euler(orders[orders.Count - 2].nextOrder.customer.model.transform.localRotation.x, orders[orders.Count - 2].nextOrder.customer.model.transform.localRotation.y + 180f, orders[orders.Count - 2].nextOrder.customer.model.transform.localRotation.z);
         }
+        currentOrder.customer.model.GetComponent<CustomerBehaviour>().isActive = true;
 
-       
     }
     int customerIndex;
     void SetCustomer()
@@ -166,6 +166,8 @@ public class GameLogic : MonoBehaviour
             oControl.SetValues(currentOrder.customer, currentOrder.customer.Tastes);
             customerIndex++;
             SetModelPosition();
+
+            currentOrder.customer.model.GetComponent<CustomerBehaviour>().isActive = true;
         }
         else
         {

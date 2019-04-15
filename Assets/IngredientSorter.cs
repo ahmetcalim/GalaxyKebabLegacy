@@ -24,14 +24,15 @@ public class IngredientSorter : MonoBehaviour
     public List<Light> leftLights;
     public List<Light> rightLights;
     public List<IngredientItem> ingredientItemsUnsorted;
+    public List<Transform> ingredientTransforms;
     int index1;
     int index2;
     private void Start()
     {
 
-        ingredientItemsUnsorted =  ingredientItems.OrderBy(t=>t.name).ToList();
-        linearDrive_1.onIngredientTrayChanged.AddListener(GetIngredientsToTray);
-        linearDrive_2.onIngredientTrayChangedRight.AddListener(GetIngredientsToTrayRight);
+        SortIngredients();
+        //linearDrive_1.onIngredientTrayChanged.AddListener(GetIngredientsToTray);
+        //linearDrive_2.onIngredientTrayChangedRight.AddListener(GetIngredientsToTrayRight);
         // ingredients2 = GetIngredientsByTaste(taste_2);
 
         //RepositionIngredientsByTaste(ingredientTransforms_2, ingredientParent, ingredients2);
@@ -129,6 +130,14 @@ public class IngredientSorter : MonoBehaviour
         }
     }
 
+    public void SortIngredients()
+    {
+        ingredientItemsUnsorted = ingredientItems.OrderBy(t => t.name).ToList();
+        for (int i = 0; i < ingredientItemsUnsorted.Count; i++)
+        {
+            ingredientItemsUnsorted[i].transform.position = ingredientTransforms[i].position;
+        }
+    }
     public void GetIngredientsToTray(int tasteIndex)
     {
         switch (tasteIndex)

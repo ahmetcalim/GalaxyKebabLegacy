@@ -36,27 +36,30 @@ public class InteractionHandler : MonoBehaviour
                     hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>().isInHand = true;
                     hand.currentAttachedObject.GetComponent<Rigidbody>().useGravity = true;
                     hand.currentAttachedObject.GetComponent<Rigidbody>().isKinematic = false;
-                            if (transform.eulerAngles.z > 90f && transform.eulerAngles.z < 270f)
-                            {
-                                hand.currentAttachedObject.transform.localScale = new Vector3(hand.currentAttachedObject.transform.localScale.x, hand.currentAttachedObject.transform.localScale.y *-1f, hand.currentAttachedObject.transform.localScale.z);
-                            }
-                            else
-                            {
-                            if (hand.currentAttachedObject.transform.localScale.y <0)
-                            {
-                                hand.currentAttachedObject.transform.localScale = new Vector3(hand.currentAttachedObject.transform.localScale.x, hand.currentAttachedObject.transform.localScale.y * -1f, hand.currentAttachedObject.transform.localScale.z);
+                    if (transform.eulerAngles.z > 90f && transform.eulerAngles.z < 270f)
+                    {
+                        hand.currentAttachedObject.transform.localScale = new Vector3(hand.currentAttachedObject.transform.localScale.x, hand.currentAttachedObject.transform.localScale.y * -1f, hand.currentAttachedObject.transform.localScale.z);
+                    }
+                    else
+                    {
+                        if (hand.currentAttachedObject.transform.localScale.y < 0)
+                        {
+                            hand.currentAttachedObject.transform.localScale = new Vector3(hand.currentAttachedObject.transform.localScale.x, hand.currentAttachedObject.transform.localScale.y * -1f, hand.currentAttachedObject.transform.localScale.z);
 
-                            }
-                            else
-                            {
-                                hand.currentAttachedObject.transform.localScale = new Vector3(hand.currentAttachedObject.transform.localScale.x, hand.currentAttachedObject.transform.localScale.y * 1f, hand.currentAttachedObject.transform.localScale.z);
-                            }
+                        }
+                        else
+                        {
+                            hand.currentAttachedObject.transform.localScale = new Vector3(hand.currentAttachedObject.transform.localScale.x, hand.currentAttachedObject.transform.localScale.y * 1f, hand.currentAttachedObject.transform.localScale.z);
+                        }
 
                     }
-
-
                 }
-              
+                if (hand.currentAttachedObject.GetComponent<RollBehaviour>() != null)
+                {
+                    ObjectInHand = hand.currentAttachedObject;
+                    ObjectInHand.GetComponent<Rigidbody>().useGravity = true;
+                    ObjectInHand.GetComponent<Rigidbody>().isKinematic = false;
+                }
             }
         }
         if (grabAction.GetLastStateUp(handType))
@@ -64,20 +67,29 @@ public class InteractionHandler : MonoBehaviour
           
             if (ObjectInHand != null)
             {
-                ObjectInHand.GetComponent<Rigidbody>().useGravity = true;
-                ObjectInHand.GetComponent<Rigidbody>().isKinematic = false;
-                ObjectInHand.GetComponent<SpiceContainerBehaviour>().isInHand = false;
-                switch (handType)
+                if (ObjectInHand.GetComponent<SpiceContainerBehaviour>() != null)
                 {
-                    case SteamVR_Input_Sources.LeftHand:
-                        ingredientGradientTest.ResetGradients(0, false);
-                        break;
-                    case SteamVR_Input_Sources.RightHand:
-                        ingredientGradientTest.ResetGradients(1, false);
-                        break;
-                    default:
-                        break;
+                    ObjectInHand.GetComponent<Rigidbody>().useGravity = true;
+                    ObjectInHand.GetComponent<Rigidbody>().isKinematic = false;
+                    ObjectInHand.GetComponent<SpiceContainerBehaviour>().isInHand = false;
+                    switch (handType)
+                    {
+                        case SteamVR_Input_Sources.LeftHand:
+                            ingredientGradientTest.ResetGradients(0, false);
+                            break;
+                        case SteamVR_Input_Sources.RightHand:
+                            ingredientGradientTest.ResetGradients(1, false);
+                            break;
+                        default:
+                            break;
+                    }
                 }
+                if (ObjectInHand.GetComponent<RollBehaviour>() != null)
+                {
+                    ObjectInHand.GetComponent<Rigidbody>().useGravity = true;
+                    ObjectInHand.GetComponent<Rigidbody>().isKinematic = false;
+                }
+         
 
             }
         }

@@ -25,6 +25,8 @@ TagManager:
   - Point_2R
   - Point_3R
   - Point_4R
+  - Customer
+  - WrongOrder
   layers:
   - Default
   - TransparentFX

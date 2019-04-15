@@ -13,7 +13,6 @@ public class RepomaticBehaviour : MonoBehaviour
     public LavasGenerator lavasGenerator;
     public static bool canThrow;
     public Transform durumSpawnPoint;
-    public GameObject finishOrderButton;
     public Transform durumparent;
     private void OnTriggerEnter(Collider other)
     {
@@ -38,10 +37,7 @@ public class RepomaticBehaviour : MonoBehaviour
             durumInstance.transform.localPosition = Vector3.MoveTowards(durumInstance.transform.localPosition, durumPoint.localPosition, .001f);
             if (durumInstance.transform.localPosition.y >= durumPoint.localPosition.y)
             {
-                if (!finishOrderButton.activeSelf)
-                {
-                    finishOrderButton.SetActive(true);
-                }
+                durumInstance.AddComponent<RollBehaviour>();
             }
         }
     } 
@@ -49,17 +45,10 @@ public class RepomaticBehaviour : MonoBehaviour
     {
         if (durumInstance != null)
         {
-            Debug.Log("Throwlamam  gerek");
-            if (durumInstance.transform.localPosition.y >= durumPoint.localPosition.y)
-            {
-                finishOrderButton.SetActive(false);
                 canThrow = true;
                 canStart = false;
                 LinearDrive.canUseWrapomatic = true;
-                durumInstance.AddComponent<Rigidbody>();
-                durumInstance.GetComponent<Rigidbody>().AddForce(Vector3.up * 7f, ForceMode.Impulse);
-                durumInstance.GetComponent<Rigidbody>().AddForce(Vector3.left * 7f, ForceMode.Impulse);
-            }
+            
         }
     }
 }
