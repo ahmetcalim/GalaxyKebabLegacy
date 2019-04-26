@@ -6,40 +6,38 @@ using UnityEngine.UI;
 public class OrderControl : MonoBehaviour
 {
     public Text customerName;
-    public List<TasteItem> tasteItems;
-    public TasteItem average;
-
-    public void SetValues(Customer customer,List<Taste> tastes)
+    public List<IngredientView> ingredientItems;
+    public IngredientView average;
+    
+    public void SetValues(Customer customer,List<CustomerIngredient> ingredients)
     {
         this.customerName.text = customer.customerName;
-        for (int i = 0; i < tastes.Count; i++)
+        for (int i = 0; i < ingredients.Count; i++)
         {
 
-            switch (tastes[i].preference)
+            switch (ingredients[i].preference)
             {
-                case Taste.Preference.irrelevant:
-                    tasteItems[i].ingredient.color = Color.black;
+                case CustomerIngredient.Preference.like:
+                    ingredientItems[i].ingredientText.color = Color.green;
                     break;
-                case Taste.Preference.like:
-                    tasteItems[i].ingredient.color = Color.green;
-                    break;
-                case Taste.Preference.dislike:
-                    tasteItems[i].ingredient.color = Color.red;
+                case CustomerIngredient.Preference.dislike:
+                    ingredientItems[i].ingredientText.color = Color.red;
                     break;
                 default:
                     break;
             }
 
-           tasteItems[i].ingredient.text =tastes[i].taste.ToString();
-           tasteItems[i].value.text = tastes[i].tasteRating.ToString();
+            ingredientItems[i].ingredientText.text = ingredients[i].ingredient.name.ToString();
+            ingredientItems[i].valueText.text = ingredients[i].ingredient.rating.ToString();
         }
-        average.ingredient.text = "average";
-        average.value.text = customer.averageTasteRatingnValue.ToString();
+        average.ingredientText.text = "average";
+        average.valueText.text = customer.averageRating.ToString();
     }
+
 }
 [System.Serializable]
-public class TasteItem
+public class IngredientView
 {
-    public Text ingredient;
-    public Text value;
+    public Text ingredientText;
+    public Text valueText;
 }

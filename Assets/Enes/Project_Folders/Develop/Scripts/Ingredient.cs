@@ -1,21 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 [System.Serializable]
-public class Ingredient
-{  
-    public string ingredientName;
-    public int ID;
-    public List<IngredientTaste> tastes;
-    [System.NonSerialized]
-    public float rating=1;
-    public int actionAmount;
-   
-}
-[System.Serializable]
-public class IngredientTaste
+public class Ingredient:ScriptableObject
 {
-    public Taste taste;
-    public float tasteInput;
+    public int ID;
+    public string ingredientName;
+    public float actionInput;
+    public float inputUnitCost;
+    public float totalInputCount;
+    public float totalCost;
+    public double rating;
+
+    public void CalculateAverageRating(double value)
+    {
+        rating = value;
+    }
+    public void CalculateCost()
+    {
+        totalCost = totalInputCount * inputUnitCost;
+    }
 }

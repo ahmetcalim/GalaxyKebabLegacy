@@ -16,13 +16,10 @@ public class InteractionHandler : MonoBehaviour
     public bool IsShaking { get; set; }
     public float power;
     public Hand hand;
-    public List<RectTransform> kadranlar = new List<RectTransform>();
-    public List<Text> texts = new List<Text>();
+    public RectTransform kadran;
+    public Text text;
     private Vector3 kadranDefault;
     public Test ingredientGradientTest;
-    private void Start()
-    {
-    }
     private void Update()
     {
         if (grabAction.GetStateDown(handType))
@@ -32,6 +29,7 @@ public class InteractionHandler : MonoBehaviour
 
                 if (hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>() != null)
                 {
+                   
                     ObjectInHand = hand.currentAttachedObject;
                     hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>().isInHand = true;
                     hand.currentAttachedObject.GetComponent<Rigidbody>().useGravity = true;
@@ -53,6 +51,7 @@ public class InteractionHandler : MonoBehaviour
                         }
 
                     }
+                    CheckDonerPieceGrabbed();
                 }
                 if (hand.currentAttachedObject.GetComponent<RollBehaviour>() != null)
                 {
@@ -127,7 +126,7 @@ public class InteractionHandler : MonoBehaviour
                     default:
                         break;
                 }
-                hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>().UpdateBar(hand, kadranlar, texts);
+                hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>().UpdateBar(hand, kadran, text);
                 hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>().Particle();
             }
             
@@ -149,7 +148,7 @@ public class InteractionHandler : MonoBehaviour
         {
             if (hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>() != null)
             {
-                hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>().InstantiateIngredient(hand, kadranlar, texts);
+                hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>().InstantiateIngredient(hand, kadran, text);
                 hand.currentAttachedObject.GetComponent<SpiceContainerBehaviour>().Particle();
             }
         

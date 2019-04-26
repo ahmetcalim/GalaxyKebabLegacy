@@ -251,11 +251,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -403,7 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 17
+  ID: 18
   gLogic: {fileID: 914915448}
 --- !u!114 &72663341
 MonoBehaviour:
@@ -543,11 +543,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -943,7 +943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 10
+  ID: 11
   gLogic: {fileID: 914915448}
 --- !u!114 &214082513
 MonoBehaviour:
@@ -1083,11 +1083,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1138,8 +1138,8 @@ RectTransform:
   - {fileID: 440865879}
   - {fileID: 699258881}
   - {fileID: 946660375}
-  - {fileID: 261589840}
   - {fileID: 989706712}
+  - {fileID: 261589840}
   - {fileID: 909309126}
   - {fileID: 1352199527}
   - {fileID: 768347199}
@@ -1185,7 +1185,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 80, y: 80}
+  m_CellSize: {x: 130, y: 130}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -1285,11 +1285,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1418,7 +1418,7 @@ RectTransform:
   m_Children:
   - {fileID: 74589685}
   m_Father: {fileID: 231620542}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1437,7 +1437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 2
+  ID: 4
   gLogic: {fileID: 914915448}
 --- !u!114 &261589842
 MonoBehaviour:
@@ -1570,7 +1570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 8
+  ID: 9
   gLogic: {fileID: 914915448}
 --- !u!114 &269405772
 MonoBehaviour:
@@ -1703,7 +1703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 18
+  ID: 19
   gLogic: {fileID: 914915448}
 --- !u!114 &283410737
 MonoBehaviour:
@@ -1843,18 +1843,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PLC
+  m_Text: Fermented Seaweed
 --- !u!222 &353137830
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1994,7 +1994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 7
+  ID: 8
   gLogic: {fileID: 914915448}
 --- !u!114 &406124199
 MonoBehaviour:
@@ -2127,7 +2127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 20
+  ID: 21
   gLogic: {fileID: 914915448}
 --- !u!114 &409253715
 MonoBehaviour:
@@ -2396,18 +2396,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fermented Pear
+  m_Text: Banana
 --- !u!222 &483334745
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2475,11 +2475,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2508,7 +2508,7 @@ GameObject:
   - component: {fileID: 502371218}
   - component: {fileID: 502371217}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: CanvasIngredient
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2588,7 +2588,7 @@ RectTransform:
   - {fileID: 1336177645}
   - {fileID: 978072930}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2817,11 +2817,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2896,11 +2896,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -3140,6 +3140,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604561917}
   m_CullTransparentMesh: 0
+--- !u!1 &615079603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 615079604}
+  - component: {fileID: 615079606}
+  - component: {fileID: 615079605}
+  m_Layer: 5
+  m_Name: Taste9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &615079604
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615079603}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children:
+  - {fileID: 1355290682}
+  m_Father: {fileID: 1310275423}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &615079605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615079603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Taste
+--- !u!222 &615079606
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615079603}
+  m_CullTransparentMesh: 0
 --- !u!1 &658616353
 GameObject:
   m_ObjectHideFlags: 0
@@ -3192,7 +3272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 9
+  ID: 10
   gLogic: {fileID: 914915448}
 --- !u!114 &658616356
 MonoBehaviour:
@@ -3325,7 +3405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 11
+  ID: 12
   gLogic: {fileID: 914915448}
 --- !u!114 &696801971
 MonoBehaviour:
@@ -3458,7 +3538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
+  ID: 1
   gLogic: {fileID: 914915448}
 --- !u!114 &699258883
 MonoBehaviour:
@@ -3670,7 +3750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 14
+  ID: 15
   gLogic: {fileID: 914915448}
 --- !u!114 &729155691
 MonoBehaviour:
@@ -3803,7 +3883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 16
+  ID: 17
   gLogic: {fileID: 914915448}
 --- !u!114 &738112249
 MonoBehaviour:
@@ -3936,7 +4016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 6
+  ID: 7
   gLogic: {fileID: 914915448}
 --- !u!114 &768347201
 MonoBehaviour:
@@ -4076,11 +4156,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -4148,7 +4228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 4
+  ID: 5
   gLogic: {fileID: 914915448}
 --- !u!114 &909309128
 MonoBehaviour:
@@ -4317,8 +4397,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 914915446}
-  - component: {fileID: 914915445}
-  - component: {fileID: 914915447}
   - component: {fileID: 914915448}
   m_Layer: 0
   m_Name: GameLogic
@@ -4327,20 +4405,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &914915445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 914915444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4bc309c6f61a4f0d8835e601c2bdabb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  customers: []
-  gLogic: {fileID: 914915448}
 --- !u!4 &914915446
 Transform:
   m_ObjectHideFlags: 0
@@ -4355,443 +4419,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &914915447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 914915444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 740f1ac562df14bf882f97c1dbfc8611, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ingredients:
-  - ingredientName: Sumac
-    ID: 0
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 7
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 5
-    actionAmount: 0
-  - ingredientName: Coriander
-    ID: 1
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 2
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 6
-    actionAmount: 0
-  - ingredientName: Fermented Olives
-    ID: 2
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 9
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 4
-    actionAmount: 0
-  - ingredientName: Onions
-    ID: 3
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 3
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 12
-    actionAmount: 0
-  - ingredientName: Soy Sauce
-    ID: 4
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 11
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 6
-    actionAmount: 0
-  - ingredientName: Heavy Cream
-    ID: 5
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 8
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 1
-    actionAmount: 0
-  - ingredientName: Fermented Pear
-    ID: 6
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 13
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 4
-    actionAmount: 0
-  - ingredientName: Chocolate
-    ID: 7
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 15
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 2
-    actionAmount: 0
-  - ingredientName: Mustard
-    ID: 8
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 3
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 6
-    actionAmount: 0
-  - ingredientName: Tomatoes
-    ID: 9
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 4
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 3
-    actionAmount: 0
-  - ingredientName: Ketchup
-    ID: 10
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 6
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 7
-    actionAmount: 0
-  - ingredientName: Salt
-    ID: 11
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 17
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 1
-    actionAmount: 0
-  - ingredientName: PLC
-    ID: 12
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 0
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 0
-    actionAmount: 0
-  - ingredientName: Garlic Sauce
-    ID: 13
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 7
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 14
-    actionAmount: 0
-  - ingredientName: Pickled Cucumber
-    ID: 14
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 13
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 3
-    actionAmount: 0
-  - ingredientName: Wheat Sprouts
-    ID: 15
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 4
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 6
-    actionAmount: 0
-  - ingredientName: Broccoli
-    ID: 16
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 4
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 13
-    actionAmount: 0
-  - ingredientName: Jalepeno
-    ID: 17
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 6
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 10
-    actionAmount: 0
-  - ingredientName: Cumin
-    ID: 18
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 5
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 7
-    actionAmount: 0
-  - ingredientName: Chilli Flakes
-    ID: 19
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 20
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 3
-    actionAmount: 0
-  - ingredientName: Cider
-    ID: 20
-    tastes:
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 11
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 12
-    actionAmount: 0
-  gLogic: {fileID: 914915448}
-  ingredientItem: {fileID: 4258734271927757586, guid: a76718198c9ad3747a232e0e6e2072b9,
-    type: 3}
-  actionViewport: {fileID: 1151647648}
 --- !u!114 &914915448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4805,627 +4432,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customers:
-  - customerName: Alien 1
-    averageTasteRatingnValue: 0
-    personality:
-      impatianceValue: 0
-      orderTime: 0
-    Tastes:
-    - taste: 0
-      x_zero: 16
-      x_max: 80
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 1
-    - taste: 1
-      x_zero: 15
-      x_max: 79
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 2
-    - taste: 2
-      x_zero: 17
-      x_max: 80
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 0
-    - taste: 3
-      x_zero: 22
-      x_max: 81
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 1
-    - taste: 4
-      x_zero: 16
-      x_max: 78
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 0
-    - taste: 5
-      x_zero: 18
-      x_max: 79
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 0
-    - taste: 6
-      x_zero: 17
-      x_max: 77
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 0
-  - customerName: Alien 2
-    averageTasteRatingnValue: 0
-    personality:
-      impatianceValue: 0
-      orderTime: 0
-    Tastes:
-    - taste: 0
-      x_zero: 20
-      x_max: 79
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 0
-    - taste: 1
-      x_zero: 17
-      x_max: 77
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 0
-    - taste: 2
-      x_zero: 22
-      x_max: 77
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 2
-    - taste: 3
-      x_zero: 25
-      x_max: 79
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 1
-    - taste: 4
-      x_zero: 15
-      x_max: 73
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 1
-    - taste: 5
-      x_zero: 25
-      x_max: 78
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 0
-    - taste: 6
-      x_zero: 24
-      x_max: 69
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 0
-  - customerName: Alien 3
-    averageTasteRatingnValue: 0
-    personality:
-      impatianceValue: 0
-      orderTime: 0
-    Tastes:
-    - taste: 0
-      x_zero: 15
-      x_max: 62
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 0
-    - taste: 1
-      x_zero: 15
-      x_max: 61
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 1
-    - taste: 2
-      x_zero: 18
-      x_max: 63
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 1
-    - taste: 3
-      x_zero: 19
-      x_max: 64
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 0
-    - taste: 4
-      x_zero: 15
-      x_max: 61
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 2
-    - taste: 5
-      x_zero: 25
-      x_max: 78
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 0
-    - taste: 6
-      x_zero: 23
-      x_max: 63
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 0
-  - customerName: Alien 4
-    averageTasteRatingnValue: 0
-    personality:
-      impatianceValue: 0
-      orderTime: 0
-    Tastes:
-    - taste: 0
-      x_zero: 19
-      x_max: 62
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 2
-    - taste: 1
-      x_zero: 23
-      x_max: 65
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 1
-    - taste: 2
-      x_zero: 21
-      x_max: 63
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 0
-    - taste: 3
-      x_zero: 15
-      x_max: 62
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 2
-    - taste: 4
-      x_zero: 15
-      x_max: 61
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 0
-    - taste: 5
-      x_zero: 16
-      x_max: 65
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 1
-    - taste: 6
-      x_zero: 17
-      x_max: 69
-      tasteRating: 0
-      totalInputCount: 0
-      preference: 1
+  - {fileID: 11400000, guid: 22105d2aeac5236448388a3ef5dbb344, type: 2}
+  - {fileID: 11400000, guid: bb66e61980dc7da4b9cc0ff552e7abcf, type: 2}
+  - {fileID: 11400000, guid: c840974877e59924296a330442b179de, type: 2}
   ingredients:
-  - ingredientName: Sumac
-    ID: 0
-    tastes:
-    - taste:
-        taste: 6
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 3.5
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 2.5
-    actionAmount: 2
-  - ingredientName: Coriander
-    ID: 1
-    tastes:
-    - taste:
-        taste: 6
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 1
-    - taste:
-        taste: 1
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 3
-    actionAmount: 20
-  - ingredientName: Fermented Olives
-    ID: 2
-    tastes:
-    - taste:
-        taste: 6
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 4.5
-    - taste:
-        taste: 3
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 2
-    actionAmount: 8
-  - ingredientName: Onions
-    ID: 3
-    tastes:
-    - taste:
-        taste: 6
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 1.5
-    - taste:
-        taste: 2
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 6
-    actionAmount: 20
-  - ingredientName: Soy Sauce
-    ID: 4
-    tastes:
-    - taste:
-        taste: 6
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 5.5
-    - taste:
-        taste: 4
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 3
-    actionAmount: 10
-  - ingredientName: Heavy Cream
-    ID: 5
-    tastes:
-    - taste:
-        taste: 6
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 4
-    - taste:
-        taste: 5
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 0.5
-    actionAmount: 5
-  - ingredientName: Fermented Pear
-    ID: 6
-    tastes:
-    - taste:
-        taste: 5
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 6.5
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 2
-    actionAmount: 20
-  - ingredientName: Chocolate
-    ID: 7
-    tastes:
-    - taste:
-        taste: 5
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 7.5
-    - taste:
-        taste: 1
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 1
-    actionAmount: 12
-  - ingredientName: Mustard
-    ID: 8
-    tastes:
-    - taste:
-        taste: 5
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 1.5
-    - taste:
-        taste: 2
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 3
-    actionAmount: 5
-  - ingredientName: Tomatoes
-    ID: 9
-    tastes:
-    - taste:
-        taste: 5
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 2
-    - taste:
-        taste: 3
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 1.5
-    actionAmount: 20
-  - ingredientName: Ketchup
-    ID: 10
-    tastes:
-    - taste:
-        taste: 5
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 3
-    - taste:
-        taste: 4
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 3.5
-    actionAmount: 8
-  - ingredientName: Salt
-    ID: 11
-    tastes:
-    - taste:
-        taste: 4
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 2.5
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 0.5
-    actionAmount: 2
-  - ingredientName: Fermented Seaweed
-    ID: 12
-    tastes:
-    - taste:
-        taste: 4
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 3
-    - taste:
-        taste: 1
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 5
-    actionAmount: 15
-  - ingredientName: Garlic Sauce
-    ID: 13
-    tastes:
-    - taste:
-        taste: 4
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 3.5
-    - taste:
-        taste: 2
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 7
-    actionAmount: 10
-  - ingredientName: Pickled Cucumber
-    ID: 14
-    tastes:
-    - taste:
-        taste: 4
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 6.5
-    - taste:
-        taste: 3
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 1.5
-    actionAmount: 20
-  - ingredientName: Wheat Sprouts
-    ID: 15
-    tastes:
-    - taste:
-        taste: 3
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 2
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 3
-    actionAmount: 10
-  - ingredientName: Broccoli
-    ID: 16
-    tastes:
-    - taste:
-        taste: 3
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 2
-    - taste:
-        taste: 1
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 6.5
-    actionAmount: 20
-  - ingredientName: Jalepeno
-    ID: 17
-    tastes:
-    - taste:
-        taste: 3
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 3
-    - taste:
-        taste: 2
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 5
-    actionAmount: 10
-  - ingredientName: Cumin
-    ID: 18
-    tastes:
-    - taste:
-        taste: 2
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 2.5
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 3.5
-    actionAmount: 2
-  - ingredientName: Chilli Flakes
-    ID: 19
-    tastes:
-    - taste:
-        taste: 2
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 10
-    - taste:
-        taste: 1
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 1.5
-    actionAmount: 2
-  - ingredientName: Cider
-    ID: 20
-    tastes:
-    - taste:
-        taste: 1
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 5.5
-    - taste:
-        taste: 0
-        x_zero: 0
-        x_max: 0
-        tasteRating: 0
-        totalInputCount: 0
-        preference: 0
-      tasteInput: 6
-    actionAmount: 5
+  - {fileID: 11400000, guid: 30068628f7339d144b699e6112896403, type: 2}
+  - {fileID: 11400000, guid: 5bab0f07ca9d36549b39661d76ed5d7d, type: 2}
+  - {fileID: 11400000, guid: 50151916b52346f46a9a5562c7dbd8f9, type: 2}
+  - {fileID: 11400000, guid: 0ce6b63525cc4b64590d5ccbc174023c, type: 2}
+  - {fileID: 11400000, guid: 8eb26c1d92e448b4baf8cb0caf0b7dcd, type: 2}
+  - {fileID: 11400000, guid: 428670a176543804ab6e46bffbbd66d8, type: 2}
+  - {fileID: 11400000, guid: ba5f82dd9fce1f947add61689c31018a, type: 2}
+  - {fileID: 11400000, guid: 84e3713a15b0499459c5b881be1acf5d, type: 2}
+  - {fileID: 11400000, guid: 0ea5a316e306c4d47a7ff0058335dfd2, type: 2}
+  - {fileID: 11400000, guid: 3f41a31973731804a85ff7666b489477, type: 2}
+  - {fileID: 11400000, guid: 596a288713b938f4c8f97b9d5bd678b3, type: 2}
+  - {fileID: 11400000, guid: e4a5bb2b8ecc03740b51b17ab5cc44e3, type: 2}
+  - {fileID: 11400000, guid: 8c0ad328cd9f757498e0fbb894af684a, type: 2}
+  - {fileID: 11400000, guid: 35ee6632c2ea7b84fa62a9f66a3b414b, type: 2}
+  - {fileID: 11400000, guid: e14a6b620ef024343b65137b50833389, type: 2}
+  - {fileID: 11400000, guid: 323e1fdf152a5f446861009c2dd84531, type: 2}
+  - {fileID: 11400000, guid: f1f2732508d4fe5468112ccaeafabd46, type: 2}
+  - {fileID: 11400000, guid: db9afce75f2769845956ff4806314951, type: 2}
+  - {fileID: 11400000, guid: 69a5c9c0a85d9164cb54ef3c492ad8c9, type: 2}
+  - {fileID: 11400000, guid: 85fbc314242007044a836ec103189e78, type: 2}
+  - {fileID: 11400000, guid: 142467be674a9924681fe34619471461, type: 2}
+  - {fileID: 11400000, guid: bd96fb05223120949b84160066cb921b, type: 2}
+  alienPrefabs:
+  - {fileID: 6293969208216280959, guid: 01e21ab1c2e4b6a49827f462ce645a61, type: 3}
+  customerSpawnPoint: {fileID: 2026256009}
   viewport: {fileID: 1151647648}
   oItem: {fileID: 676017147392888186, guid: 8c860c09c74d15a4b8487501eae7935c, type: 3}
   oControl: {fileID: 1310275427}
   summaryView: {fileID: 121013397}
   star: {fileID: 7195276488973041280, guid: a8d2ae25bcdbb634fbf32e8005c06ca5, type: 3}
-  playingTime: 180
-  interval: 30
+  playingTime: 60
+  interval: 20
   timeCounter: 0
+  currentOrder: {fileID: 0}
 --- !u!1 &946660374
 GameObject:
   m_ObjectHideFlags: 0
@@ -5478,7 +4522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 1
+  ID: 2
   gLogic: {fileID: 914915448}
 --- !u!114 &946660377
 MonoBehaviour:
@@ -5667,7 +4711,7 @@ RectTransform:
   m_Children:
   - {fileID: 217823507}
   m_Father: {fileID: 231620542}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5780,7 +4824,7 @@ GameObject:
   - component: {fileID: 1014950796}
   - component: {fileID: 1014950795}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasOrderPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6155,6 +5199,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107288712}
   m_CullTransparentMesh: 0
+--- !u!1 &1119466450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1119466451}
+  - component: {fileID: 1119466453}
+  - component: {fileID: 1119466452}
+  m_Layer: 5
+  m_Name: Taste9Meat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1119466451
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119466450}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children:
+  - {fileID: 1862476971}
+  m_Father: {fileID: 1310275423}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1119466452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119466450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Taste
+--- !u!222 &1119466453
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119466450}
+  m_CullTransparentMesh: 0
 --- !u!1 &1151647647
 GameObject:
   m_ObjectHideFlags: 0
@@ -6407,11 +5531,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -6479,7 +5603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 19
+  ID: 20
   gLogic: {fileID: 914915448}
 --- !u!114 &1266595046
 MonoBehaviour:
@@ -6718,6 +5842,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285452880}
   m_CullTransparentMesh: 0
+--- !u!1 &1286269872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1286269873}
+  - component: {fileID: 1286269875}
+  - component: {fileID: 1286269874}
+  m_Layer: 5
+  m_Name: value
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1286269873
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286269872}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1348166775}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -26}
+  m_SizeDelta: {x: 0, y: -51.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1286269874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286269872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: value
+--- !u!222 &1286269875
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286269872}
+  m_CullTransparentMesh: 0
 --- !u!1 &1310275422
 GameObject:
   m_ObjectHideFlags: 0
@@ -6757,6 +5960,9 @@ RectTransform:
   - {fileID: 1351404352}
   - {fileID: 91090323}
   - {fileID: 1916413049}
+  - {fileID: 1348166775}
+  - {fileID: 615079604}
+  - {fileID: 1119466451}
   - {fileID: 2133132565}
   m_Father: {fileID: 85858375}
   m_RootOrder: 0
@@ -6840,24 +6046,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customerName: {fileID: 524992158}
-  tasteItems:
-  - ingredient: {fileID: 70484221}
-    value: {fileID: 1952927699}
-  - ingredient: {fileID: 21990847}
-    value: {fileID: 2059309654}
-  - ingredient: {fileID: 240893277}
-    value: {fileID: 2117863408}
-  - ingredient: {fileID: 1061279536}
-    value: {fileID: 707881816}
-  - ingredient: {fileID: 1351404353}
-    value: {fileID: 604561919}
-  - ingredient: {fileID: 91090324}
-    value: {fileID: 1034636166}
-  - ingredient: {fileID: 1916413050}
-    value: {fileID: 1285452882}
+  ingredientItems:
+  - ingredientText: {fileID: 70484221}
+    valueText: {fileID: 1952927699}
+  - ingredientText: {fileID: 21990847}
+    valueText: {fileID: 2059309654}
+  - ingredientText: {fileID: 240893277}
+    valueText: {fileID: 2117863408}
+  - ingredientText: {fileID: 1061279536}
+    valueText: {fileID: 707881816}
+  - ingredientText: {fileID: 1351404353}
+    valueText: {fileID: 604561919}
+  - ingredientText: {fileID: 91090324}
+    valueText: {fileID: 1034636166}
+  - ingredientText: {fileID: 1916413050}
+    valueText: {fileID: 1285452882}
+  - ingredientText: {fileID: 1348166776}
+    valueText: {fileID: 1286269874}
+  - ingredientText: {fileID: 615079605}
+    valueText: {fileID: 1355290683}
+  - ingredientText: {fileID: 1119466452}
+    valueText: {fileID: 1862476972}
   average:
-    ingredient: {fileID: 2133132566}
-    value: {fileID: 1250532675}
+    ingredientText: {fileID: 2133132566}
+    valueText: {fileID: 1250532675}
 --- !u!1 &1311813507
 GameObject:
   m_ObjectHideFlags: 0
@@ -6917,11 +6129,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -6996,11 +6208,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -7051,8 +6263,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -400}
-  m_SizeDelta: {x: 0, y: -799.9}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1336177646
 MonoBehaviour:
@@ -7169,6 +6381,86 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341102456}
+  m_CullTransparentMesh: 0
+--- !u!1 &1348166774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1348166775}
+  - component: {fileID: 1348166777}
+  - component: {fileID: 1348166776}
+  m_Layer: 5
+  m_Name: Taste8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1348166775
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348166774}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_Children:
+  - {fileID: 1286269873}
+  m_Father: {fileID: 1310275423}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1348166776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348166774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Taste
+--- !u!222 &1348166777
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348166774}
   m_CullTransparentMesh: 0
 --- !u!1 &1351404351
 GameObject:
@@ -7302,7 +6594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 5
+  ID: 6
   gLogic: {fileID: 914915448}
 --- !u!114 &1352199529
 MonoBehaviour:
@@ -7382,6 +6674,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1352199526}
+  m_CullTransparentMesh: 0
+--- !u!1 &1355290681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1355290682}
+  - component: {fileID: 1355290684}
+  - component: {fileID: 1355290683}
+  m_Layer: 5
+  m_Name: value
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1355290682
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355290681}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 615079604}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -26}
+  m_SizeDelta: {x: 0, y: -51.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1355290683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355290681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: value
+--- !u!222 &1355290684
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355290681}
   m_CullTransparentMesh: 0
 --- !u!1 &1357710493
 GameObject:
@@ -7514,7 +6885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 15
+  ID: 16
   gLogic: {fileID: 914915448}
 --- !u!114 &1388461049
 MonoBehaviour:
@@ -7654,11 +7025,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -7733,18 +7104,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Broccoli
+  m_Text: Kale
 --- !u!222 &1460526102
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8128,11 +7499,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -8200,7 +7571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 13
+  ID: 14
   gLogic: {fileID: 914915448}
 --- !u!114 &1681638748
 MonoBehaviour:
@@ -8498,11 +7869,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -8577,11 +7948,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -8798,7 +8169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
---- !u!1 &1879512337
+--- !u!1 &1862476970
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8806,28 +8177,77 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1879512338}
-  m_Layer: 0
-  m_Name: Ingredients
+  - component: {fileID: 1862476971}
+  - component: {fileID: 1862476973}
+  - component: {fileID: 1862476972}
+  m_Layer: 5
+  m_Name: value
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1879512338
-Transform:
+--- !u!224 &1862476971
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1879512337}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 1862476970}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1119466451}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -26}
+  m_SizeDelta: {x: 0, y: -51.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1862476972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862476970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: value
+--- !u!222 &1862476973
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862476970}
+  m_CullTransparentMesh: 0
 --- !u!1 &1893887546
 GameObject:
   m_ObjectHideFlags: 0
@@ -9204,11 +8624,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -9412,11 +8832,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -9432,6 +8852,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020895040}
   m_CullTransparentMesh: 0
+--- !u!1 &2026256005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2026256009}
+  - component: {fileID: 2026256008}
+  - component: {fileID: 2026256007}
+  - component: {fileID: 2026256006}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &2026256006
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026256005}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2026256007
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026256005}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &2026256008
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026256005}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2026256009
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026256005}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.59, y: 0.77, z: 0.71}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2039358985
 GameObject:
   m_ObjectHideFlags: 0
@@ -9491,11 +9002,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -9642,7 +9153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502134ae619d3c442ad25082000e3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 12
+  ID: 13
   gLogic: {fileID: 914915448}
 --- !u!114 &2103194847
 MonoBehaviour:
@@ -9833,7 +9344,7 @@ RectTransform:
   m_Children:
   - {fileID: 1250532674}
   m_Father: {fileID: 1310275423}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

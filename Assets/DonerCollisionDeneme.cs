@@ -12,7 +12,7 @@ public class DonerCollisionDeneme : MonoBehaviour
             
             contactPoint = collision.GetContact(0).point;
             
-            Debug.Log(contactPoint);
+
         }
     }
 }

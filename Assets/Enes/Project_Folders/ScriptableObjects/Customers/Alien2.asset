@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d64b4d2498f64a9691a20c67c96b238, type: 3}
+  m_Name: Alien2
+  m_EditorClassIdentifier: 
+  customerName: Alien2
+  model: {fileID: 4798314165247318366, guid: 4f0b10a9db831434bb42a2349a11330b, type: 3}
+  averageRating: 0
+  personality:
+    orderTime: 0
+  c_Ingredients:
+  - ingredient: {fileID: 11400000, guid: 85fbc314242007044a836ec103189e78, type: 2}
+    x_zero: 24
+    x_max: 61
+    preference: 0
+  - ingredient: {fileID: 11400000, guid: 5bab0f07ca9d36549b39661d76ed5d7d, type: 2}
+    x_zero: 22
+    x_max: 65
+    preference: 0
+  - ingredient: {fileID: 11400000, guid: 8c0ad328cd9f757498e0fbb894af684a, type: 2}
+    x_zero: 17
+    x_max: 83
+    preference: 0
+  - ingredient: {fileID: 11400000, guid: 428670a176543804ab6e46bffbbd66d8, type: 2}
+    x_zero: 25
+    x_max: 96
+    preference: 0
+  - ingredient: {fileID: 11400000, guid: 596a288713b938f4c8f97b9d5bd678b3, type: 2}
+    x_zero: 15
+    x_max: 98
+    preference: 0
+  - ingredient: {fileID: 11400000, guid: 0ea5a316e306c4d47a7ff0058335dfd2, type: 2}
+    x_zero: 28
+    x_max: 82
+    preference: 0
+  - ingredient: {fileID: 11400000, guid: e14a6b620ef024343b65137b50833389, type: 2}
+    x_zero: 19
+    x_max: 85
+    preference: 1
+  - ingredient: {fileID: 11400000, guid: 3f41a31973731804a85ff7666b489477, type: 2}
+    x_zero: 23
+    x_max: 79
+    preference: 0
+  - ingredient: {fileID: 11400000, guid: 8eb26c1d92e448b4baf8cb0caf0b7dcd, type: 2}
+    x_zero: 17
+    x_max: 71
+    preference: 1
+  - ingredient: {fileID: 11400000, guid: bd96fb05223120949b84160066cb921b, type: 2}
+    x_zero: 24
+    x_max: 49
+    preference: 2

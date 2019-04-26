@@ -1,0 +1,291 @@
+fileFormatVersion: 2
+guid: 1fc6592dc6730884588fa6e8a500f404
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Cabinet_Door_1
+    100002: Cabinet_Door_1 1
+    100004: Cabinet_Door_2
+    100006: Cabinet_Door_2 1
+    100008: Drawer_1
+    100010: Drawer_1 1
+    100012: Drawer_2
+    100014: Drawer_2 1
+    100016: Drawer_3
+    100018: Drawer_3 1
+    100020: Handle_1
+    100022: Handle_1 1
+    100024: Handle_2
+    100026: Handle_2 1
+    100028: Handle_High
+    100030: Module_Cabinet_1
+    100032: Module_Cabinet_2
+    100034: Module_Drawer_1
+    100036: Module_Drawer_2
+    100038: Module_Empty_1
+    100040: Module_Empty_2
+    100042: Module_Round_Corner
+    100044: Module_Sharp_Corner
+    100046: Module_Void_1
+    100048: Module_Void_2
+    100050: Modules
+    100052: //RootNode
+    100054: Seperator_1
+    100056: Seperator_2
+    100058: Seperator_3
+    100060: Seperator_4
+    100062: Seperator_5
+    100064: Seperator_6
+    100066: Seperator_7
+    100068: Seperator_8
+    100070: Seperator_9
+    100072: Seperators
+    400000: Cabinet_Door_1
+    400002: Cabinet_Door_1 1
+    400004: Cabinet_Door_2
+    400006: Cabinet_Door_2 1
+    400008: Drawer_1
+    400010: Drawer_1 1
+    400012: Drawer_2
+    400014: Drawer_2 1
+    400016: Drawer_3
+    400018: Drawer_3 1
+    400020: Handle_1
+    400022: Handle_1 1
+    400024: Handle_2
+    400026: Handle_2 1
+    400028: Handle_High
+    400030: Module_Cabinet_1
+    400032: Module_Cabinet_2
+    400034: Module_Drawer_1
+    400036: Module_Drawer_2
+    400038: Module_Empty_1
+    400040: Module_Empty_2
+    400042: Module_Round_Corner
+    400044: Module_Sharp_Corner
+    400046: Module_Void_1
+    400048: Module_Void_2
+    400050: Modules
+    400052: //RootNode
+    400054: Seperator_1
+    400056: Seperator_2
+    400058: Seperator_3
+    400060: Seperator_4
+    400062: Seperator_5
+    400064: Seperator_6
+    400066: Seperator_7
+    400068: Seperator_8
+    400070: Seperator_9
+    400072: Seperators
+    2100000: Color_Cyan
+    2100002: Color_Yellow
+    2100004: Color_Purple
+    2100006: Color_Red
+    2300000: Cabinet_Door_1
+    2300002: Cabinet_Door_1 1
+    2300004: Cabinet_Door_2
+    2300006: Cabinet_Door_2 1
+    2300008: Drawer_1
+    2300010: Drawer_1 1
+    2300012: Drawer_2
+    2300014: Drawer_2 1
+    2300016: Drawer_3
+    2300018: Drawer_3 1
+    2300020: Handle_1
+    2300022: Handle_1 1
+    2300024: Handle_2
+    2300026: Handle_2 1
+    2300028: Handle_High
+    2300030: Module_Cabinet_1
+    2300032: Module_Cabinet_2
+    2300034: Module_Drawer_1
+    2300036: Module_Drawer_2
+    2300038: Module_Empty_1
+    2300040: Module_Empty_2
+    2300042: Module_Round_Corner
+    2300044: Module_Sharp_Corner
+    2300046: Module_Void_1
+    2300048: Module_Void_2
+    2300050: Seperator_1
+    2300052: Seperator_2
+    2300054: Seperator_3
+    2300056: Seperator_4
+    2300058: Seperator_5
+    2300060: Seperator_6
+    2300062: Seperator_7
+    2300064: Seperator_8
+    2300066: Seperator_9
+    3300000: Cabinet_Door_1
+    3300002: Cabinet_Door_1 1
+    3300004: Cabinet_Door_2
+    3300006: Cabinet_Door_2 1
+    3300008: Drawer_1
+    3300010: Drawer_1 1
+    3300012: Drawer_2
+    3300014: Drawer_2 1
+    3300016: Drawer_3
+    3300018: Drawer_3 1
+    3300020: Handle_1
+    3300022: Handle_1 1
+    3300024: Handle_2
+    3300026: Handle_2 1
+    3300028: Handle_High
+    3300030: Module_Cabinet_1
+    3300032: Module_Cabinet_2
+    3300034: Module_Drawer_1
+    3300036: Module_Drawer_2
+    3300038: Module_Empty_1
+    3300040: Module_Empty_2
+    3300042: Module_Round_Corner
+    3300044: Module_Sharp_Corner
+    3300046: Module_Void_1
+    3300048: Module_Void_2
+    3300050: Seperator_1
+    3300052: Seperator_2
+    3300054: Seperator_3
+    3300056: Seperator_4
+    3300058: Seperator_5
+    3300060: Seperator_6
+    3300062: Seperator_7
+    3300064: Seperator_8
+    3300066: Seperator_9
+    4300000: Module_Empty_1
+    4300002: Module_Void_1
+    4300004: Module_Drawer_1
+    4300006: Drawer_1
+    4300008: Drawer_2
+    4300010: Drawer_3
+    4300012: Module_Void_2
+    4300014: Module_Round_Corner
+    4300016: Module_Cabinet_1
+    4300018: Cabinet_Door_1
+    4300020: Handle_1
+    4300022: Handle_High
+    4300024: Cabinet_Door_2
+    4300026: Handle_2
+    4300028: Module_Sharp_Corner
+    4300030: Module_Empty_2
+    4300032: Module_Cabinet_2
+    4300034: Cabinet_Door_1
+    4300036: Handle_1
+    4300038: Cabinet_Door_2
+    4300040: Handle_2
+    4300042: Module_Drawer_2
+    4300044: Drawer_1
+    4300046: Drawer_2
+    4300048: Drawer_3
+    4300050: Seperator_1
+    4300052: Seperator_2
+    4300054: Seperator_3
+    4300056: Seperator_4
+    4300058: Seperator_5
+    4300060: Seperator_6
+    4300062: Seperator_7
+    4300064: Seperator_8
+    4300066: Seperator_9
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_Cyan
+    second: {fileID: 2100000, guid: ece56adf0b307854d85329dc5b194794, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_Purple
+    second: {fileID: 2100000, guid: 1395001b786a38844be9db5c5e34d8c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_Red
+    second: {fileID: 2100000, guid: 11511402e4d7b4343b59d2c7700258c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Color_Yellow
+    second: {fileID: 2100000, guid: 0f9554641c0807641aef399f47f570fb, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

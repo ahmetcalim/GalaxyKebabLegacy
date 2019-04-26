@@ -37,7 +37,11 @@ public class RepomaticBehaviour : MonoBehaviour
             durumInstance.transform.localPosition = Vector3.MoveTowards(durumInstance.transform.localPosition, durumPoint.localPosition, .001f);
             if (durumInstance.transform.localPosition.y >= durumPoint.localPosition.y)
             {
-                durumInstance.AddComponent<RollBehaviour>();
+                if (durumInstance.GetComponent<RollBehaviour>() == null)
+                {
+                    durumInstance.AddComponent<RollBehaviour>();
+                }
+               
             }
         }
     } 

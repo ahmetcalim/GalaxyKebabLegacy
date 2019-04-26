@@ -9,6 +9,7 @@ public class DonerKnifeBehaviour : MonoBehaviour
     private Vector3 contactPoint;
     public  static float beginPointY;
     private float timeSinceTriggered;
+    public static float amount;
     public static float velocity;
     public static GameObject currentDoner;
     public Transform donerObject;
@@ -27,7 +28,6 @@ public class DonerKnifeBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "Doner")
         {
-            
             if (!spawned)
             {
                 beginPointY = transform.localPosition.y;
@@ -44,8 +44,8 @@ public class DonerKnifeBehaviour : MonoBehaviour
         if (other.tag == "Doner")
         {
             distanceFromDoner = Vector3.Distance(new Vector3(transform.position.x, 0f, transform.position.z), new Vector3(donerObject.position.x, 0f, donerObject.position.z));
-
-            velocity = Mathf.Abs(transform.localPosition.y - beginPointY);
+            amount = Mathf.Abs(transform.localPosition.y - beginPointY);
+            velocity = GetComponent<Rigidbody>().velocity.magnitude;
             currentDoner.GetComponent<DonerBehaviour>().UpdateScaleOfDoner();
             isHit = true;
         }
@@ -58,6 +58,7 @@ public class DonerKnifeBehaviour : MonoBehaviour
             meshCollider.isTrigger = false;
             spawned = false;
                isHit = false;
+            
             if (currentDoner.GetComponent<Rigidbody>() == null || currentDoner.GetComponent<MeshCollider>() == null)
             {
                 currentDoner.AddComponent<Rigidbody>();

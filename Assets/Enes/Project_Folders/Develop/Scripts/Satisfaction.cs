@@ -22,12 +22,20 @@ public static class Satisfaction
     }
 
     public static double  CalculateSatisfaction(double xMax,double xZero,double tasteInput,int preference)
-    {
+    {     
         if (tasteInput < 0)
             tasteInput = 0;
 
         return ((2/(1+ Math.Pow(2.71f,-GetSteepnessValue(xMax,xZero)*
         (GetTasteInputValue(tasteInput,xMax)+0.01f-xZero))))-1)*preference;
+    }
+    public static double CalculateSatisfactionMeat(double xMax, double xZero, double tasteInput, int preference)
+    {
+        if (tasteInput < 0)
+            tasteInput = 0;
+
+        return ((2 / (1 + Math.Pow(2.71f, -GetSteepnessValue(xMax, xZero) *
+        (tasteInput + 0.01f - xZero)))) - 1) * preference;
     }
 
     public static double CalculateIrrelevantSatisfaction_OverTaste(double tasteInput)

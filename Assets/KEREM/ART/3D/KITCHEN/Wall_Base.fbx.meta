@@ -1,0 +1,233 @@
+fileFormatVersion: 2
+guid: de2b25d2417cefa4fa6d360d9cce56c2
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Door
+    100002: Ground_Base
+    100004: The_Wall
+    100006: Wall_A_1
+    100008: Wall_A_2
+    100010: Wall_A_3
+    100012: Wall_A_4
+    100014: Wall_B_1
+    100016: Wall_B_2
+    100018: Wall_B_3
+    100020: //RootNode
+    100022: Wall_C_1
+    100024: Wall_C_2
+    100026: Wall_D_1
+    100028: Wall_F_1
+    100030: Wall_F_2
+    100032: Wall_Roof
+    100034: Wall_Round_Corner
+    100036: Wall_Sharp_Corner
+    100038: Walls
+    400000: Door
+    400002: Ground_Base
+    400004: The_Wall
+    400006: Wall_A_1
+    400008: Wall_A_2
+    400010: Wall_A_3
+    400012: Wall_A_4
+    400014: Wall_B_1
+    400016: Wall_B_2
+    400018: Wall_B_3
+    400020: //RootNode
+    400022: Wall_C_1
+    400024: Wall_C_2
+    400026: Wall_D_1
+    400028: Wall_F_1
+    400030: Wall_F_2
+    400032: Wall_Roof
+    400034: Wall_Round_Corner
+    400036: Wall_Sharp_Corner
+    400038: Walls
+    2100000: M_Wall_Blue
+    2100002: M_Wall_Red
+    2100004: M_Wall_Cyan
+    2100006: M_Wall_Orange_2
+    2100008: M_Door_Glass
+    2100010: M_Door
+    2100012: M_Wall_Orange
+    2100014: M_Wall_Lime
+    2300000: Door
+    2300002: Ground_Base
+    2300004: The_Wall
+    2300006: Wall_A_1
+    2300008: Wall_A_2
+    2300010: Wall_A_3
+    2300012: Wall_A_4
+    2300014: Wall_B_1
+    2300016: Wall_B_2
+    2300018: Wall_B_3
+    2300020: Wall_C_1
+    2300022: Wall_C_2
+    2300024: Wall_D_1
+    2300026: Wall_F_1
+    2300028: Wall_F_2
+    2300030: Wall_Roof
+    2300032: Wall_Round_Corner
+    2300034: Wall_Sharp_Corner
+    3300000: Door
+    3300002: Ground_Base
+    3300004: The_Wall
+    3300006: Wall_A_1
+    3300008: Wall_A_2
+    3300010: Wall_A_3
+    3300012: Wall_A_4
+    3300014: Wall_B_1
+    3300016: Wall_B_2
+    3300018: Wall_B_3
+    3300020: Wall_C_1
+    3300022: Wall_C_2
+    3300024: Wall_D_1
+    3300026: Wall_F_1
+    3300028: Wall_F_2
+    3300030: Wall_Roof
+    3300032: Wall_Round_Corner
+    3300034: Wall_Sharp_Corner
+    4300000: The_Wall
+    4300002: Wall_Roof
+    4300004: Door
+    4300006: Wall_Round_Corner
+    4300008: Wall_Sharp_Corner
+    4300010: Ground_Base
+    4300012: Wall_A_1
+    4300014: Wall_A_2
+    4300016: Wall_A_3
+    4300018: Wall_A_4
+    4300020: Wall_B_1
+    4300022: Wall_B_2
+    4300024: Wall_B_3
+    4300026: Wall_C_1
+    4300028: Wall_D_1
+    4300030: Wall_C_2
+    4300032: Wall_F_1
+    4300034: Wall_F_2
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Door
+    second: {fileID: 2100000, guid: 9e4de08db97dcb94c9a9d58c093d33a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Door_Glass
+    second: {fileID: 2100000, guid: ffcb53c357530b44ebc0b450f2275950, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Wall_Blue
+    second: {fileID: 2100000, guid: e4facdeaad2c38945b2bff9e54f1fc51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Wall_Cyan
+    second: {fileID: 2100000, guid: 32bd25ecc21b2bc43b5aaa7061545123, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Wall_Lime
+    second: {fileID: 2100000, guid: 14b7f32ae734b80429c1ba62554e6768, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Wall_Orange
+    second: {fileID: 2100000, guid: f2f473cbb09849e43ac53479b7c69e5f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Wall_Orange_2
+    second: {fileID: 2100000, guid: 51269ba683e944046acf434b2e56fded, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Wall_Red
+    second: {fileID: 2100000, guid: e44352be506e8a341b3d74a66260a8cf, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4,7 +4,6 @@ using UnityEngine;
 [System.Serializable]
 public class Personality
 {
-    public bool irrelevantFunction;
     public int orderTime;
     [System.NonSerialized]
     public bool counterActive=true;

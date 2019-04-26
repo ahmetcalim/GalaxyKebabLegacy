@@ -13,8 +13,8 @@ public class IngredientSorter : MonoBehaviour
     public List<Transform> ingredientTransforms_1;
     public List<Transform> ingredientTransforms_2;
     public Transform ingredientParent;
-    private Taste.Tastes taste_1;
-    private Taste.Tastes taste_2;
+    private CustomerIngredient taste_1;
+    private CustomerIngredient taste_2;
     public LinearDrive linearDrive_1;
     public LinearDrive linearDrive_2;
     public IngredientItem[] ingredientItems;
@@ -38,6 +38,16 @@ public class IngredientSorter : MonoBehaviour
         //RepositionIngredientsByTaste(ingredientTransforms_2, ingredientParent, ingredients2);
     }
 
+  
+    public void SortIngredients()
+    {
+        ingredientItemsUnsorted = ingredientItems.OrderBy(t => t.name).ToList();
+        for (int i = 0; i < ingredientItemsUnsorted.Count; i++)
+        {
+            ingredientItemsUnsorted[i].transform.position = ingredientTransforms[i].position;
+        }
+    }
+    /*
     public void CheckTasteLights()
     {
         foreach (var item in gameLogic.currentOrder.customer.Tastes)
@@ -130,14 +140,6 @@ public class IngredientSorter : MonoBehaviour
         }
     }
 
-    public void SortIngredients()
-    {
-        ingredientItemsUnsorted = ingredientItems.OrderBy(t => t.name).ToList();
-        for (int i = 0; i < ingredientItemsUnsorted.Count; i++)
-        {
-            ingredientItemsUnsorted[i].transform.position = ingredientTransforms[i].position;
-        }
-    }
     public void GetIngredientsToTray(int tasteIndex)
     {
         switch (tasteIndex)
@@ -167,7 +169,7 @@ public class IngredientSorter : MonoBehaviour
         switch (tasteIndex)
         {
             case 0:
-                taste_2 = Taste.Tastes.Pungent;
+                taste_2 = gam;
                 break;
             case 1:
                 taste_2 = Taste.Tastes.Bitter;
@@ -181,12 +183,12 @@ public class IngredientSorter : MonoBehaviour
             default:
                 break;
         }
-        foreach (var item in gameLogic.currentOrder.customer.Tastes)
+        foreach (var item in gameLogic.currentOrder.customer.c_Ingredients)
         {
-            if (item.taste == taste_2)
+            if (item.ingredient == taste_2)
             {
 
-                if (item.preference == Taste.Preference.like)
+                if (item.preference == CustomerIngredient.Preference.like)
                 {
                     rightLights[tasteIndex].enabled = true;
                 }
@@ -200,12 +202,12 @@ public class IngredientSorter : MonoBehaviour
         ingredients2 = GetIngredientsByTaste(taste_2);
         RepositionIngredientsByTaste();
     }
-    private List<int> GetIngredientsByTaste(Taste.Tastes tastes)
+    private List<int> GetIngredientsByTaste()
     {
         ingredient = new List<int>();
         foreach (var item in gameLogic.ingredients)
         {
-            for (int i = 0; i < item.tastes.Count; i++)
+            for (int i = 0; i < item.Count; i++)
             {
                 if (item.tastes[i].taste.taste == tastes)
                 {   ingredient.Add(item.ID);
@@ -250,5 +252,5 @@ public class IngredientSorter : MonoBehaviour
             
            
         }
-    }
+    }*/
 }

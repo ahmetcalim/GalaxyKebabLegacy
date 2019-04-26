@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -6,14 +7,18 @@ using UnityEngine;
 
 public class Popularity
 {
-    public int userID=1;
+    public int userID = 1;
     public double averageDailyPopularity;
     public double totalDailyPopularity;
     public double globalPopularity;
-    public int activeDay; // actively played
-    public int passiveDay; //have not played
-    public float popularityDecayRate=1; //Pdec
-    public float otherDecayRate = 1;  //c
+    public int kAct; // actively played
+    public int kIdle; //have not played
+    public int kConsIdle; //consecutive idle days
+    public float pDecayRate = 1.13f; //Pdec
+    public float scoreBase = 100f;
+    public float dScoreActive; //Daily Popularity score for active game
+    public float dScoreIdle; //Daily Popularity score for idle game
+
 
     public void Activate()
     {
@@ -25,9 +30,14 @@ public class Popularity
             averageDailyPopularity = p.averageDailyPopularity;
             totalDailyPopularity = p.totalDailyPopularity;
             globalPopularity = p.globalPopularity;
-            popularityDecayRate = p.popularityDecayRate;
-            activeDay = p.activeDay;
-            passiveDay = p.passiveDay;
+            pDecayRate = p.pDecayRate;
+            kAct = p.kAct;
+            kIdle = p.kIdle;
+            kConsIdle = p.kConsIdle;
+            pDecayRate = p.pDecayRate;
+            scoreBase = p.scoreBase;
+            dScoreActive = p.dScoreActive;
+            dScoreIdle = p.dScoreIdle;
         }
     }
 
@@ -44,21 +54,23 @@ public class Popularity
 
     public double CalculateGlobalPopularity()
     {
-       return globalPopularity = totalDailyPopularity - (Mathf.Pow(passiveDay,2)/(passiveDay+Mathf.Pow(activeDay,2)))*popularityDecayRate*otherDecayRate;
+        return globalPopularity = CalculateScoreForActiveDay() + CalculateScoreForIdleDay();
     }
 
     public void SetGlobalPopularity()
     {
-        activeDay += 1;
-        totalDailyPopularity += DailyPopularity.dailyPopularity/DailyPopularity.index;
-        averageDailyPopularity = totalDailyPopularity / activeDay;
+        kAct += 1;
+        totalDailyPopularity += DailyPopularity.dailyPopularity / DailyPopularity.index;
+        averageDailyPopularity = totalDailyPopularity / kAct;
         globalPopularity = CalculateGlobalPopularity();
 
-        if (!File.Exists(DailyPopularity.path))    
+        if (!File.Exists(DailyPopularity.path))
             using (StreamWriter sw = File.CreateText(DailyPopularity.path))
                 sw.WriteLine(JsonUtility.ToJson(this));
         else
-            File.WriteAllText(DailyPopularity.path,JsonUtility.ToJson(this));
+            File.WriteAllText(DailyPopularity.path, JsonUtility.ToJson(this));
+
+
 
         DailyPopularity.dailyPopularity = 0;
         DailyPopularity.index = 0;
@@ -70,6 +82,25 @@ public class Popularity
             return sr.ReadLine();
         }
 
+    }
+    public float CalculateScoreForActiveDay()
+    {
+        dScoreActive += (float)(1.5f * DailyPopularity.dailyPopularity / DailyPopularity.index) * scoreBase;
+        return dScoreActive;
+    }
+    public float CalculateScoreForIdleDay()
+    {
+        Debug.Log("consIdle: "+kConsIdle );
+        if (kConsIdle > 0)
+        {
+            Debug.Log("Hesapladı!");
+            dScoreIdle -= (float)(Math.Pow(pDecayRate, kConsIdle) * scoreBase);
+        }
+
+
+        Debug.Log("dScoreIdle: " + dScoreIdle);
+        kConsIdle = 0;
+        return dScoreIdle;
     }
     public static class DailyPopularity
     {
