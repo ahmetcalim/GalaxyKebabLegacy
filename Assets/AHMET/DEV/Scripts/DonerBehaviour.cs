@@ -35,7 +35,7 @@ public class DonerBehaviour : MonoBehaviour
             else
             {
                 DonerKnifeBehaviour.beginPointY = FindObjectOfType<DonerKnifeBehaviour>().transform.localPosition.y;
-                DonerKnifeBehaviour.currentDoner = Instantiate(FindObjectOfType<DonerController>().doner, new Vector3(FindObjectOfType<DonerKnifeBehaviour>().transform.localPosition.x, endPoint.position.y, FindObjectOfType<DonerKnifeBehaviour>().transform.localPosition.z), transform.rotation);
+                DonerKnifeBehaviour.currentDoner = Instantiate(FindObjectOfType<DonerController>().doner, DonerKnifeBehaviour.contactPoint - new Vector3(0f, endPoint.localPosition.z, 0f), transform.rotation);
                 gameObject.GetComponent<BoxCollider>().center = new Vector3(gameObject.GetComponent<BoxCollider>().center.x, gameObject.GetComponent<BoxCollider>().center.y, Mathf.Abs(startPoint.localPosition.z - endPoint.localPosition.z) / 2f);
                 gameObject.GetComponent<BoxCollider>().size = new Vector3(gameObject.GetComponent<BoxCollider>().size.x, gameObject.GetComponent<BoxCollider>().size.y, Mathf.Abs(startPoint.localPosition.z - endPoint.localPosition.z));
                 gameObject.GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;

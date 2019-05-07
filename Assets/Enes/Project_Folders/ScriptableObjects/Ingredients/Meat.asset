@@ -17,5 +17,4 @@ MonoBehaviour:
   actionInput: 1
   inputUnitCost: 0.85
   totalInputCount: 0
-  totalCost: 0
   rating: 0

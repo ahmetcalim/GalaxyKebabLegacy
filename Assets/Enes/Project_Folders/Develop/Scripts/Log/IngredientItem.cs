@@ -7,7 +7,11 @@ public class IngredientItem : MonoBehaviour
 {
     public int ID;
     public GameLogic gLogic;
-    
+
+    private void OnEnable()
+    {
+
+    }
 
     public void Action()
     {

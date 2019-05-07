@@ -37,7 +37,6 @@ public static class Satisfaction
         return ((2 / (1 + Math.Pow(2.71f, -GetSteepnessValue(xMax, xZero) *
         (tasteInput + 0.01f - xZero)))) - 1) * preference;
     }
-
     public static double CalculateIrrelevantSatisfaction_OverTaste(double tasteInput)
     {
         return -Math.Pow(tasteInput/119.52f,2);

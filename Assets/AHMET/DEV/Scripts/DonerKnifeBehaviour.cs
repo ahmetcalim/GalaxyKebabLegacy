@@ -6,7 +6,7 @@ public class DonerKnifeBehaviour : MonoBehaviour
 {
     public static bool isHit;
     private bool spawned;
-    private Vector3 contactPoint;
+    public static Vector3 contactPoint;
     public  static float beginPointY;
     private float timeSinceTriggered;
     public static float amount;

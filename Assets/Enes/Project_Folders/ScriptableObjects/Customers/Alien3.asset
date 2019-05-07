@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Alien3
   m_EditorClassIdentifier: 
   customerName: Alien2
-  model: {fileID: 8366878227190076846, guid: 3db0ce9c5984b7545a0fcdbbf91ce27a, type: 3}
+  model: {fileID: 4798314165247318366, guid: 4f0b10a9db831434bb42a2349a11330b, type: 3}
   averageRating: 0
   personality:
     orderTime: 0
@@ -55,6 +55,6 @@ MonoBehaviour:
     x_max: 80
     preference: 0
   - ingredient: {fileID: 11400000, guid: bd96fb05223120949b84160066cb921b, type: 2}
-    x_zero: 20
-    x_max: 47
+    x_zero: 24
+    x_max: 45
     preference: 2

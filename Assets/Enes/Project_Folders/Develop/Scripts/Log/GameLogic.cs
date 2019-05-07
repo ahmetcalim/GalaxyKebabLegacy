@@ -27,15 +27,17 @@ public class GameLogic : MonoBehaviour
     Session session;
     SessionItem sessionItem;
     public static bool hasOrder;
-    double spawnRate;
     public LavasGenerator lavasGenerator;
+    public Test test;
+    double spawnRate;
+
     public void Start()
     {
         ClearAllIngredientValues();
         if (!isPlay)
         {
-            lavasGenerator.GenerateLavas();
             isPlay = true;
+            lavasGenerator.GenerateLavas();
             StartPopularity();
             StartSummaryView();
             StartSession();
@@ -46,8 +48,8 @@ public class GameLogic : MonoBehaviour
     {
         isPlay = false;
         FinishOrder();
-        FinishSummaryView();
         FinishSession();
+        FinishSummaryView();
         FinishPopularity();
         summaryView.globalLast.text = popularity.averageDailyPopularity.ToString();
         successOrderCount = 0;
@@ -67,7 +69,7 @@ public class GameLogic : MonoBehaviour
     {
         popularity = new Popularity();
         popularity.Activate();
-        spawnRate = 0.5f + 0.005f * popularity.globalPopularity;
+        spawnRate = 0.5f + 0.5f * popularity.averageDailyPopularity;
     }
     void StartSummaryView()
     {
@@ -87,6 +89,10 @@ public class GameLogic : MonoBehaviour
         summaryView.totalOrder.text = orders.Count.ToString();
         summaryView.dailyRating.text = (Popularity.DailyPopularity.dailyPopularity / Popularity.DailyPopularity.index).ToString();
         summaryView.successOrder.text = successOrderCount.ToString();
+        summaryView.Print();
+        summaryView.averageCost.text = summaryView.f_averageCost.ToString("0.##") + "$";
+        summaryView.totalCost.text = summaryView.f_totalCost.ToString("0.##") + "$";
+
     }
     void FinishPopularity()
     {
@@ -106,11 +112,11 @@ public class GameLogic : MonoBehaviour
         {
             if (timeCounter < playingTime)
             {
-                //if (timeCounter == 0)
-                //{
-                CreateOrder(customers[Random.Range(0, customers.Count)]);
-                //}
-                /*
+                if (timeCounter == 0)
+                {
+                    CreateOrder(customers[Random.Range(0, customers.Count)]);
+                }
+
                 else
                 {
                     if (spawnRate >= 1)
@@ -130,7 +136,7 @@ public class GameLogic : MonoBehaviour
                             CreateOrder(customers[Random.Range(0, customers.Count)]);
                     }
                 }
-                */
+
 
                 timeCounter += interval;
                 if (currentOrder.isFinished)
@@ -189,7 +195,7 @@ public class GameLogic : MonoBehaviour
             orders[orders.Count - 2].nextOrder.customer.model = Instantiate(orders[orders.Count - 2].nextOrder.customer.model, new Vector3(orders[orders.Count - 2].customer.model.transform.position.x, orders[orders.Count - 2].customer.model.transform.position.y, orders[orders.Count - 2].customer.model.transform.position.z + 8), Quaternion.identity);
             orders[orders.Count - 2].nextOrder.customer.model.transform.localRotation = Quaternion.Euler(orders[orders.Count - 2].nextOrder.customer.model.transform.localRotation.x, orders[orders.Count - 2].nextOrder.customer.model.transform.localRotation.y + 180f, orders[orders.Count - 2].nextOrder.customer.model.transform.localRotation.z);
         }
-
+        test.SetGradient3(currentOrder.customer.c_Ingredients.Where(i => i.preference == CustomerIngredient.Preference.meat).ToList().FirstOrDefault().x_max);
         currentOrder.customer.model.GetComponent<CustomerBehaviour>().isActive = true;
     }
     int customerIndex;
@@ -291,17 +297,17 @@ public class GameLogic : MonoBehaviour
             }
             else
             {
-                Debug.Log("Hiç yıldız alamadım");
                 currentOrderPrefab.GetComponent<OrderItem>().SetColor(Color.red);
             }
             currentOrder.isFinished = true;
             currentOrder.customer.ClearCustomer();
             currentOrder.customer.model.SetActive(false);
             currentOrder.customer.personality.SetCounter(false);
+            summaryView.CalculateOrderItems(sessionItem.sessionOrders[sessionItem.orderCount].orderIngredients);
         }
         SetCustomer();
     }
-  
+
     public void AddIngredient(int ingredientID)
     {
 
@@ -346,6 +352,7 @@ public class GameLogic : MonoBehaviour
                             result.ingredient.CalculateAverageRating(Satisfaction.CalculateSatisfaction(result.x_max - (popularity.averageDailyPopularity * 10), result.x_zero + (popularity.averageDailyPopularity * 10), result.ingredient.totalInputCount, -1));
                             result.ingredient.CalculateCost();
                         }
+
                         break;
                     default:
                         break;
@@ -363,10 +370,10 @@ public class GameLogic : MonoBehaviour
         result = currentOrder.customer.c_Ingredients.Where(i => i.ingredient.ID == ingredientID).ToList().FirstOrDefault();
         if (result.ingredient.totalInputCount <= 100)
         {
-            result.ingredient.totalInputCount +=Mathf.Abs(x * y * 0.85f);
+            result.ingredient.totalInputCount += Mathf.Abs(x * y * 0.85f);
             if (result.ingredient.totalInputCount <= result.x_max)
             {
-                result.ingredient.CalculateAverageRating(Satisfaction.CalculateSatisfactionMeat(result.x_max - (popularity.averageDailyPopularity * 10), result.x_zero + (popularity.averageDailyPopularity * 10), result.ingredient.totalInputCount, 1)*3);
+                result.ingredient.CalculateAverageRating(Satisfaction.CalculateSatisfactionMeat(result.x_max - (popularity.averageDailyPopularity * 10), result.x_zero + (popularity.averageDailyPopularity * 10), result.ingredient.totalInputCount, 1) * 3);
                 result.ingredient.CalculateCost();
             }
 

@@ -13,6 +13,7 @@ public class InteractionHandler : MonoBehaviour
     public SteamVR_Action_Boolean grabAction;
     public GameObject CollidingObject { get; set; }
     public GameObject ObjectInHand { get; set; }
+    public GameObject ObjectInHandSnap { get; set; }
     public bool IsShaking { get; set; }
     public float power;
     public Hand hand;
@@ -22,8 +23,13 @@ public class InteractionHandler : MonoBehaviour
     public Test ingredientGradientTest;
     private void Update()
     {
+        if (grabAction.GetLastState(handType))
+        {
+            Grab();
+        }
         if (grabAction.GetStateDown(handType))
         {
+            
             if (hand.currentAttachedObject != null)
             {
 
@@ -63,7 +69,8 @@ public class InteractionHandler : MonoBehaviour
         }
         if (grabAction.GetLastStateUp(handType))
         {
-          
+
+            Release();
             if (ObjectInHand != null)
             {
                 if (ObjectInHand.GetComponent<SpiceContainerBehaviour>() != null)
@@ -155,31 +162,35 @@ public class InteractionHandler : MonoBehaviour
             hand.hapticAction.Execute(3f, 3f, 300f, 1f, handType);
         }
     }
-    private void Grab(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
+    
+    private void Grab()
     {
-        ObjectInHand = CollidingObject;
-        CollidingObject = null;
-        if (GetComponent<FixedJoint>() == null)
-        {
-            var joint = AddFixedJoint();
-            if (ObjectInHand != null)
+       
+            ObjectInHandSnap = CollidingObject;
+            CollidingObject = null;
+            if (GetComponent<FixedJoint>() == null)
             {
-                joint.connectedBody = ObjectInHand.GetComponent<Rigidbody>();
+                var joint = AddFixedJoint();
+                if (ObjectInHandSnap != null)
+                {
+                    joint.connectedBody = ObjectInHandSnap.GetComponent<Rigidbody>();
+                }
             }
-        }
+        
+      
     }
-    private void Release(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
+    private void Release()
     {
         if (GetComponent<FixedJoint>())
         {
-            if (ObjectInHand != null)
+            if (ObjectInHandSnap != null)
             {
 
                 GetComponent<FixedJoint>().connectedBody = null;
                 Destroy(GetComponent<FixedJoint>());
-                ObjectInHand.GetComponent<Rigidbody>().velocity = controllerPose.GetVelocity();
-                ObjectInHand.GetComponent<Rigidbody>().angularVelocity = controllerPose.GetAngularVelocity();
-                ObjectInHand = null;
+                ObjectInHandSnap.GetComponent<Rigidbody>().velocity = controllerPose.GetVelocity();
+                ObjectInHandSnap.GetComponent<Rigidbody>().angularVelocity = controllerPose.GetAngularVelocity();
+                ObjectInHandSnap = null;
             }
 
         }
@@ -195,7 +206,10 @@ public class InteractionHandler : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        SetCollidingObject(other);
+        if (other.CompareTag("Bowl"))
+        {
+            SetCollidingObject(other);
+        }
     }
     private void OnTriggerStay(Collider other)
     {

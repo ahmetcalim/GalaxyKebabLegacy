@@ -5,18 +5,13 @@ using Valve.VR.InteractionSystem;
 
 public class PlayerPositionManager : MonoBehaviour
 {
-    public Transform playerSpawnPoint;
     public Transform player;
     public Transform playerCam;
     // Start is called before the first frame update
     void Start()
     {
-        player.localPosition = new Vector3(-playerCam.position.x, player.localPosition.y, -playerCam.position.z) ;
+       // player.position = new Vector3(-playerCam.position.x, player.localPosition.y, -playerCam.position.z) ;
+        transform.position = new Vector3(playerCam.transform.position.x, 16.8f, playerCam.transform.position.z) ;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

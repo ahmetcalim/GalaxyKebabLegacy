@@ -7,13 +7,16 @@ public class Test : MonoBehaviour {
     
     private Texture2D texture;
     private Texture2D texture2;
+    private Texture2D texture3;
     public Image img;
     public Image img2;
+    public Image img3;
     public CustomGradient tasteGradient;
     public CustomGradient tasteGradient2;
+    public CustomGradient tasteGradient3;
     public CustomGradient tasteGradient_Dislike;
     public CustomGradient tasteGradient_Dislike2;
-   
+
     public CustomGradient tasteGradient_Irrelevant;
     public CustomGradient tasteGradient_Irrelevant2;
     public GameObject leftHandGradients;
@@ -60,7 +63,7 @@ public class Test : MonoBehaviour {
         {
             case 0:
                 tasteGradient2.UpdateKeyTime(1, green / 100f);
-                texture2 = tasteGradient.GetTexture(100);
+                texture2 = tasteGradient2.GetTexture(100);
                 break;
             case 1:
                 tasteGradient_Dislike2.UpdateKeyTime(2, green / 100f);
@@ -75,5 +78,11 @@ public class Test : MonoBehaviour {
         }
 
         img2.sprite = Sprite.Create(texture2, new Rect(0.0f, 0.0f, texture2.width, texture2.height), new Vector2(0.5f, 0.5f), 100.0f);
+    }
+    public void SetGradient3(float green)
+    {
+        tasteGradient3.UpdateKeyTime(1, green / 100f);
+        texture3 = tasteGradient3.GetTexture(100);
+        img3.sprite = Sprite.Create(texture3, new Rect(0.0f, 0.0f, texture3.width, texture3.height), new Vector2(0.5f, 0.5f), 100.0f);
     }
 }

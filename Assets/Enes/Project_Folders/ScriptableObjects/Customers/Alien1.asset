@@ -55,6 +55,6 @@ MonoBehaviour:
     x_max: 71
     preference: 0
   - ingredient: {fileID: 11400000, guid: bd96fb05223120949b84160066cb921b, type: 2}
-    x_zero: 24
-    x_max: 46
+    x_zero: 19
+    x_max: 47
     preference: 2

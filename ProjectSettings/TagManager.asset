@@ -27,6 +27,7 @@ TagManager:
   - Point_4R
   - Customer
   - WrongOrder
+  - Bowl
   layers:
   - Default
   - TransparentFX
