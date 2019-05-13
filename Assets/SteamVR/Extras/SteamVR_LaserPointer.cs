@@ -1,20 +1,19 @@
 ﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 namespace Valve.VR.Extras
 {
     public class SteamVR_LaserPointer : MonoBehaviour
-    {
+    { 
         public SteamVR_Behaviour_Pose pose;
 
         //public SteamVR_Action_Boolean interactWithUI = SteamVR_Input.__actions_default_in_InteractUI;
         public SteamVR_Action_Boolean interactWithUI = SteamVR_Input.GetBooleanAction("InteractUI");
 
-        public bool active = true;
-        public Color color;
+        public Color outUI,onUI;
         public float thickness = 0.002f;
-        public Color clickColor = Color.green;
         public GameObject holder;
         public GameObject pointer;
         bool isActive = false;
@@ -23,7 +22,7 @@ namespace Valve.VR.Extras
         public event PointerEventHandler PointerIn;
         public event PointerEventHandler PointerOut;
         public event PointerEventHandler PointerClick;
-
+        private VRUIItem crrUIItem, prevUIItem;
         Transform previousContact = null;
 
 
@@ -66,7 +65,7 @@ namespace Valve.VR.Extras
                 }
             }
             Material newMaterial = new Material(Shader.Find("Unlit/Color"));
-            newMaterial.SetColor("_Color", color);
+            newMaterial.SetColor("_Color", outUI);
             pointer.GetComponent<MeshRenderer>().material = newMaterial;
         }
 
@@ -102,6 +101,8 @@ namespace Valve.VR.Extras
             Ray raycast = new Ray(transform.position, transform.forward);
             RaycastHit hit;
             bool bHit = Physics.Raycast(raycast, out hit);
+
+           
 
             if (previousContact && previousContact != hit.transform)
             {
@@ -142,16 +143,43 @@ namespace Valve.VR.Extras
                 OnPointerClick(argsClick);
             }
 
-            if (interactWithUI != null && interactWithUI.GetState(pose.inputSource))
+            if (bHit)
             {
                 pointer.transform.localScale = new Vector3(thickness * 5f, thickness * 5f, dist);
-                pointer.GetComponent<MeshRenderer>().material.color = clickColor;
+                pointer.GetComponent<MeshRenderer>().material.color = onUI;
+
+
+                if (hit.transform.GetComponent<VRUIItem>())
+                {
+                    if (crrUIItem)
+                        prevUIItem = crrUIItem;
+
+                    crrUIItem = hit.transform.GetComponent<VRUIItem>();
+                    crrUIItem.OnEnter();
+                }
+                   
+                Debug.Log("Üstünde");
             }
             else
             {
+                
                 pointer.transform.localScale = new Vector3(thickness, thickness, dist);
-                pointer.GetComponent<MeshRenderer>().material.color = color;
+                pointer.GetComponent<MeshRenderer>().material.color = outUI;
+                if (crrUIItem)           
+                    crrUIItem.OnExit();
+                if (prevUIItem)
+                    prevUIItem.OnExit();
+
+                Debug.Log("Üstünde Değil");
             }
+
+            if (interactWithUI != null && interactWithUI.GetStateDown(pose.inputSource)&&bHit)
+            {
+                if (crrUIItem)
+                    crrUIItem.Click();
+
+                Debug.Log("Burda trigger");
+            }          
             pointer.transform.localPosition = new Vector3(0f, 0f, dist / 2f);
         }
     }
