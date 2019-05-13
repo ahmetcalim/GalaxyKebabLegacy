@@ -17,7 +17,8 @@ public class Popularity
     public float pDecayRate = 1.13f; //Pdec
     public float scoreBase = 100f;
     public float dScoreActive; //Daily Popularity score for active game
-    public float dScoreIdle; //Daily Popularity score for idle game
+    public float dScoreIdle; //Daily Popularity score for idle game
+
 
     public void Activate()
     {
