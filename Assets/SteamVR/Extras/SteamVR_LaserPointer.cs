@@ -24,7 +24,8 @@ namespace Valve.VR.Extras
         public event PointerEventHandler PointerClick;
         private VRUIItem crrUIItem, prevUIItem;
         Transform previousContact = null;
-
+        
+        
 
         private void Start()
         {
@@ -143,6 +144,7 @@ namespace Valve.VR.Extras
                 OnPointerClick(argsClick);
             }
 
+
             if (bHit)
             {
                 pointer.transform.localScale = new Vector3(thickness * 5f, thickness * 5f, dist);
@@ -157,8 +159,6 @@ namespace Valve.VR.Extras
                     crrUIItem = hit.transform.GetComponent<VRUIItem>();
                     crrUIItem.OnEnter();
                 }
-                   
-                Debug.Log("Üstünde");
             }
             else
             {
@@ -169,8 +169,6 @@ namespace Valve.VR.Extras
                     crrUIItem.OnExit();
                 if (prevUIItem)
                     prevUIItem.OnExit();
-
-                Debug.Log("Üstünde Değil");
             }
 
             if (interactWithUI != null && interactWithUI.GetStateDown(pose.inputSource)&&bHit)
@@ -178,7 +176,6 @@ namespace Valve.VR.Extras
                 if (crrUIItem)
                     crrUIItem.Click();
 
-                Debug.Log("Burda trigger");
             }          
             pointer.transform.localPosition = new Vector3(0f, 0f, dist / 2f);
         }

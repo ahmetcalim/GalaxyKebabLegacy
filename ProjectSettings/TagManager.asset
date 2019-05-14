@@ -4,30 +4,30 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - projectile
-  - FxTemporaire
-  - Slicable
-  - Repomatic
-  - Lavas
-  - Doner
-  - DonerPiece
-  - LavasIngredient
-  - EndPoint
-  - StartPoint
-  - Picak
-  - AddableLavas
   - ContactPoint
   - Point_1
-  - Point_2
-  - Point_3
+  - WrongOrder
   - Point_4
-  - Point_1R
+  - Point_2
   - Point_2R
   - Point_3R
+  - EndPoint
+  - Point_3
+  - Repomatic
   - Point_4R
+  - Doner
+  - Point_1R
+  - StartPoint
+  - projectile
+  - DonerPiece
   - Customer
-  - WrongOrder
+  - FxTemporaire
+  - Lavas
+  - LavasIngredient
+  - AddableLavas
+  - Picak
   - Bowl
+  - UI
   layers:
   - Default
   - TransparentFX
@@ -37,12 +37,12 @@ TagManager:
   - UI
   - 
   - 
-  - Kurekicin
-  - PostProcess
-  - 
-  - 
-  - 
-  - 
+  - Ethan
+  - MazeWalls
+  - MazeTurret
+  - MazeTurretBullet
+  - Bg
+  - FPSWeapon
   - 
   - 
   - 
@@ -64,4 +64,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: GUI
+    uniqueID: 2379361113
     locked: 0

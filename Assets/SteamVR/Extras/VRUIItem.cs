@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
+[RequireComponent(typeof(RectTransform))]
 public class VRUIItem : MonoBehaviour
 {
     private BoxCollider boxCollider;
