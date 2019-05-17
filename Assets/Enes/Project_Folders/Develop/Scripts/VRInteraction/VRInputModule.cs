@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class VRInputModule: BaseInputModule
 {
     public Camera m_Camera;
     public SteamVR_Input_Sources m_TargetSources;
     public SteamVR_Action_Boolean m_ClickAction;
-   
-
+    public Hand hand;
     public static GameObject m_CurrentObject = null;
     private PointerEventData m_Data = null;
 
@@ -26,12 +27,20 @@ public class VRInputModule: BaseInputModule
 
         eventSystem.RaycastAll(m_Data,m_RaycastResultCache);
         m_Data.pointerCurrentRaycast = FindFirstRaycast(m_RaycastResultCache);
+
+        /*
+        if (m_CurrentObject!= m_Data.pointerCurrentRaycast.gameObject)
+            TikTikHaptik(1);
+        else
+            TikTikHaptik(0);
+        */
         m_CurrentObject = m_Data.pointerCurrentRaycast.gameObject;
 
         //Clear
         m_RaycastResultCache.Clear();
         //Hover
         HandlePointerExitAndEnter(m_Data,m_CurrentObject);
+        
         //Press
         if (m_ClickAction.GetLastStateDown(m_TargetSources))
             ProcessPress(m_Data);
@@ -73,6 +82,20 @@ public class VRInputModule: BaseInputModule
         data.pointerPress = null;
         data.rawPointerPress = null;
     }
+    int k = 0;
+    void TikTikHaptik(int i)
+    {
+        if (i == 1)
+            k = 1;
+        else
+            k = 0;
 
+        if (k == 1)
+        {
+            hand.hapticAction.Execute(3f, 3f, 300f, 1f, m_TargetSources);
+            k = 0;
+        }
+
+    }
 
 }

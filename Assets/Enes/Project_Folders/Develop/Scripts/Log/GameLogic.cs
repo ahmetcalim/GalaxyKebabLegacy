@@ -23,26 +23,31 @@ public class GameLogic : MonoBehaviour
     List<Order> orders = new List<Order>();
     CustomerIngredient result;
     public Order currentOrder;
-    Popularity popularity;
-    Session session;
+    public Popularity popularity;
+    public Session session;
     SessionItem sessionItem;
     public static bool hasOrder;
     public LavasGenerator lavasGenerator;
     public Test test;
     double spawnRate;
+    public VRSceneManager vrSceneManager;
 
-    public void Start()
+    public void StartGame()
     {
         ClearAllIngredientValues();
-        if (!isPlay)
+        orders.Clear();       
+        foreach (Transform item in viewport.GetComponentInChildren<Transform>())
         {
-            isPlay = true;
-            lavasGenerator.GenerateLavas();
-            StartPopularity();
-            StartSummaryView();
-            StartSession();
-            StartCoroutine(RecursiveCounter());
+            if (item.parent == viewport)
+                Destroy(item.gameObject);
         }
+        summaryView.gameObject.SetActive(false);
+        isPlay = true;
+        lavasGenerator.GenerateLavas();   
+        StartSummaryView();
+        StartSession();
+        StartCoroutine(RecursiveCounter());
+
     }
     public void EndGame()
     {
@@ -65,7 +70,7 @@ public class GameLogic : MonoBehaviour
 
         }
     }
-    void StartPopularity()
+    public void StartPopularity()
     {
         popularity = new Popularity();
         popularity.Activate();
@@ -92,6 +97,8 @@ public class GameLogic : MonoBehaviour
         summaryView.Print();
         summaryView.averageCost.text = summaryView.f_averageCost.ToString("0.##") + "$";
         summaryView.totalCost.text = summaryView.f_totalCost.ToString("0.##") + "$";
+        popularity.totalDurumCost += summaryView.f_totalCost;
+        popularity.lifeTimeDoner += successOrderCount;
 
     }
     void FinishPopularity()

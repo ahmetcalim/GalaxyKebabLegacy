@@ -18,6 +18,8 @@ public class Popularity
     public float scoreBase = 100f;
     public float dScoreActive; //Daily Popularity score for active game
     public float dScoreIdle; //Daily Popularity score for idle game
+    public int lifeTimeDoner;
+    public float totalDurumCost;
 
 
     public void Activate()
@@ -38,6 +40,8 @@ public class Popularity
             scoreBase = p.scoreBase;
             dScoreActive = p.dScoreActive;
             dScoreIdle = p.dScoreIdle;
+            lifeTimeDoner = p.lifeTimeDoner;
+            totalDurumCost = p.totalDurumCost;
         }
     }
 

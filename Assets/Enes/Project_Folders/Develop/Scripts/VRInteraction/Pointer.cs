@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Valve.VR.InteractionSystem;
 
 public class Pointer : MonoBehaviour
 {
@@ -26,7 +27,6 @@ public class Pointer : MonoBehaviour
 
         if (VRInputModule.m_CurrentObject&& VRInputModule.m_CurrentObject.layer==5)
         {
-            Debug.Log(VRInputModule.m_CurrentObject.layer);
             float targetLenght = data.pointerCurrentRaycast.distance == 0 ? m_DefaultLenght : data.pointerCurrentRaycast.distance;
             RaycastHit hit = CreateRaycast(targetLenght);
             Vector3 endPosition = transform.position + (transform.forward * targetLenght);
